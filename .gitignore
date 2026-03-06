@@ -1,0 +1,9 @@
+pdf/
+*.pdf
+__pycache__/
+*.pyc
+.venv/
+*.db
+review/
+assets/figures-original/
+assets/figures-export/
