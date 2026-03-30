@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCR Review{% if view == 'page' %} — {{ chapter }} p{{ page_num }}{% endif %}</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+    font-size: 13px;
+    background: #1a1a1a;
+    color: #d4d4d4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a { color: #7eb3e8; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ── Top nav bar ─────────────────────────────────────────────────── */
+  .topbar {
+    background: #252526;
+    border-bottom: 1px solid #3c3c3c;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+  .topbar .breadcrumb { color: #858585; }
+  .topbar .breadcrumb a { color: #7eb3e8; }
+  .topbar .spacer { flex: 1; }
+  .nav-btn {
+    background: #3c3c3c;
+    border: 1px solid #555;
+    color: #d4d4d4;
+    padding: 4px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+  }
+  .nav-btn:hover { background: #4c4c4c; }
+  .nav-btn:disabled { opacity: 0.4; cursor: default; }
+  .btn-primary {
+    background: #0e639c;
+    border-color: #1177bb;
+    color: #fff;
+  }
+  .btn-primary:hover { background: #1177bb; }
+
+  /* ── Index / chapter list views ──────────────────────────────────── */
+  .list-view {
+    padding: 32px;
+    max-width: 800px;
+  }
+  .list-view h1 { font-size: 18px; margin-bottom: 24px; color: #e8e8e8; font-weight: 500; }
+  .list-view h2 { font-size: 15px; margin-bottom: 16px; color: #cccccc; font-weight: 500; }
+
+  .chapter-list, .page-list { list-style: none; }
+  .chapter-list li, .page-list li {
+    padding: 10px 14px;
+    border: 1px solid #3c3c3c;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #252526;
+  }
+  .chapter-list li:hover, .page-list li:hover { border-color: #555; }
+
+  .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .pill-pending { background: #5a3e1b; color: #e8a84a; }
+  .pill-done    { background: #1b3a1b; color: #73c771; }
+  .pill-agree   { background: #1b3a1b; color: #73c771; }
+  .pill-minor   { background: #3a3a1b; color: #d4c66e; }
+  .pill-conflict{ background: #3a1b1b; color: #e07070; }
+
+  .progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #3c3c3c;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar-fill { height: 100%; background: #0e639c; border-radius: 3px; }
+
+  /* ── Review layout ────────────────────────────────────────────────── */
+  .review-layout {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Scan panel */
+  .scan-panel {
+    border-right: 1px solid #3c3c3c;
+    overflow-y: auto;
+    padding: 12px;
+    background: #111;
+  }
+  .scan-panel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #3c3c3c;
+  }
+  .scan-loading {
+    color: #858585;
+    padding: 16px;
+    text-align: center;
+  }
+
+  /* Spans panel */
+  .spans-panel {
+    overflow-y: auto;
+    padding: 12px 16px;
+  }
+
+  /* ── Span cards ───────────────────────────────────────────────────── */
+  .span-card {
+    border: 1px solid #3c3c3c;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background: #252526;
+    overflow: hidden;
+  }
+  .span-card.resolved { border-color: #2a5a2a; }
+
+  .span-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    cursor: pointer;
+    user-select: none;
+    background: #2d2d2d;
+  }
+  .span-header:hover { background: #333; }
+  .span-num { color: #858585; font-size: 11px; min-width: 50px; }
+  .span-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .tag-agree   { background: #1b3a1b; color: #73c771; }
+  .tag-minor   { background: #3a3a1b; color: #d4c66e; }
+  .tag-conflict{ background: #3a1b1b; color: #e07070; }
+  .span-preview {
+    flex: 1;
+    color: #a0a0a0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+  .span-saved-mark { color: #73c771; font-size: 14px; margin-left: auto; }
+
+  .span-body { padding: 10px 12px; }
+
+  /* Model output rows */
+  .model-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .model-label {
+    font-size: 11px;
+    color: #858585;
+    min-width: 52px;
+    padding-top: 3px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .model-text {
+    flex: 1;
+    background: #1e1e1e;
+    border: 1px solid #3c3c3c;
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #c8c8c8;
+  }
+  .use-btn {
+    background: #3c3c3c;
+    border: 1px solid #555;
+    color: #c8c8c8;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .use-btn:hover { background: #4c4c4c; color: #fff; }
+
+  /* Resolution textarea + save */
+  .resolve-row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .resolve-label { font-size: 11px; color: #858585; }
+  .resolve-textarea {
+    width: 100%;
+    min-height: 64px;
+    background: #1e1e1e;
+    border: 1px solid #555;
+    border-radius: 3px;
+    padding: 6px 8px;
+    color: #e8e8e8;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.5;
+    resize: vertical;
+  }
+  .resolve-textarea:focus { outline: none; border-color: #0e639c; }
+  .resolve-actions { display: flex; gap: 8px; align-items: center; }
+  .save-btn {
+    background: #0e639c;
+    border: 1px solid #1177bb;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+  }
+  .save-btn:hover { background: #1177bb; }
+  .save-status { font-size: 11px; color: #73c771; display: none; }
+  .save-status.visible { display: inline; }
+
+  mark.diff {
+    background: #5a3e00;
+    color: #f0c060;
+    border-radius: 2px;
+    padding: 0 2px;
+    font-style: normal;
+  }
+
+  /* AI resolution tags and badges */
+  .tag-ai       { background: #1a3a3a; color: #5dd8d8; }
+  .tag-escalate { background: #3a2a0a; color: #e0a020; }
+  .pill-escalate { background: #3a2a0a; color: #e0a020; }
+  .pill-ai       { background: #1a3a3a; color: #5dd8d8; }
+
+  .confidence-badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 8px;
+    background: #2a4a4a;
+    color: #5dd8d8;
+    margin-left: -4px;
+  }
+
+  .ai-note {
+    font-size: 11px;
+    color: #a08030;
+    background: #2a2010;
+    border: 1px solid #4a3a10;
+    border-radius: 3px;
+    padding: 5px 8px;
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+  }
+
+  .accept-ai-btn {
+    background: #1a4a4a;
+    border: 1px solid #2a7a7a;
+    color: #5dd8d8;
+    padding: 4px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+  }
+  .accept-ai-btn:hover { background: #2a6a6a; }
+
+  .span-card.ai-resolved { border-color: #2a5a5a; }
+  .span-card.escalate    { border-color: #5a4a10; }
+
+  .focus-active { background: #1a3a1a !important; border-color: #2a5a2a !important; }
+</style>
+</head>
+<body>
+
+{% if view == 'index' %}
+<!-- ================================================================ INDEX -->
+<div class="topbar">
+  <span class="breadcrumb">OCR Review</span>
+</div>
+<div class="list-view">
+  <h1>Chapters</h1>
+  <ul class="chapter-list">
+  {% for row in chapters %}
+    <li>
+      <a href="/chapter/{{ row.chapter }}">{{ row.chapter }}</a>
+      {% if row.escalate and row.escalate > 0 %}
+        <span class="pill pill-escalate">{{ row.escalate }} escalate</span>
+      {% endif %}
+      {% if row.pending and row.pending > 0 %}
+        <span class="pill pill-pending">{{ row.pending }} pending</span>
+      {% endif %}
+      {% if row.ai_resolved and row.ai_resolved > 0 %}
+        <span class="pill pill-ai">{{ row.ai_resolved }} AI</span>
+      {% endif %}
+      {% if not row.pending and not row.escalate %}
+        <span class="pill pill-done">complete</span>
+      {% endif %}
+      <div class="progress-bar">
+        <div class="progress-bar-fill"
+             style="width: {{ ((row.total - (row.pending or 0) - (row.escalate or 0)) / row.total * 100)|int }}%"></div>
+      </div>
+      <span style="color:#858585; font-size:11px;">{{ row.total - (row.pending or 0) - (row.escalate or 0) }}/{{ row.total }}</span>
+    </li>
+  {% else %}
+    <li style="color:#858585;">No comparison data yet. Run compare.py first.</li>
+  {% endfor %}
+  </ul>
+</div>
+
+{% elif view == 'chapter' %}
+<!-- ============================================================ CHAPTER LIST -->
+<div class="topbar">
+  <span class="breadcrumb"><a href="/">OCR Review</a> / {{ chapter }}</span>
+</div>
+<div class="list-view">
+  <h2>{{ chapter }}</h2>
+  <ul class="page-list">
+  {% for row in pages %}
+    <li>
+      <a href="/review/{{ chapter }}/{{ row.page }}">p{{ row.page }}</a>
+      <span class="pill tag-agree">{{ row.agree }}A</span>
+      <span class="pill tag-minor">{{ row.minor }}M</span>
+      <span class="pill tag-conflict">{{ row.conflict }}C</span>
+      {% if row.escalate and row.escalate > 0 %}
+        <span class="pill pill-escalate">{{ row.escalate }} escalate</span>
+      {% endif %}
+      {% if row.pending and row.pending > 0 %}
+        <span class="pill pill-pending">{{ row.pending }} pending</span>
+      {% endif %}
+      {% if row.ai_resolved and row.ai_resolved > 0 %}
+        <span class="pill pill-ai">{{ row.ai_resolved }} AI</span>
+      {% endif %}
+      {% if not row.pending and not row.escalate %}
+        <span class="pill pill-done">done</span>
+      {% endif %}
+      <div class="progress-bar">
+        <div class="progress-bar-fill"
+             style="width: {{ ((row.total - (row.pending or 0) - (row.escalate or 0)) / row.total * 100)|int }}%"></div>
+      </div>
+    </li>
+  {% else %}
+    <li style="color:#858585;">No pages found.</li>
+  {% endfor %}
+  </ul>
+</div>
+
+{% elif view == 'page' %}
+<!-- ================================================================ PAGE REVIEW -->
+<div class="topbar">
+  <span class="breadcrumb">
+    <a href="/">Review</a> /
+    <a href="/chapter/{{ chapter }}">{{ chapter }}</a> /
+    p{{ page_num }}
+  </span>
+  <div class="spacer"></div>
+  <button class="nav-btn btn-primary"
+          onclick="resolveAll()"
+          title="Auto-resolve all remaining AGREE spans">Auto-resolve AGREE</button>
+  <button class="accept-ai-btn"
+          onclick="acceptAllAI()"
+          title="Accept all AI-resolved spans on this page">Resolve AI suggestions</button>
+  <button class="nav-btn" id="focus-btn"
+          onclick="toggleFocusEscalated()"
+          title="Show only escalated and pending spans">Focus: Escalated</button>
+  <button class="nav-btn" onclick="setAllOpen(false)" title="Collapse all spans">Collapse all</button>
+  <button class="nav-btn" onclick="setAllOpen(true)"  title="Expand all spans">Expand all</button>
+  {% if prev_page %}
+    <a href="/review/{{ chapter }}/{{ prev_page }}">
+      <button class="nav-btn">← p{{ prev_page }}</button>
+    </a>
+  {% else %}
+    <button class="nav-btn" disabled>← prev</button>
+  {% endif %}
+  {% if next_page %}
+    <a href="/review/{{ chapter }}/{{ next_page }}">
+      <button class="nav-btn">p{{ next_page }} →</button>
+    </a>
+  {% else %}
+    <button class="nav-btn" disabled>next →</button>
+  {% endif %}
+</div>
+
+<div class="review-layout">
+
+  <!-- Scan image -->
+  <div class="scan-panel">
+    <div class="scan-loading" id="scan-loading">Loading scan…</div>
+    <div style="position:relative; display:inline-block; width:100%;">
+      <img id="scan-img"
+           style="display:none; width:100%; height:auto; display:block;"
+           src="/api/page-image/{{ chapter }}/{{ page_num }}"
+           alt="Page {{ page_num }} scan"
+           onload="onScanLoaded(this)"
+           onerror="document.getElementById('scan-loading').textContent='Scan not available';">
+      <canvas id="bbox-canvas"
+              style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; display:none;">
+      </canvas>
+    </div>
+  </div>
+
+  <!-- Spans -->
+  <div class="spans-panel">
+  {% for span in spans %}
+    {% set is_agree      = span.agreement == 'AGREE' %}
+    {% set is_resolved   = span.status == 'resolved' %}
+    {% set is_ai         = span.status == 'ai_resolved' %}
+    {% set is_escalate   = span.status == 'escalate' %}
+    {% set collapse_body = is_agree or is_resolved or is_ai %}
+    {% set card_class    = 'resolved' if is_resolved else ('ai-resolved' if is_ai else ('escalate' if is_escalate else '')) %}
+    <div class="span-card{{ (' ' + card_class) if card_class else '' }}" id="card-{{ span.id }}">
+
+      {% set bboxes = diffs.get(span.id, {}).get('bboxes', []) %}
+      <div class="span-header"
+           onclick="toggleCard({{ span.id }})"
+           onmouseenter="highlightBboxes({{ bboxes | tojson }})"
+           onmouseleave="clearBboxes()">
+        <span class="span-num">span {{ span.span_index }}</span>
+
+        {# Tag label — priority: resolved/ai/escalate state overrides agreement #}
+        {% if is_resolved %}
+          <span class="span-tag tag-agree">RESOLVED</span>
+        {% elif is_ai %}
+          <span class="span-tag tag-ai">AI</span>
+        {% elif is_escalate %}
+          <span class="span-tag tag-escalate">Escalate</span>
+        {% else %}
+          <span class="span-tag tag-{{ span.agreement|lower }}">{{ span.agreement }}</span>
+        {% endif %}
+
+        {% if span.ai_confidence is not none %}
+          <span class="confidence-badge">{{ (span.ai_confidence * 100)|int }}%</span>
+        {% endif %}
+
+        <span class="span-preview">
+          {{ (span.resolved_text or span.olmocr_text or '')[:120] }}
+        </span>
+
+        {% if is_resolved %}
+          <span class="span-saved-mark" title="Resolved">✓</span>
+        {% elif is_ai %}
+          <button class="accept-ai-btn" style="margin-left:auto; padding:2px 10px; font-size:11px;"
+                  onclick="event.stopPropagation(); acceptAI({{ span.id }})">Accept ✓</button>
+        {% endif %}
+      </div>
+
+      <div class="span-body" id="body-{{ span.id }}"
+           style="{{ 'display:none' if collapse_body else '' }}">
+
+        {# AI reasoning note for escalate and ai_resolved spans #}
+        {% if span.ai_notes %}
+          <div class="ai-note">AI: {{ span.ai_notes }}</div>
+        {% endif %}
+
+        {% if not is_agree %}
+        <!-- Three model outputs with diff highlighting and "Use this" buttons -->
+        {% set d = diffs.get(span.id, {}) %}
+        {% if d.get('all_same') %}
+          <div style="font-size:11px; color:#858585; margin-bottom:8px; padding:4px 8px; background:#1e1e1e; border-radius:3px;">
+            ⚠ All three raw OCR outputs are identical — difference may be whitespace-only or a comparison model false positive.
+          </div>
+        {% endif %}
+        {% for label, text, diff_html, plain in [
+            ('olmocr',  span.olmocr_text,  d.get('olmocr_html'),  span.olmocr_text),
+            ('lighton', span.lighton_text, d.get('lighton_html'), span.lighton_text),
+            ('chandra', span.chandra_text, d.get('chandra_html'), d.get('chandra_plain') or span.chandra_text),
+        ] %}
+        {% if text %}
+        <div class="model-row">
+          <span class="model-label">{{ label }}</span>
+          <div class="model-text" data-plain="{{ plain | e }}">
+            {% if diff_html %}{{ diff_html | safe }}{% else %}{{ text }}{% endif %}
+          </div>
+          <button class="use-btn" onclick="useText({{ span.id }}, this.closest('.model-row').querySelector('.model-text').dataset.plain)">use</button>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        <div class="resolve-row">
+          {% if not is_agree %}
+            <span class="resolve-label">
+              Resolution
+              {% if is_escalate and span.resolved_text %}
+                <span style="color:#808030; margin-left:6px;">(AI suggestion — low confidence)</span>
+              {% elif is_ai %}
+                <span style="color:#308080; margin-left:6px;">(AI suggestion — high confidence)</span>
+              {% endif %}
+            </span>
+          {% endif %}
+          <textarea class="resolve-textarea"
+                    id="ta-{{ span.id }}"
+                    placeholder="Enter resolved text…">{{ span.resolved_text or (span.olmocr_text if is_agree else '') }}</textarea>
+          <div class="resolve-actions">
+            <button class="save-btn" onclick="saveSpan({{ span.id }})">Save</button>
+            {% if is_ai %}
+              <button class="accept-ai-btn" onclick="acceptAI({{ span.id }})">Accept ✓</button>
+            {% endif %}
+            <span class="save-status" id="status-{{ span.id }}">✓ Saved</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  {% else %}
+    <p style="color:#858585; padding:16px;">No spans found for this page.</p>
+  {% endfor %}
+  </div>
+</div>
+
+<script>
+const CHANDRA_LS = {{ chandra_ls }};
+const DISPLAY_LS = {{ display_ls }};
+const BBOX_SCALE = DISPLAY_LS / CHANDRA_LS;
+
+let scanNaturalW = 0, scanNaturalH = 0;
+
+function onScanLoaded(img) {
+  document.getElementById('scan-loading').style.display = 'none';
+  scanNaturalW = img.naturalWidth;
+  scanNaturalH = img.naturalHeight;
+  const canvas = document.getElementById('bbox-canvas');
+  canvas.width  = scanNaturalW;
+  canvas.height = scanNaturalH;
+  canvas.style.display = 'block';
+}
+
+function highlightBboxes(bboxes) {
+  const canvas = document.getElementById('bbox-canvas');
+  if (!canvas || !bboxes.length) return;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = 'rgba(255, 165, 0, 0.9)';
+  ctx.fillStyle   = 'rgba(255, 165, 0, 0.15)';
+  ctx.lineWidth   = 3;
+  for (const [x1, y1, x2, y2] of bboxes) {
+    const sx = x1 * BBOX_SCALE, sy = y1 * BBOX_SCALE;
+    const sw = (x2 - x1) * BBOX_SCALE, sh = (y2 - y1) * BBOX_SCALE;
+    ctx.fillRect(sx, sy, sw, sh);
+    ctx.strokeRect(sx, sy, sw, sh);
+  }
+}
+
+function clearBboxes() {
+  const canvas = document.getElementById('bbox-canvas');
+  if (canvas) canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function toggleCard(id) {
+  const body = document.getElementById('body-' + id);
+  body.style.display = body.style.display === 'none' ? '' : 'none';
+}
+
+function setAllOpen(open) {
+  document.querySelectorAll('.span-body').forEach(body => {
+    body.style.display = open ? '' : 'none';
+  });
+}
+
+let focusMode = false;
+function toggleFocusEscalated() {
+  focusMode = !focusMode;
+  const btn = document.getElementById('focus-btn');
+  btn.classList.toggle('focus-active', focusMode);
+  document.querySelectorAll('.span-card').forEach(card => {
+    const isEscalate = card.classList.contains('escalate');
+    const isPending  = !card.classList.contains('resolved') &&
+                       !card.classList.contains('ai-resolved') &&
+                       !card.classList.contains('escalate');
+    const show = !focusMode || isEscalate || isPending;
+    card.style.display = show ? '' : 'none';
+  });
+}
+
+async function acceptAI(id) {
+  const resp = await fetch('/api/accept-ai-resolve', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ span_id: id }),
+  });
+  const data = await resp.json();
+  if (data.ok) {
+    const card = document.getElementById('card-' + id);
+    card.classList.remove('ai-resolved');
+    card.classList.add('resolved');
+    const tag = card.querySelector('.span-tag');
+    if (tag) { tag.textContent = 'RESOLVED'; tag.className = 'span-tag tag-agree'; }
+    // Remove the Accept button(s)
+    card.querySelectorAll('.accept-ai-btn').forEach(b => b.remove());
+    // Add checkmark if not present
+    if (!card.querySelector('.span-saved-mark')) {
+      const mark = document.createElement('span');
+      mark.className = 'span-saved-mark'; mark.title = 'Resolved'; mark.textContent = '✓';
+      card.querySelector('.span-header').appendChild(mark);
+    }
+    // Remove confidence badge
+    const badge = card.querySelector('.confidence-badge');
+    if (badge) badge.remove();
+    card.querySelector('.span-body').style.display = 'none';
+  }
+}
+
+async function acceptAllAI() {
+  const resp = await fetch('/api/accept-ai-resolve', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ chapter: '{{ chapter }}', page: {{ page_num }} }),
+  });
+  const data = await resp.json();
+  if (data.ok) {
+    document.querySelectorAll('.span-card.ai-resolved').forEach(card => {
+      const idMatch = card.id.match(/card-(\d+)/);
+      if (idMatch) acceptAI(parseInt(idMatch[1]));
+    });
+  }
+}
+
+function useText(id, text) {
+  document.getElementById('ta-' + id).value = text.trim();
+}
+
+async function saveSpan(id) {
+  const text = document.getElementById('ta-' + id).value;
+  const resp = await fetch('/api/resolve', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ span_id: id, resolved_text: text }),
+  });
+  const data = await resp.json();
+  if (data.ok) {
+    const card = document.getElementById('card-' + id);
+    card.classList.add('resolved');
+    // Update preview text
+    card.querySelector('.span-preview').textContent = text.slice(0, 120);
+    // Show or add checkmark
+    let mark = card.querySelector('.span-saved-mark');
+    if (!mark) {
+      mark = document.createElement('span');
+      mark.className = 'span-saved-mark';
+      mark.title = 'Resolved';
+      mark.textContent = '✓';
+      card.querySelector('.span-header').appendChild(mark);
+    }
+    // Change the agreement tag to show RESOLVED
+    const tag = card.querySelector('.span-tag');
+    if (tag && !tag.classList.contains('tag-agree')) {
+      tag.textContent = 'RESOLVED';
+      tag.className = 'span-tag tag-agree';
+    }
+    // Collapse the span body after a brief delay so the user sees the save feedback
+    setTimeout(() => {
+      document.getElementById('body-' + id).style.display = 'none';
+    }, 600);
+  }
+}
+
+async function resolveAll() {
+  const resp = await fetch('/api/resolve-all', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ chapter: '{{ chapter }}', page: {{ page_num }} }),
+  });
+  const data = await resp.json();
+  if (data.ok) {
+    // Update AGREE spans in-place without reloading (reload would reset JS-applied tags)
+    document.querySelectorAll('.span-card').forEach(card => {
+      const tag = card.querySelector('.span-tag');
+      if (!tag || !tag.classList.contains('tag-agree')) return;
+      if (card.classList.contains('resolved')) return;
+      card.classList.add('resolved');
+      if (!card.querySelector('.span-saved-mark')) {
+        const mark = document.createElement('span');
+        mark.className = 'span-saved-mark';
+        mark.title = 'Resolved';
+        mark.textContent = '✓';
+        card.querySelector('.span-header').appendChild(mark);
+      }
+      card.querySelector('.span-body').style.display = 'none';
+    });
+  }
+}
+</script>
+{% endif %}
+
+</body>
+</html>
