@@ -173,7 +173,7 @@ Now the speed of sound, denoted by c, can be found by solving
 a calculus problem known as Laplace's equation, given the density and elasticity of the air.
 The result of the calculation is
 #mitex("c^2 = \\frac{E}{\\rho_0}")
-Bernoulli's equation, one of the basic formulae of fluid dynamics, gives the relation between the pressure exerted by a moving fluid in the direction transverse to its motion (the *static pressure*) and the flow velocity #mi("u") as
+Bernoulli's equation, one of the basic formulae of fluid dynamics, gives the relation between the pressure exerted by a moving fluid in the direction transverse to its motion (the _static pressure_) and the flow velocity #mi("u") as
 #mitex("p + \\frac{1}{2} \\rho_o u^2 = \\text{constant}")
 The maximum change in pressure #mi("\\Delta p") caused by flow of velocity #mi("u") about a body is therefore (assuming there is some so-called stagnation point on the body's surface at which the fluid is decelerated to rest) of the order #mi("\\frac{1}{2} \\rho_0 u^2").
 This last quantity is often denoted by the symbol q and referred to as the dynamic pressure.
@@ -181,7 +181,7 @@ Substituting #mi("E = c^2 \\rho_0") and
 #mitex("\\Delta p \\approx \\frac{1}{2} \\rho_o u^2")
 into equation (4), we obtain
 #mitex("\\frac{\\Delta \\rho}{\\rho_0} \\equiv \\frac{\\rho_0 u^2}{2 c^2 \\rho_0} = \\frac{1}{2} \\left( \\frac{u}{c} \\right)^2")
-The ratio #mi("u/c") is known as the *Mach number* #mi("M") of the flow (named for Ernst Mach (1838-1916)).
+The ratio #mi("u/c") is known as the _Mach number_ #mi("M") of the flow (named for Ernst Mach (1838-1916)).
 Since, for approximate incompressibility to prevail, #mi(" \\Delta \\rho / \\rho_0 ") must be small compared to one, equation (8) gives
 #mitex("\\frac{1}{2} M^2 \\ll 1")
 // === page 26 ===
@@ -194,7 +194,7 @@ Hence, it will be assumed throughout this chapter's Sections #ref(<sec:basic-con
 ==== Viscosity and Kinematic Viscosity <sec:viscosity>
 Suppose we had a cube of some elastic solid material, such as hard rubber or some "springy" metal like steel or aluminum.
 Suppose, moreover, that we had somehow arranged to apply forces parallel to four faces of the cube in the manner shown in @fig:shear-solid (a).
-The force on each face (which is equal in magnitude to that on each of the other faces), divided by the area of that face, is known as the *shearing stress* #mi("\\tau") ,
+The force on each face (which is equal in magnitude to that on each of the other faces), divided by the area of that face, is known as the _shearing stress_ #mi("\\tau") ,
 // === page 27 ===
 // Figure 4
 #figure(
@@ -240,7 +240,7 @@ In fact, there are cases of the flow of extremely rarified gases in which a cons
 In all cases of interest to model rocketeers, however, the validity of the no-slip condition can be assumed.
 The no-slip condition has a number of ramifications in application to model rockets which will be detailed in @sec:viscous-drag.
 In our experiment, a consequence of the no-slip condition is that the velocity of the fluid increases linearly with height above the lower plate, from zero at the lower plate to U at the upper plate.
-Assuming the lower plate to be fastened to some fixture that prevents it from moving, there must be a force #mi("F") applied tangentially to the upper plate to *maintain* its velocity at #mi("U"), and since there is no acceleration #mi("F") must equal the frictional (or *viscous*) forces applied to the upper plate by the fluid.
+Assuming the lower plate to be fastened to some fixture that prevents it from moving, there must be a force #mi("F") applied tangentially to the upper plate to _maintain_ its velocity at #mi("U"), and since there is no acceleration #mi("F") must equal the frictional (or _viscous_) forces applied to the upper plate by the fluid.
 Furthermore, experiment reveals that
 // === page 31 ===
 #mitex("F \\propto \\frac{UA}{h}")
@@ -253,7 +253,7 @@ where the symbol #mi("\\propto") reads in English, "is directly proportional to"
 Specifically, it has been found that
 #mitex("\\tau = \\mu \\frac{du}{dy}")
 where #mi("\\mu") is the coefficient of viscosity, a physical property of the fluid.
-From (12b) it is seen that the shearing stress in a fluid is dependent on the *rate*, not the *amount* of deformation.
+From (12b) it is seen that the shearing stress in a fluid is dependent on the _rate_, not the _amount_ of deformation.
 The constant #mi("\\mu") is then a measure of a fluid's resistance to deformation.
 At room temperature, water is roughly 75 times as viscous as air.
 Substances like glycerine and molasses are more viscous still.
@@ -293,7 +293,7 @@ are referred to the excellent accounts in Shapiro @shape-and-flow and Schlichtin
 Suppose we consider the forces acting on a fluid element moving parallel to the x-axis of a Cartesian coordinate system at a velocity u, where u is a function of both the x and y coordinate values (@fig:fluid-element).
 The size of the fluid element is large compared with the dimensions of a molecule of fluid, and large compared with the average distance between the molecules, but small compared with the dimensions of the region in which fluid is flowing and small compared to the dimensions of any physical boundary or solid object nearby.
 The flow itself is composed of a very large number of fluid elements, such that variations in density, velocity, and all other physical properties between adjacent elements are small enough to permit the flow to appear continuous.
-There are essentially two types of forces which act upon an individual fluid element: *body* forces, which act from a distance (such as gravity), and *surface* forces, which act through the physical contact of one fluid element with another.
+There are essentially two types of forces which act upon an individual fluid element: _body_ forces, which act from a distance (such as gravity), and _surface_ forces, which act through the physical contact of one fluid element with another.
 Surface forces may be further subdivided into normal stresses (pressure), which act perpendicular to the surface, and shear stresses (viscous friction), which act parallel to the surface of the element.
 In this analysis, the body force due to gravity is assumed to be balanced by buoyancy forces in the fluid, and hence is neglected.
 Furthermore, the fluid is assumed incompressible, which means that the volume of each fluid element is constant;
@@ -313,7 +313,7 @@ Furthermore, the fluid is assumed incompressible, which means that the volume of
 ) <fig:free-stream-velocity>
 // === page 37 ===
 hence any elastic forces which might arise from a change in volume are neglected.
-The only forces left to consider, then, are *inertia* forces and *viscous* friction forces.
+The only forces left to consider, then, are _inertia_ forces and _viscous_ friction forces.
 We shall attempt to express the ratio of these two forces in terms of the variables which determine the nature of the flow: the density #mi("\\rho"), the coefficient of viscosity #mi("\\mu"), the free-stream velocity #mi("V"), and a characteristic linear dimension of any given solid body in the flow, #mi("L").
 The free-stream velocity #mi("V") is the velocity of the undisturbed fluid relative to the solid body.
 For a model rocket, #mi("V") is the velocity of the airstream as seen by an imaginary observer moving with the rocket, at points far enough from the rocket's surface to be undisturbed by its passage (@fig:free-stream-velocity).
@@ -335,7 +335,7 @@ Now using order-of-magnitude approximations, we can say that the velocity #mi(" 
 Hence the ratio of inertia force to friction force is given approximately by
 #mitex("\\frac{\\text{inertia force}}{\\text{friction force}} = \\frac{\\rho \\frac{V^2}{L^2}}{\\mu} = \\frac{\\rho}{\\mu} VL = \\frac{VL}{\\nu}")
 The quantity #mi(" \\frac{VL}{\\nu} ") is the Reynolds number.
-Part of the significance of this quantity (which is dimensionless when evaluated in a consistent set of units) stems from the answer to the following question: given two bodies, geometrically similar but of different sizes, what is the condition that must be satisfied for the *flow* over these two bodies to be similar; i.e., for the streamlines to be geometrically similar also?
+Part of the significance of this quantity (which is dimensionless when evaluated in a consistent set of units) stems from the answer to the following question: given two bodies, geometrically similar but of different sizes, what is the condition that must be satisfied for the _flow_ over these two bodies to be similar; i.e., for the streamlines to be geometrically similar also?
 Some thought reveals that the forces acting on any two fluid elements at geometrically similar positions must bear the same ratio in both cases, at each and every instant of time.
 If we consider now the type of flow from which we derived
 // === page 39 ===
@@ -367,7 +367,7 @@ Using #mi("\\nu = 1.495 \\times 10^{-5}") meter#mi("^2")/second, we obtain from 
 Because a consistent set of units was used, the Reynolds number is dimensionless; this must be the case, as the ratio of forces should not depend on the system of units used to evaluate it.
 It appears that model rocket flight thus enters regimes in which inertia forces on the air in regions surrounding the model are about a million times greater than frictional forces.
 One might assume, for this reason, that it would be possible to ignore friction forces completely in our analysis.
-Despite the attractiveness of this proposition, it does not stand up to experiment; friction forces exert a great influence on the flow around a body, no matter how great the Reynolds number, but their action is confined essentially to a very thin layer at the body's surface known as the *boundary layer*.
+Despite the attractiveness of this proposition, it does not stand up to experiment; friction forces exert a great influence on the flow around a body, no matter how great the Reynolds number, but their action is confined essentially to a very thin layer at the body's surface known as the _boundary layer_.
 This concept will be discussed more thoroughly in @sec:viscous-drag.
 
 ==== The Drag Coefficient <sec:drag-coefficient>
@@ -375,7 +375,7 @@ The drag coefficient of a body, denoted by #mi("C_D"), is defined as
 #mitex("C_D = \\frac{D}{\\frac{1}{2} \\rho V^2 A_r}")
 (18)
 // === page 42 ===
-where D is the drag force, #mi(" A_r ") is a characteristic "reference area" of the body (in model rockets, usually the body tube cross-sectional area), and #mi("\\frac{1}{2}\\rho V^2") is known as the *dynamic pressure*.
+where D is the drag force, #mi(" A_r ") is a characteristic "reference area" of the body (in model rockets, usually the body tube cross-sectional area), and #mi("\\frac{1}{2}\\rho V^2") is known as the _dynamic pressure_.
 In this form, evaluated with a consistent set of units, the drag coefficient is dimensionless.
 Under certain conditions the drag coefficient possesses a very useful and valuable property: given two geometrically similar bodies, the only difference in drag coefficient between them (if any) will be due to their being operated at different Reynolds numbers; the drag coefficient is a function of Reynolds number alone.
 Mathematically,
@@ -405,7 +405,7 @@ In flow past a body such as a model rocket, however, the static pressure as meas
 At a stagnation point (where the flow has been brought to rest relative to the body, as happens at the tip of the nose), for example, the static pressure will increase.
 In incompressible flow the amount of this increase is just #mi(" q = \\frac{1}{2} \\rho V^2 "), where #mi(" V ") is the free-stream velocity.
 At other points on the body, the static pressure will vary between its value at the stagnation point -- #mi(" (p_s)_{\\text{stag}} = p_0 + \\frac{1}{2} \\rho V^2 ") -- and some minimum value which can be less than the ambient static pressure #mi(" p_0 ").
-The fundamental relationship which relates changes in static pressure to changes in dynamic pressure #mi(" q ") is *Bernoulli's Principle*, which states that the total pressure #mi(" P_{tot} ") is a constant in frictionless, incompressible flow.
+The fundamental relationship which relates changes in static pressure to changes in dynamic pressure #mi(" q ") is _Bernoulli's Principle_, which states that the total pressure #mi(" P_{tot} ") is a constant in frictionless, incompressible flow.
 The total pressure is simply the sum of the local static and dynamic pressures, at any location in the flow:
 #mitex("P_{\\text{tot}} = p_{s1} + \\frac{1}{2}\\rho u_1^2 = p_{s2} + \\frac{1}{2}\\rho u_2^2 = \\text{constant}")
 where #mi(" p_{s1}, p_{s2} "), and #mi(" u_1, u_2 ") are the static pressures and velocities at any two points which have been designated point 1 and point 2, respectively.
@@ -428,18 +428,18 @@ In @sec:pressure-drag, Bernoulli's Principle and the concept of the pressure coe
 It has been found in practice that a systematic analysis of drag requires some scheme for dividing the drag into components,
 // === page 46 ===
 which can then be studied separately.
-In subsonic flow problems, the most common partitioning technique is to divide the total drag into *skin-friction drag* (due to forces tangential to the body surface) and *pressure drag* (resulting from forces perpendicular to the body surface).
+In subsonic flow problems, the most common partitioning technique is to divide the total drag into _skin-friction drag_ (due to forces tangential to the body surface) and _pressure drag_ (resulting from forces perpendicular to the body surface).
 Integration of the components of the tangential and normal forces which are parallel to the direction of motion leads to the following general expressions for the drag @missile-aerodynamics:
 
 (26) pressure drag: #mi(" D_p = - \\iint_S p \\cos(\\vec{n}, \\vec{V}) \\, dS ")
 
 (27) skin-friction drag: #mi(" D_v = \\iint_S \\tau \\cos(\\vec{t}, \\vec{V}) \\, dS ")
 
-The notation associated with these so-called *double integrals* or *surface integrals* is illustrated in @fig:surface-integral-notation.
+The notation associated with these so-called _double integrals_ or _surface integrals_ is illustrated in @fig:surface-integral-notation.
 The effect of performing the calculus operation called "integration" is just to add up all the infinitesimal contributions to drag resulting from the pressure and viscous skin-friction stress on each infinitesimal bit of surface area dS.
 The pressure integration results in equation (26), while the friction integration results in equation (27).
 The area S includes the base area of the rocket.
-The pressure drag may be further subdivided into the integral over the base area, called *base drag*, and the integral over the rest of the model's surface, called *pressure foredrag*:
+The pressure drag may be further subdivided into the integral over the base area, called _base drag_, and the integral over the rest of the model's surface, called _pressure foredrag_:
 
 #mi(" D_p = - \\iint_{S_b} p \\cos (\\vec{n}, \\vec{V}) \\, dS_b - \\iint_{S_S} p \\cos (\\vec{n}, \\vec{V}) \\, dS_S ")
 
@@ -469,7 +469,7 @@ Skin friction drag is discussed in @sec:viscous-drag, and base drag in @sec:pres
 The analysis of these sections will be valid only for zero angle of attack; in @sec:other-drag, the additional drag #mi(" D_\\alpha ") due to angular deflection of the rocket longitudinal axis from the direction of the relative airstream will be considered.
 The total drag at a general, nonzero angle of attack may then be written
 #mitex("D = D_b + D_f + D_v + D_\\alpha")
-Dividing by #mi(" \\frac{1}{2} \\rho V^2 A_r "), where the #mi(" A_r ") we will be using is the rocket's *maximum frontal area*, we can express the drag in nondimensional form as the sum of constituent drag coefficients:
+Dividing by #mi(" \\frac{1}{2} \\rho V^2 A_r "), where the #mi(" A_r ") we will be using is the rocket's _maximum frontal area_, we can express the drag in nondimensional form as the sum of constituent drag coefficients:
 #mitex("\\frac{D}{\\frac{1}{2} \\rho V^2 A_r} = C_D = C_{Db} + C_{Df} + C_{Dv} + C_{D\\alpha}")
 You should note the use of maximum cross-sectional area in this chapter for computing drag coefficients, as opposed to the use of the cross-sectional area at the base of the nose as the reference area for determining the normal force coefficients of Chapter 2's Barrowman analysis.
 // === page 49 ===
@@ -477,12 +477,12 @@ The above scheme of componentization will be used to study model rocket drag in 
 At this point something might be said about the relative importance of the various terms in equation (32).
 According to experimental evidence to date, the order of importance of the drag components of a typical streamlined, well-constructed model rocket might appear as follows:
 
-1) *Launch lug drag*: In models having launch lugs, the lug produces a component of pressure drag that must be added to the pressure foredrag.
+1) _Launch lug drag_: In models having launch lugs, the lug produces a component of pressure drag that must be added to the pressure foredrag.
 This component accounts for about 35% of the total #mi("C_D").
-2) *Skin-friction drag of forebody*: Accounts for 25% to 30% of the total #mi("C_D") in models having launch lugs, 35% to 45% in lugless models.
-3) *Skin-friction drag of fins*: Accounts for 25%-30% of the total #mi("C_D") in models with lugs, 35%-45% in lugless models.
-4) *Base drag*: Accounts for about 10% of the total #mi("C_D") in models having lugs, about 15% in lugless models.
-5) *Pressure foredrag*: Forebody pressure drag from sources other than launch lugs accounts for less than 1% of the total #mi("C_D").
+2) _Skin-friction drag of forebody_: Accounts for 25% to 30% of the total #mi("C_D") in models having launch lugs, 35% to 45% in lugless models.
+3) _Skin-friction drag of fins_: Accounts for 25%-30% of the total #mi("C_D") in models with lugs, 35%-45% in lugless models.
+4) _Base drag_: Accounts for about 10% of the total #mi("C_D") in models having lugs, about 15% in lugless models.
+5) _Pressure foredrag_: Forebody pressure drag from sources other than launch lugs accounts for less than 1% of the total #mi("C_D").
 The order of this list, and the relative magnitudes of the contributions, can be altered drastically by improper construction techniques.
 Failing to provide the fins with the
 // === page 50 ===
@@ -1241,7 +1241,7 @@ or, letting #mi(" R_a = A_2 / A_1 ").
   #mi("A_1") is the frontal cross-section area of the control surface; #mi("A_2") is the frontal cross-section area of the half-body.]
 ) <fig:half-body-pressure-drag>
 // === page 121 ===
-Drag, it will be recalled, represents the *momentum flux* through the control surface (as in the friction-drag calculations of @sec:viscous-drag).
+Drag, it will be recalled, represents the _momentum flux_ through the control surface (as in the friction-drag calculations of @sec:viscous-drag).
 Hence, (115) #mi(" D = A_1 (p_1 - p_2) + A_1 \\rho u_1^2 - (A_1 - A_2) \\rho u_2^2 ") Applying the condition of mass conservation, (116) #mi(" D = A_1 (p_1 - p_2) + A_1 \\rho u_1 (u_1 - u_2) ") From equation (113), then, (117) #mi(" D = A_1 \\frac{\\rho}{2} u_2^2 \\left\\{ 1 - (1 - R_a)^2 + 2 \\left[ (1 - R_a)^2 - 1 + R_a \\right] \\right\\} ") Finally, simplifying the algebra, one obtains (118) #mi(" D = A_1 \\frac{\\rho}{2} u_2^2 R_a^2 = A_2 \\frac{\\rho}{2} u_2^2 R_a ") or #mi(" C_D = R_a ").
 If we let the cross-sectional area #mi(" A_1 ") of the enclosing cylinder become infinitely large, #mi(" R_a ") goes to zero -- resulting in the prediction that the drag of a half-body in a fluid flow of infinite extent is zero.
 A better understanding of this result can be had by examining
@@ -1470,7 +1470,7 @@ Since the nozzle of a
 model rocket engine provides a natural concavity at the base, this technique, although not regarded as such, has been in use for some time.
 By recessing the engine slightly into the tube, thereby creating a deeper concavity, it may be possible to reduce base drag still further.
 Care must be taken not to recess the engine further than about half a body diameter, or the conditions of nozzle overexpansion responsible for the notorious Krushnic effect (named for Richard Krushnic, who discovered it in 1958) will be created, destroying most of the effective thrust (and probably the aft section of the model).
-Those readers desiring a further explanation of this interesting phenomenon may consult the article by Gordon Mandell in *Model Rocketry* magazine for November, 1969.
+Those readers desiring a further explanation of this interesting phenomenon may consult the article by Gordon Mandell in _Model Rocketry_ magazine for November, 1969.
 
 == Other Contributions to Model Rocket Drag <sec:other-drag>
 === Introduction <sec:other-drag-intro>
