@@ -1,3 +1,26 @@
+#import "@preview/unify:0.7.1": qty as _qty, unit, num
+
+// Units not in unify's SI registry — extend as needed for this book.
+// Values are Typst math expression strings passed to eval inside unify's rawunit mode.
+#let _raw-units = (
+  "psi":  "upright(\"psi\")",
+  "fps":  "upright(\"fps\")",
+  "rpm":  "upright(\"rpm\")",
+  "slug": "upright(\"slug\")",
+  "lb":   "upright(\"lb\")",
+  "lbf":  "upright(\"lbf\")",
+  "ft":   "upright(\"ft\")",
+)
+
+// Drop-in replacement for unify's qty that handles custom units automatically
+#let qty(value, unit-str, ..args) = {
+  if unit-str in _raw-units {
+    _qty(value, _raw-units.at(unit-str), rawunit: true, ..args)
+  } else {
+    _qty(value, unit-str, ..args)
+  }
+}
+
 // Review mode: conflict/minor spans are highlighted; set false for clean build
 #let review-mode = true
 

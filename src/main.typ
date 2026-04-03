@@ -1,6 +1,7 @@
 #import "preamble.typ": *
 #import "@preview/ilm:2.0.0": *
 #import "@preview/zero:0.6.1"
+#import "@preview/unify:0.7.1": qty
 
 #set text(lang: "en", font: "EB Garamond")
 #show math.equation: set text(font: "Garamond-Math")
@@ -28,4 +29,16 @@
 
 // #set par(first-line-indent: (amount: 1em, all: true))
 
+#show heading.where(level: 1): set heading(supplement: [Chapter])
+
+#set heading(numbering: (..nums) => {
+  let n = nums.pos()
+  if n.len() == 1 { numbering("1", ..n) }
+  else { n.slice(1).map(str).join(".") }
+})
+
+#include "chapters/ch0-intro.typ"
+#include "chapters/ch1-flight-dynamics.typ"
+#include "chapters/ch2-aerodynamic-stability.typ"
 #include "chapters/ch3-aerodynamic-drag.typ"
+#include "chapters/ch4-trajectory-analysis.typ"
