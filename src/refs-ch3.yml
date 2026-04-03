@@ -1,0 +1,182 @@
+model-rocket-drag-gregorek:
+  type: Misc
+  title: A Critical Examination of Model Rocket Drag for Use With Maximum Altitude Performance Charts
+  author: Gregorek, Gerald M.
+  date: 1967
+  note: Photocopy of original document
+
+center-of-pressure:
+  type: Report
+  title: Calculating the Center of Pressure of a Model Rocket
+  author: Barrowman, James
+  date: 1968
+  organization: Centuri Engineering Company
+  serial-number: TIR-33
+
+roughness-transition:
+  type: Report
+  title: Simplified Method for Determination of Critical Height of Distributed Roughness Particles for Boundary-Layer Transition at Mach Numbers from 0 to 5
+  author:
+    - Braslow, Albert L.
+    - Knox, Eugene C.
+  date: 1958-09
+  organization: National Advisory Committee for Aeronautics
+  serial-number: Technical Note 4363
+
+power-on-base-drag:
+  type: Article
+  title: An Empirical Technique for Estimating Power-On Base Drag of Bodies-of-Revolution With a Single Jet Exhaust
+  author:
+    - Brazzel, Charles E.
+    - Henderson, James H.
+  date: 1966-09
+  parent:
+    type: Proceedings
+    title: AGARD Conference Proceedings
+    serial-number: CP-10
+
+base-drag-recessing:
+  type: Report
+  title: Effects on Base Drag of Recessing the Bases of Conical Afterbodies at Subsonic and Transonic Speeds
+  author: Compton, William B., III
+  date: 1968-10
+  organization: National Aeronautics and Space Administration
+  serial-number: TN D-4821
+
+datcom:
+  type: Report
+  title: "United States Air Force Stability and Control Datcom"
+  author:
+    - Ellison, D. E.
+    - Malthan, L. V.
+  date: 1960-10
+  organization: Douglas Aircraft Company, Inc.
+  note: Revised July 1963. Prepared under contract for the Flight Control Division, Air Force Flight Dynamics Laboratory, Wright-Patterson Air Force Base, Ohio
+
+exterior-ballistics:
+  type: Book
+  title: The Exterior Ballistics of Rockets
+  author:
+    - Davis, L., Jr.
+    - Follin, James W., Jr.
+    - Blitzer, Leon
+  date: 1958
+  publisher: D. Van Nostrand Company, Inc.
+  location: Princeton, New Jersey
+
+aerodynamic-theory:
+  type: Book
+  title: "Aerodynamic Theory: A General Review of Progress"
+  editor: Durand, Frederick W.
+  date: 1963
+  publisher: Dover Publications, Inc.
+  location: New York
+  note: 6 vols. Unabridged republication of 1936 work
+
+fluid-dynamic-drag:
+  type: Book
+  title: Fluid-Dynamic Drag
+  author: Hoerner, Sighard F.
+  date: 1958
+  publisher: Published by the author
+  location: Midland Park, New Jersey
+
+altitude-performance:
+  type: Report
+  title: Model Rocket Altitude Performance
+  author: Malewicki, Douglas
+  date: 1968
+  organization: Centuri Engineering Company
+  serial-number: TIR-100
+
+newtonian-aerodynamics:
+  type: Report
+  title: Newtonian Aerodynamics for Tangent Ogive Bodies of Revolution
+  author: Mayo, Edward E.
+  date: 1956-03
+  organization: National Advisory Committee for Aeronautics
+  serial-number: TN D-3337
+
+applied-hydro-aeromechanics:
+  type: Book
+  title: Applied Hydro- and Aeromechanics
+  author:
+    - Prandtl, L.
+    - Tietjens, O. G.
+  date: 1957
+  publisher: Dover Publications, Inc.
+  location: New York
+  note: Unabridged republication of 1934 work
+
+fundamentals-hydro-aeromechanics:
+  type: Book
+  title: Fundamentals of Hydro- and Aeromechanics
+  author:
+    - Prandtl, L.
+    - Tietjens, O. G.
+  date: 1957
+  publisher: Dover Publications, Inc.
+  location: New York
+  note: Unabridged republication of 1934 work
+
+missile-aerodynamics:
+  type: Book
+  title: Missile Aerodynamics
+  author: Nielsen, Jack N.
+  date: 1960
+  publisher: McGraw-Hill Book Company, Inc.
+  location: New York
+
+boundary-layer-theory:
+  type: Book
+  title: Boundary Layer Theory
+  author: Schlichting, Hermann
+  date: 1960
+  edition: 4
+  publisher: McGraw-Hill Book Company, Inc.
+  location: New York
+
+review-base-drag:
+  type: Article
+  title: Review of Base Drag
+  author: Sedney, R.
+  date: 1966-09
+  parent:
+    type: Proceedings
+    title: AGARD Conference Proceedings
+    serial-number: CP-10
+
+shape-and-flow:
+  type: Book
+  title: "Shape and Flow: The Fluid Dynamics of Drag"
+  author: Shapiro, Ascher H.
+  date: 1961
+  publisher: Doubleday and Company, Inc.
+  location: Garden City, New York
+  series: Science Study Series
+
+handbook-model-rocketry:
+  type: Book
+  title: Handbook of Model Rocketry
+  author: "Stine, G. Harry"
+  date: 1965
+  publisher: Follett Publishing Company
+  location: Chicago
+
+us-standard-atmosphere:
+  type: Report
+  title: United States Standard Atmosphere, 1962
+  date: 1962
+  organization: U.S. Government Printing Office
+  location: Washington, D.C.
+
+drag-coefficient-measurements:
+  type: Article
+  title: Drag Coefficient Measurements
+  author: Malewicki, Douglas
+  date: 1970-04
+  parent:
+    type: Periodical
+    title: Model Rocketry
+    publisher: Model Rocketry, Inc.
+    location: Cambridge, Massachusetts

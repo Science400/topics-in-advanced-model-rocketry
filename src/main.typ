@@ -42,3 +42,5 @@
 #include "chapters/ch2-aerodynamic-stability.typ"
 #include "chapters/ch3-aerodynamic-drag.typ"
 #include "chapters/ch4-trajectory-analysis.typ"
+
+// #bibliography("refs-ch3.yml", style: "ieee")
