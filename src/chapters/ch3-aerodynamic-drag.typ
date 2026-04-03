@@ -29,7 +29,7 @@ set of experimental data on model rocket drag available to date.
 
 During the same period, serious analytical and semiempirical studies of the model rocket drag problem first began to appear.
 The Research and Development competition event at the Eighth Annual National Model Rocket Championships in 1966 saw the presentation of a paper by Dr. Gerald M.Gregorek of Ohio State University, entitled "A Critical Examination of Model Rocket Drag for Use with Maximum Altitude Performance Charts".
-Dr. Gregorek's paper, a milestone in the hobby comparable to the advent of Barrowman analysis in stability determination, and to Malewicki's publication of altitude graphs based on closed-form solutions to the equations of vertical motion for model rockets, presented a semiempirical method for calculating the drag coefficient of a model rocket based on the _United States Air Force Stability and Control Datcom_ (Datcom being an acronym for #emph[Dat]a #emph[Com]pendium).
+Dr. Gregorek's paper, a milestone in the hobby comparable to the advent of Barrowman analysis in stability determination, and to Malewicki's publication of altitude graphs based on closed-form solutions to the equations of vertical motion for model rockets, presented a semiempirical method for calculating the drag coefficient of a model rocket based on the _United States Air Force Stability and Control Datcom_ (Datcom being an acronym for #underline[Dat]a #underline[Com]pendium).
 The Gregorek treatment deserves credit, not only for being the first in-depth, analytical discussion of the topic of model rocket drag, but also for motivating the growing body of literature on the subject that has appeared in the hobby since the original paper was presented and subsequently, widely circulated among interested local sections of the National Association of Rocketry.
 Since its first appearance in 1968, the periodical _Model Rocketry_ has carried a number of articles concerned with the topic of drag coefficient determination by both experimental and analytical means.
 Contributors to the literature over the past three years have included George J. Caporaso, Douglas J. Malewicki, Forrest M.
@@ -39,10 +39,10 @@ It is in this atmosphere of increased interest in the determination of model roc
 
 The treatment to be presented here is divided into eight major sections, of which the first is a basic survey of the properties and importance of model rocket drag.
 @sec:basic-concepts presents discussions of the basic concepts--drag coefficient, Reynolds number, and so on--which will be employed repeatedly in the subsequent sections.
-Sections 3 and 4 contain analyses of the two major contributions to drag at a zero angle of attack: pressure forces and skin friction, while Section 5 examines drag due to the side force (or "lift") on a yawed rocket, drag due to nonzero roll rate, and drag due to surface roughness.
-Section 6 contains information of use in the practical calculation of drag coefficients for specific model rockets.
+Sections #ref(<sec:viscous-drag>, supplement: none) and #ref(<sec:pressure-drag>, supplement: none) contain analyses of the two major contributions to drag at a zero angle of attack: pressure forces and skin friction, while @sec:other-drag examines drag due to the side force (or "lift") on a yawed rocket, drag due to nonzero roll rate, and drag due to surface roughness.
+@sec:zero-lift-drag-calc contains information of use in the practical calculation of drag coefficients for specific model rockets.
 I have, for this purpose, used a slight modification of the _USAF Stability and Control Datcom_ method which is applicable to the regime of relatively low Reynolds numbers (usually under #num[3e6]) typically encountered in model rocketry.
-In Section 7 a semiempirical method of accounting for the effects of compressible airflow on the drag coefficients of extremely high-performance model rockets is considered, and the chapter is concluded with a survey of experimental methods for the determination of model rocket drag.
+In @sec:transonic-supersonic-drag a semiempirical method of accounting for the effects of compressible airflow on the drag coefficients of extremely high-performance model rockets is considered, and the chapter is concluded with a survey of experimental methods for the determination of model rocket drag.
 
 The accurate determination of model rocket drag requires a rather precise knowledge of the airflow pattern which exists
 // === page 15 ===
@@ -72,7 +72,7 @@ Defined in this manner, the total drag of any body is, of course, positive.
 The drag of a model rocket is a complicated function of its size, shape, finish, velocity, and angle of attack, and of the thermodynamic state of the air.
 // === page 17 ===
 Even for relatively simple rocket shapes, the relationship between drag and the variables upon which it depends is virtually impossible to predict with any precision on a purely theoretical basis.
-Resort must be had to semiempirical methods--composites of theoretical predictions and experimental data--like the one employed in Section 6; hence the need for extensive experimental research on model rocket shapes, to confirm (or if necessary, correct) any such method.
+Resort must be had to semiempirical methods--composites of theoretical predictions and experimental data--like the one employed in @sec:zero-lift-drag-calc; hence the need for extensive experimental research on model rocket shapes, to confirm (or if necessary, correct) any such method.
 In @model-rocket-drag the definition of drag (which is considered to originate from the model's center of pressure, or C.P.), and the multiplicity of factors which determine its magnitude, have been illustrated.
 
 Because of their lightweight, low-density construction, model rockets have lower ratios of weight to frontal and surface area than any other class of ballistic, rocket-propelled bodies.
@@ -108,7 +108,7 @@ and each constituent of aerodynamic drag considered, it will be found that these
 This section will lay the foundation for a detailed analysis of drag forces by presenting a number of basic concepts and ideas.
 @sec:atmospheric-properties will examine certain physical properties of the atmosphere, and the variation of these properties as they affect calculations of drag (and hence, altitude performance).
 The dimensionless quantities defined and discussed in @sec:density will be used extensively in succeeding sections, particularly the Reynolds number #mi("R") and the drag coefficient #mi("C_D") .
-Section 2.3 concludes the treatment of basic concepts with a discussion of the scheme by which the total drag force is separated into components and analyzed in later sections.
+@sec:drag-constituents concludes the treatment of basic concepts with a discussion of the scheme by which the total drag force is separated into components and analyzed in later sections.
 
 === Atmospheric Properties for Model Rocket Flight <sec:atmospheric-properties>
 The physical properties of the atmosphere of greatest interest to model rocketry are its mass density #mi(" \\rho "), its absolute coefficient of viscosity #mi(" \\mu "), and the ratio between these two quantities, the kinematic viscosity #mi(" \\nu = (\\mu / \\rho) ").
@@ -123,18 +123,27 @@ The assumed sea-level temperature for the tabulations is 59° Fahrenheit (15° C
 A measure of the drag force exerted on a rocket is the total momentum the rocket imparts to the originally stationary fluid through which it travels.
 Momentum is directly proportional to the mass of the fluid displaced; and since the density of a fluid is simply its mass per unit volume, its connection with drag is established.
 As mentioned in Chapter 1 and shown later in this chapter, the overall drag on a model rocket is directly proportional to the mass density of the air through which it flies.
-Atmospheric density generally decreases with altitude, as seen in Figure 2.
+Atmospheric density generally decreases with altitude, as seen in @fig:atm-density.
 At an altitude of 300 meters, #mi(" \\rho ") departs from its sea-level value by just under 3%.
 At 1000 meters, a respectable altitude for a model rocket, the deviation is just over 9%.
 By the time a height of 3000 meters, the practical altitude limit for a model rocket, is reached the density has decreased by 25.6%.
 Except in cases of extremely high performance models, the variation in atmospheric density during the course of a flight is rarely considered.
 It is, however, fairly common for modelers to account for the elevation of their launch
 // === page 22 ===
-Figure 2: Variation of standard atmospheric density with altitude above sea level.
-Figure 3: Variation of standard atmospheric temperature with altitude above sea level.
+// Figure 2
+#figure(
+  image("../../assets/figures-original/fig3-2.png"),
+  caption: [Variation of standard atmospheric density with altitude above sea level.]
+) <fig:atm-density>
+
+// Figure 3
+#figure(
+  image("../../assets/figures-original/fig3-3.png"),
+  caption: [Variation of standard atmospheric temperature with altitude above sea level.]
+) <fig:atm-temperature>
 // === page 23 ===
 sites by using the atmospheric density at the launcher elevation in their calculations of drag.
-Density is also affected by the temperature of the air; in fact, the Standard Atmosphere density graph of Figure 2 is based on the relationship of temperature to altitude shown in Figure 3.
+Density is also affected by the temperature of the air; in fact, the Standard Atmosphere density graph of @fig:atm-density is based on the relationship of temperature to altitude shown in @fig:atm-temperature.
 It can be seen from the graph that the Standard Atmosphere assumes a so-called "linear lapse rate" of about 1° C.
 for each 154 meters of altitude.
 As we all know from experience, however, the temperature at any given launch site may vary widely from day to day; for very precise performance calculations one might therefore wish to use the perfect gas law for correcting the density according to
@@ -176,22 +185,29 @@ Since, for approximate incompressibility to prevail, #mi(" \\Delta \\rho / \\rho
 #mitex("\\frac{1}{2} M^2 \\ll 1")
 // === page 26 ===
 If one assumes #mi(" \\Delta \\rho / \\rho_0 = 0.05 ") to be the largest tolerable relative compression for which compressibility need not be considered, one derives #mi(" \\frac{1}{2} M^2 = .05 "), or #mi(" M = 0.316 ").
-Since the velocity of sound at sea level (see Figure 4) is about 340 meters/second, this value of Mach number corresponds to a rocket velocity of about 107 meters/second.
+Since the velocity of sound at sea level (see @fig:atm-sound-speed) is about 340 meters/second, this value of Mach number corresponds to a rocket velocity of about 107 meters/second.
 High-performance model rockets certainly attain, and often exceed, this value in flight, but for the majority of model rockets it is a fairly high figure, attained only during the final instants of powered flight, if at all, and then persisting for only a short time after burnout.
-As we shall see in Section 7, moreover, slender, finned projectiles like model rockets possess the fortunate property that, throughout much of the higher subsonic flight regime, the influence of compressibility on the overall drag characteristics of the body as computed according to incompressible flow theory is relatively slight even though the relative compression itself is not.
-Hence, it will be assumed throughout this chapter's Sections 1 through 6 that effects due to the compressibility of air are negligible.
+As we shall see in @sec:transonic-supersonic-drag, moreover, slender, finned projectiles like model rockets possess the fortunate property that, throughout much of the higher subsonic flight regime, the influence of compressibility on the overall drag characteristics of the body as computed according to incompressible flow theory is relatively slight even though the relative compression itself is not.
+Hence, it will be assumed throughout this chapter's Sections #ref(<sec:basic-considerations>, supplement: none) through #ref(<sec:zero-lift-drag-calc>, supplement: none) that effects due to the compressibility of air are negligible.
 
 ==== Viscosity and Kinematic Viscosity <sec:viscosity>
 Suppose we had a cube of some elastic solid material, such as hard rubber or some "springy" metal like steel or aluminum.
-Suppose, moreover, that we had somehow arranged to apply forces parallel to four faces of the cube in the manner shown in Figure 5a.
+Suppose, moreover, that we had somehow arranged to apply forces parallel to four faces of the cube in the manner shown in @fig:shear-solid (a).
 The force on each face (which is equal in magnitude to that on each of the other faces), divided by the area of that face, is known as the *shearing stress* #mi("\\tau") ,
 // === page 27 ===
-Figure 4: Variation of standard atmospheric sound speed with altitude above sea level.
-#mitex("\\tau = \\frac{F}{A_c}")
-#mitex("\\gamma = \\frac{\\pi}{2} - \\theta")
-Figure 5: Shearing deformation of an elastic solid.
-A cube of elastic material is subjected to a shearing stress #mi(" \\tau ") on its lateral faces (a), placing it in a state of uniform shearing strain #mi(" \\gamma ") as shown in (b).
-The cube is viewed directly from the front, so that only its forward face is visible.
+// Figure 4
+#figure(
+  image("../../assets/figures-original/fig3-4.png"),
+  caption: [Variation of standard atmospheric sound speed with altitude above sea level.]
+) <fig:atm-sound-speed>
+
+// Figure 5
+#figure(
+  image("../../assets/figures-original/fig3-5.png"),
+  caption: [Shearing deformation of an elastic solid.
+  A cube of elastic material is subjected to a shearing stress #mi("\\tau") (#mi("\\tau = F/A_c")) on its lateral faces (a), placing it in a state of uniform shearing strain #mi("\\gamma") (#mi("\\gamma = \\pi/2 - \\theta")) as shown in (b).
+  The cube is viewed directly from the front, so that only its forward face is visible.]
+) <fig:shear-solid>
 // === page 28 ===
 given in MKS units as newtons/meter#mi("^2").
 Thus, if the face area is denoted by #mi("A_C") and the force by #mi("F"), #mi("\\tau = F/A_C").
@@ -204,12 +220,16 @@ The stress required to produce a given shear strain is given by Hooke's law as
 where #mi("G"), given in newtons/meter#mi("^2"), is called the torsion modulus or shear modulus.
 In elastic solids, then, the shearing stress is directly proportional to the amount of shearing strain.
 In fluids, however, the deformation law assumes a different dependence on strain, as the following experiment demonstrates.
-Consider two very long parallel plates, containing a viscous fluid between them (the meaning of "viscous" will become clear as the experiment proceeds), as in Figure 6 (after 15).
+Consider two very long parallel plates, containing a viscous fluid between them (the meaning of "viscous" will become clear as the experiment proceeds), as in @fig:shear-fluid (after 15).
 The lower plate is fixed in the observer's reference frame, while the upper plate, at a height #mi("h") above the lower, moves to the
 // === page 29 ===
-Figure 6: Shearing deformation of a viscous fluid.
-The lower plate is fixed, while the upper plate moves at horizontal velocity U.
-The horizontal velocity of the fluid confined between the plates is given by #mi("u = Uy/h").
+// Figure 6
+#figure(
+  image("../../assets/figures-original/fig3-6.png"),
+  caption: [Shearing deformation of a viscous fluid.
+  The lower plate is fixed, while the upper plate moves at horizontal velocity U.
+  The horizontal velocity of the fluid confined between the plates is given by #mi("u = Uy/h").]
+) <fig:shear-fluid>
 // === page 30 ===
 right with a constant velocity U.
 An extremely important experimental observation about viscous fluid flow is that the fluid behaves as if it were adhering to any surface with which it comes in contact -- that is, the fluid directly adjacent to any given surface undergoes no relative motion with respect to that surface; it "sticks" to it.
@@ -217,7 +237,7 @@ This phenomenon, known as the no-slip condition at the wall, means that the mate
 The no-slip condition is a useful physical assumption in continuum fluid dynamics, although it is by no means an absolutely valid physical model of what actually happens near a surface in fluid flow.
 In fact, there are cases of the flow of extremely rarified gases in which a considerable amount of "slip" relative to the wall occurs and a finite-slip condition must be applied.
 In all cases of interest to model rocketeers, however, the validity of the no-slip condition can be assumed.
-The no-slip condition has a number of ramifications in application to model rockets which will be detailed in Section 3.
+The no-slip condition has a number of ramifications in application to model rockets which will be detailed in @sec:viscous-drag.
 In our experiment, a consequence of the no-slip condition is that the velocity of the fluid increases linearly with height above the lower plate, from zero at the lower plate to U at the upper plate.
 Assuming the lower plate to be fastened to some fixture that prevents it from moving, there must be a force #mi("F") applied tangentially to the upper plate to *maintain* its velocity at #mi("U"), and since there is no acceleration #mi("F") must equal the frictional (or *viscous*) forces applied to the upper plate by the fluid.
 Furthermore, experiment reveals that
@@ -238,16 +258,24 @@ At room temperature, water is roughly 75 times as viscous as air.
 Substances like glycerine and molasses are more viscous still.
 Thus you can see that the word "thick", as applied to fluids colloquially, is roughly equivalent to the more technical term "viscous".
 For gases, to a first approximation, #mi("\\mu") can be considered independent of pressure, depending only on temperature.
-In Figure 7, #mi("\\mu") is seen to decrease steadily with increasing altitude.
+In @fig:atm-viscosity, #mi("\\mu") is seen to decrease steadily with increasing altitude.
 The ratio of the coefficient of viscosity to the density of a fluid is called its kinematic viscosity \nu = \mu/\rho .
 It is
 // === page 32 ===
-Figure 7: Variation of the absolute viscosity of standard atmosphere with altitude above sea level.
+// Figure 7
+#figure(
+  image("../../assets/figures-original/fig3-7.png"),
+  caption: [Variation of the absolute viscosity of standard atmosphere with altitude above sea level.]
+) <fig:atm-viscosity>
 // === page 33 ===
-Figure 8: Variation of the kinematic viscosity of standard atmosphere with altitude above sea level.
+// Figure 8
+#figure(
+  image("../../assets/figures-original/fig3-8.png"),
+  caption: [Variation of the kinematic viscosity of standard atmosphere with altitude above sea level.]
+) <fig:atm-kinematic-viscosity>
 // === page 34 ===
 this quantity, rather than \rho independently, that will appear repeatedly in our analysis of drag; its significance is discussed in the treatment of Reynolds number.
-For the present, we observe from Figure 8 that \nu increases relatively slowly with altitude.
+For the present, we observe from @fig:atm-kinematic-viscosity that \nu increases relatively slowly with altitude.
 This is because at altitudes typical of model rocket flight, although \rho and \mu are both decreasing, \rho is decreasing at a faster rate than \mu with increasing altitude.
 At an altitude of 300 meters, \nu is only about 2.4% greater than its sea-level value.
 In the calculations of this chapter \nu will be assumed to have a constant value of #mi(" 1.495 \\times 10^{-5} ") meter#mi("^2")/second, an average valid for the temperature and density variations normally encountered in flying model rockets.
@@ -261,7 +289,7 @@ The theoretical derivation of the Reynolds number may be accomplished in a varie
 I shall use the second approach, since I feel it is of greatest interest to model rocketeers; those readers who desire to follow the other lines of argument
 // === page 35 ===
 are referred to the excellent accounts in Shapiro (17) and Schlichting (15).
-Suppose we consider the forces acting on a fluid element moving parallel to the x-axis of a Cartesian coordinate system at a velocity u, where u is a function of both the x and y coordinate values (Figure 9).
+Suppose we consider the forces acting on a fluid element moving parallel to the x-axis of a Cartesian coordinate system at a velocity u, where u is a function of both the x and y coordinate values (@fig:fluid-element).
 The size of the fluid element is large compared with the dimensions of a molecule of fluid, and large compared with the average distance between the molecules, but small compared with the dimensions of the region in which fluid is flowing and small compared to the dimensions of any physical boundary or solid object nearby.
 The flow itself is composed of a very large number of fluid elements, such that variations in density, velocity, and all other physical properties between adjacent elements are small enough to permit the flow to appear continuous.
 There are essentially two types of forces which act upon an individual fluid element: *body* forces, which act from a distance (such as gravity), and *surface* forces, which act through the physical contact of one fluid element with another.
@@ -269,20 +297,29 @@ Surface forces may be further subdivided into normal stresses (pressure), which 
 In this analysis, the body force due to gravity is assumed to be balanced by buoyancy forces in the fluid, and hence is neglected.
 Furthermore, the fluid is assumed incompressible, which means that the volume of each fluid element is constant;
 // === page 36 ===
-Figure 9: A fluid element in Cartesian coordinates, showing the variation of the x-component of velocity with the y coordinate and the shearing stress on the upper and lower y-faces of the element.
-Figure 10: The concept of free-stream velocity.
-The air in the free stream moves past the rocket at velocity #mi("V"), while the air in the "boundary layer" next to the rocket's surface is slowed down by viscous friction.
-The thickness of the boundary layer has been greatly exaggerated to make it visible; actual boundary layers have thicknesses on the order of #mi("10^{-2}") or #mi("10^{-3}") cm.
+// Figure 9
+#figure(
+  image("../../assets/figures-original/fig3-9.png"),
+  caption: [A fluid element in Cartesian coordinates, showing the variation of the x-component of velocity with the y coordinate and the shearing stress on the upper and lower y-faces of the element.]
+) <fig:fluid-element>
+
+// Figure 10
+#figure(
+  image("../../assets/figures-original/fig3-10.png"),
+  caption: [The concept of free-stream velocity.
+  The air in the free stream moves past the rocket at velocity #mi("V"), while the air in the "boundary layer" next to the rocket's surface is slowed down by viscous friction.
+  The thickness of the boundary layer has been greatly exaggerated to make it visible; actual boundary layers have thicknesses on the order of #mi("10^{-2}") or #mi("10^{-3}") cm.]
+) <fig:free-stream-velocity>
 // === page 37 ===
 hence any elastic forces which might arise from a change in volume are neglected.
 The only forces left to consider, then, are *inertia* forces and *viscous* friction forces.
 We shall attempt to express the ratio of these two forces in terms of the variables which determine the nature of the flow: the density #mi("\\rho"), the coefficient of viscosity #mi("\\mu"), the free-stream velocity #mi("V"), and a characteristic linear dimension of any given solid body in the flow, #mi("L").
 The free-stream velocity #mi("V") is the velocity of the undisturbed fluid relative to the solid body.
-For a model rocket, #mi("V") is the velocity of the airstream as seen by an imaginary observer moving with the rocket, at points far enough from the rocket's surface to be undisturbed by its passage (Figure 10).
+For a model rocket, #mi("V") is the velocity of the airstream as seen by an imaginary observer moving with the rocket, at points far enough from the rocket's surface to be undisturbed by its passage (@fig:free-stream-velocity).
 It is important to distinguish #mi("V") from the velocity of elements very near the body; for the elements at the surface itself this velocity is effectively zero.
 In most cases applicable to model rockets, #mi("L") will refer to the total length of the rocket.
-When we consider friction drag in Section 3, however, we will find that the nature of the flow over the fins is determined by the fin chord #mi("c"), so #mi("L") will be taken as #mi("c") in that instance.
-From considering Figure 9, one can determine that the net resultant of all shearing forces on the element is
+When we consider friction drag in @sec:viscous-drag, however, we will find that the nature of the flow over the fins is determined by the fin chord #mi("c"), so #mi("L") will be taken as #mi("c") in that instance.
+From considering @fig:fluid-element, one can determine that the net resultant of all shearing forces on the element is
 #mitex("\\quad (\\tau + \\frac{\\partial \\tau}{\\partial y} dy) dx dz - \\tau dx dz = \\frac{\\partial \\tau}{\\partial y} dx dy dz")
 Applying equation (12b) and dividing through by #mi("dx dy dz"), the volume of the element, we find the shear force per unit volume as
 // === page 38 ===
@@ -330,7 +367,7 @@ Because a consistent set of units was used, the Reynolds number is dimensionless
 It appears that model rocket flight thus enters regimes in which inertia forces on the air in regions surrounding the model are about a million times greater than frictional forces.
 One might assume, for this reason, that it would be possible to ignore friction forces completely in our analysis.
 Despite the attractiveness of this proposition, it does not stand up to experiment; friction forces exert a great influence on the flow around a body, no matter how great the Reynolds number, but their action is confined essentially to a very thin layer at the body's surface known as the *boundary layer*.
-This concept will be discussed more thoroughly in Section 3.
+This concept will be discussed more thoroughly in @sec:viscous-drag.
 
 ==== The Drag Coefficient <sec:drag-coefficient>
 The drag coefficient of a body, denoted by #mi("C_D"), is defined as
@@ -349,7 +386,7 @@ Unfortunately, there are few individuals with access to the necessary equipment 
 One solution to this problem is to resort to semi-empirical expressions for the drag coefficient which have been compiled from statistics derived by testing a great many subsonic rocket
 // === page 43 ===
 vehicles.
-In Section 6, one such method is presented and analyzed in detail.
+In @sec:zero-lift-drag-calc, one such method is presented and analyzed in detail.
 Although these formulae are not applicable to bizarre model rocket shapes, and have not yet been extended to multistaged vehicles with any considerable degree of confidence in their accuracy, they do permit sizeable variations in nose cone shape, fin planform, number of fins, boattail characteristics, and general physical dimensions for single-stage rockets.
 Since the empirical expression must necessarily be dependent on Reynolds number, it would appear that a laborious computational procedure is still required to determine graphically the relationship between #mi("C_D") and #mi("R") for any given model.
 Fortunately, as we shall see later, the drag force on a model rocket over a considerable range of Reynolds numbers of interest is very nearly proportional to the square of the velocity:
@@ -383,7 +420,7 @@ In an analogous manner we can define a pressure coefficient.
 It is apparent from the above discussion that differences in pressure, rather than absolute pressures, are important in determining fluid dynamic forces.
 Hence we define (25) #mi(" C_p \\equiv \\frac{\\Delta p}{q} \\equiv \\frac{p - p_{\\infty}}{q} ") where p is the local static pressure, #mi(" p_{\\infty} ") is the ambient atmospheric pressure (free-stream static pressure) -- 101,325 newtons/meter#mi("^2") at sea level -- and q is the free-stream dynamic pressure, #mi(" \\frac{1}{2} \\rho V^2 ").
 At a stagnation point, equation (25) gives the result #mi(" C_p = +1.0 ").
-In Section 4, Bernoulli's Principle and the concept of the pressure coefficient will be used to explain the existence of pressure drag.
+In @sec:pressure-drag, Bernoulli's Principle and the concept of the pressure coefficient will be used to explain the existence of pressure drag.
 
 === Constituents of the Total Drag Coefficient <sec:drag-constituents>
 
@@ -397,7 +434,7 @@ Integration of the components of the tangential and normal forces which are para
 
 (27) skin-friction drag: #mi(" D_v = \\iint_S \\tau \\cos(\\vec{t}, \\vec{V}) \\, dS ")
 
-The notation associated with these so-called *double integrals* or *surface integrals* is illustrated in Figure 11.
+The notation associated with these so-called *double integrals* or *surface integrals* is illustrated in @fig:surface-integral-notation.
 The effect of performing the calculus operation called "integration" is just to add up all the infinitesimal contributions to drag resulting from the pressure and viscous skin-friction stress on each infinitesimal bit of surface area dS.
 The pressure integration results in equation (26), while the friction integration results in equation (27).
 The area S includes the base area of the rocket.
@@ -408,8 +445,12 @@ The pressure drag may be further subdivided into the integral over the base area
 where #mi(" S_b ") denotes the base area and #mi(" S_S ") the total forebody surface, or "wetted", area.
 Equation (28) may also be written using
 // === page 47 ===
-Figure 11: Notation used in the surface integrations for calculating friction drag and pressure drag.
-The unit vector #mi("\\vec{n}"), perpendicular to the surface, and the unit vector #mi("\\vec{t}"), tangent to the surface, originate from the center of the small element of area #mi("dS").
+// Figure 11
+#figure(
+  image("../../assets/figures-original/fig3-11.png"),
+  caption: [Notation used in the surface integrations for calculating friction drag and pressure drag.
+  The unit vector #mi("\\vec{n}"), perpendicular to the surface, and the unit vector #mi("\\vec{t}"), tangent to the surface, originate from the center of the small element of area #mi("dS").]
+) <fig:surface-integral-notation>
 The drag force on a model rocket over a considerable range of Reynolds numbers is nearly proportional to the square of the velocity:
 #mitex("D = k V^2")
 where #mi(" k ") is a constant.
@@ -423,8 +464,8 @@ where #mi(" D_b ") denotes the base drag and #mi(" D_f ") the pressure foredrag.
 This arrangement is convenient because base drag is an important topic in itself, and special techniques are employed to reduce it.
 The total drag at zero angle of attack is then
 #mitex("D = D_b + D_f + D_v")
-Skin friction drag is discussed in Section 3, and base drag in Section 4.
-The analysis of these sections will be valid only for zero angle of attack; in Section 5, the additional drag #mi(" D_\\alpha ") due to angular deflection of the rocket longitudinal axis from the direction of the relative airstream will be considered.
+Skin friction drag is discussed in @sec:viscous-drag, and base drag in @sec:pressure-drag.
+The analysis of these sections will be valid only for zero angle of attack; in @sec:other-drag, the additional drag #mi(" D_\\alpha ") due to angular deflection of the rocket longitudinal axis from the direction of the relative airstream will be considered.
 The total drag at a general, nonzero angle of attack may then be written
 #mitex("D = D_b + D_f + D_v + D_\\alpha")
 Dividing by #mi(" \\frac{1}{2} \\rho V^2 A_r "), where the #mi(" A_r ") we will be using is the rocket's *maximum frontal area*, we can express the drag in nondimensional form as the sum of constituent drag coefficients:
@@ -451,18 +492,22 @@ Typical values of the total drag coefficient for model rockets with launch lugs 
 By comparison, a circular disc held perpendicular to the flow has a #mi("C_D") of 1.1; the disc thus experiences a drag force 50% to 100% greater than that on a model rocket of the same diameter in an airstream of the same velocity.
 This result foreshadows our later discussion on the undesirability of blunt shapes and abrupt protrusions in model rocket work.
 To quote an example, removing the launch lug from a certain model rocket may reduce its drag coefficient from 0.7 to about 0.45.
-Figure 12 summarizes diagrammatically the important topics in model rocket drag to be considered in detail in the following pages.
+@fig:drag-constituents summarizes diagrammatically the important topics in model rocket drag to be considered in detail in the following pages.
 
 == Viscous (Skin-Friction) Drag <sec:viscous-drag>
 
 === The Importance of Viscosity in Real Fluid Flow <sec:viscosity-importance>
 
-In Section 2 the skin-friction drag was defined as
+In @sec:basic-concepts the skin-friction drag was defined as
 #mitex("D_v = \\iint_S \\tau_0 \\cos(\\vec{t}, \\vec{V}) \\, dS")
 // === page 51 ===
-Figure 12: Causes and constituents of model rocket drag.
-The various drag constituents and flow phenomena shown here are discussed in detail in later sections of this chapter.
-The thickness of the boundary layer in this drawing has been greatly exaggerated to make it visible to the eye.
+// Figure 12
+#figure(
+  image("../../assets/figures-original/fig3-12.png"),
+  caption: [Causes and constituents of model rocket drag.
+  The various drag constituents and flow phenomena shown here are discussed in detail in later sections of this chapter.
+  The thickness of the boundary layer in this drawing has been greatly exaggerated to make it visible to the eye.]
+) <fig:drag-constituents>
 // === page 52 ===
 where #mi(" \\tau_0 ") is the skin-friction force per unit area at the surface of the model (equal to the viscous shearing stress in the air directly adjacent to the model surface).
 Recalling equation (12b), we can write \tau\_0 as
@@ -501,7 +546,7 @@ one can derive results which are applicable to the calculation of skin-friction 
 
 === The Distinction Between Laminar and Turbulent Flow <sec:laminar-turbulent>
 The fluid flow within a boundary layer may be characterized as either laminar or turbulent.
-The distinction between these two states may be observed in the stream of smoke rising from a burning cigarette in very still air (Plate 1).
+The distinction between these two states may be observed in the stream of smoke rising from a burning cigarette in very still air (@plate:laminar-turbulent-smoke).
 For a short vertical distance the column is narrow and straight, but above this region the flow disintegrates into a disorderly, eddying stream.
 The smooth, unmixed phase of the flow is termed laminar; the rough, eddying part is called turbulent.
 Whether the flow in the boundary layer along an object will be laminar or turbulent depends to a large extent on the Reynolds number, although physical conditions such as air turbulence and surface roughness can assume important roles.
@@ -510,17 +555,21 @@ Since this interval includes the previously calculated typical value of #mi("R")
 Consequently, we shall examine both types of boundary-layer flow.
 Because the analysis for a three-dimensional body can be extremely complicated, our discussion will be
 // === page 56 ===
-Plate 1: Smoke rising from a cigarette in a still room.
-The path of the smoke is at first smooth and straight (laminar flow), but after it has risen for a certain distance it becomes rough and mixed (turbulent flow).
+// Plate 1
+#figure(
+  image("../../assets/figures-original/plate3-1.png"),
+  caption: [Smoke rising from a cigarette in a still room.
+  The path of the smoke is at first smooth and straight (laminar flow), but after it has risen for a certain distance it becomes rough and mixed (turbulent flow).]
+) <plate:laminar-turbulent-smoke>
 // === page 57 ===
 restricted to the steady, two-dimensional flow past a thin, flat plate held parallel to the airstream.
-Although this is geometrically a quite simple case, the skin-friction coefficients derived from the analysis of the flat plate in laminar and turbulent flow form the basis for the calculation of skin-friction drag on all three-dimensional shapes (assuming that boundary-layer separation, discussed in Section 4.2, is not present).
-The results of Sections 3.3 and 3.4 for laminar and turbulent flow, respectively, will be used extensively later on in this chapter for the determination of model rocket drag coefficients.
-Next, in Section 3.5, a discussion of the mechanism of boundary-layer transition is presented.
+Although this is geometrically a quite simple case, the skin-friction coefficients derived from the analysis of the flat plate in laminar and turbulent flow form the basis for the calculation of skin-friction drag on all three-dimensional shapes (assuming that boundary-layer separation, discussed in @sec:bl-separation, is not present).
+The results of Sections #ref(<sec:laminar-boundary-layer>, supplement: none) and #ref(<sec:turbulent-boundary-layer>, supplement: none) for laminar and turbulent flow, respectively, will be used extensively later on in this chapter for the determination of model rocket drag coefficients.
+Next, in @sec:bl-transition, a discussion of the mechanism of boundary-layer transition is presented.
 Since laminar and turbulent boundary layers produce markedly different skin-friction coefficients, even at identical Reynolds numbers, it is important to know the location of the transition zone in order to calculate viscous drag accurately.
 This problem, unfortunately, has not as yet been well-researched for model rockets, and it is necessary to assume a location for the transition.
-Section 3.5 analyzes the important factors affecting the location of the transition point and discusses the calculation of the total skin-friction coefficient for boundary layers exhibiting both laminar and turbulent regions.
-Section 3 will conclude with some estimates of the correction factors required to apply the flat-plate results to three-dimensional configurations.
+@sec:bl-transition analyzes the important factors affecting the location of the transition point and discusses the calculation of the total skin-friction coefficient for boundary layers exhibiting both laminar and turbulent regions.
+@sec:viscous-drag will conclude with some estimates of the correction factors required to apply the flat-plate results to three-dimensional configurations.
 This will be seen to be small, usually 5% or less, for the fins and body of a model rocket.
 // === page 58 ===
 === The Laminar Boundary Layer on a Smooth, Flat Plate <sec:laminar-boundary-layer>
@@ -528,21 +577,30 @@ In laminar flow, the fluid elements move parallel to the surface of the body and
 Historically, the first application of Prandtl's boundary-layer theory was accomplished by H.
 Blasius, who in 1908 computed the laminar boundary layer in uniform potential flow past a flat plate.
 Since this example illustrates many of the important features of boundary-layer analysis, we shall examine it in detail.
-Steady fluid motion about such a plate is depicted in Plate 2 (12).
+Steady fluid motion about such a plate is depicted in @plate:flat-plate-flow (12).
 The streamlines of the flow were made visible by sprinkling aluminum particles on the water; the length of the streaks left by the particles is proportional to their velocity.
 Very near the surface of the plate, the traces are much shorter than in the exterior flow; this region of reduced velocity is the boundary layer.
 Note also that the apparent thickness of the boundary layer, which we shall shortly define in mathematical terms, increases with distance downstream along the plate.
 This is because the boundary-layer shearing stresses are retarding a greater volume of fluid as distance from the leading edge increases.
 Note that there is no indication of the absolute size of the plate in the photograph.
-Hence we expect the velocity profiles (see Figure 13) at all x-stations on the plate to be mathematically similar; i.e., the dimensionless ratio #mi("u/U_{\\infty}") may be expressed as some function of the dimensionless coordinate
+Hence we expect the velocity profiles (see @fig:laminar-velocity-profiles) at all x-stations on the plate to be mathematically similar; i.e., the dimensionless ratio #mi("u/U_{\\infty}") may be expressed as some function of the dimensionless coordinate
 // === page 59 ===
-Plate 2: Flow about a thin plate of length #mi(" \\ell ") at a Reynolds number #mi(" R_\\ell ") of 3.
-Figure 13: Profiles of longitudinal velocity in a laminar boundary layer over one side of a flat plate at zero angle of attack.
+// Plate 2
+#figure(
+  image("../../assets/figures-original/plate3-2.png"),
+  caption: [Flow about a thin plate of length #mi("\\ell") at a Reynolds number #mi("R_\\ell") of 3.]
+) <plate:flat-plate-flow>
+
+// Figure 13
+#figure(
+  image("../../assets/figures-original/fig3-13.png"),
+  caption: [Profiles of longitudinal velocity in a laminar boundary layer over one side of a flat plate at zero angle of attack.]
+) <fig:laminar-velocity-profiles>
 // === page 60 ===
 ratio #mi(" y/\\delta "), where #mi(" U_{\\infty} ") is the velocity of the exterior flow immediately outside the boundary layer (calculated by potential-flow theory) and #mi(" \\delta ") is the boundary-layer thickness at any given location on the plate.
 This function must be the same at all distances #mi(" x ") from the leading edge of the plate, although #mi(" \\delta ") itself becomes greater as #mi(" x ") increases.
 We can make an estimate of the boundary-layer thickness #mi(" \\delta ") by equating the viscous and inertial forces within the boundary layer and solving for the value of #mi(" \\delta ") at which this condition occurs.
-As seen in Section 2.2, the inertial forces in the fluid flowing near an object of characteristic dimension #mi(" L ") are of the order #mi(" \\rho U_{\\infty}^2 / L ").
+As seen in @sec:dimensionless-coefficients, the inertial forces in the fluid flowing near an object of characteristic dimension #mi(" L ") are of the order #mi(" \\rho U_{\\infty}^2 / L ").
 The friction forces per unit volume in a boundary layer of thickness #mi(" \\delta ") are of the order #mi(" \\mu U_{\\infty} / \\delta^2 "), as the velocity gradient #mi(" \\frac{\\partial u}{\\partial y} ") exists only within the thickness of the boundary layer itself.
 We then obtain
 #mitex("\\frac{\\mu U_{\\infty}}{\\delta^2} \\sim \\frac{\\rho U_{\\infty}^2}{L}")
@@ -587,14 +645,22 @@ Such an equation is easier to solve than the original system of equations; "easi
 Power series methods have been used to obtain accurate solutions by numerical means, but the procedure is rather complex and its mechanics are of little interest to model rocketeers (readers desiring a presentation of the method are urged to consult Reference 15).
 Table 1 presents the numerical tabulation obtained by L.
 Howarth from his highly accurate solution of equation (51).
-These data can be used to obtain a picture of the velocity distribution in the boundary layer; the results for the horizontal velocity component are plotted in Figure 14.
+These data can be used to obtain a picture of the velocity distribution in the boundary layer; the results for the horizontal velocity component are plotted in @fig:blasius-velocity-profile.
 Near the wall
 // === page 65 ===
   #mi(" \\eta = \\gamma \\sqrt{\\frac{U_{\\infty}}{DX}} ") #mi(" r ") #mi(" r' = u/U_{\\infty} ") #mi(" r'' ")  0.00.000000.000000.33206 0.20.006640.066410.33199 0.40.026560.132770.33147 0.60.059740.198940.33008 0.80.106110.264710.32739 1.00.165570.329790.32301 1.20.237950.393780.31659 1.40.322980.456270.30787 1.60.420320.516760.29667 1.80.529520.574770.28293 2.00.650030.629770.26675 2.20.781200.681320.24835 2.40.922300.728990.22809 2.61.072520.772460.20646 2.81.230990.811520.18401 3.01.396820.846050.16136 3.21.569110.876090.13913 3.41.746960.901770.11788 3.61.929540.923330.09809 3.82.1116050.941120.08013 4.02.305760.955520.06424 4.22.498060.966960.05052 4.42.692380.975870.03897 4.62.888260.982690.02948 4.83.085340.987790.02187 5.03.283290.991550.01591 5.23.481890.994250.01134 5.43.680940.996160.00793 5.63.880310.997480.00543 5.84.079900.998380.00365 6.04.279640.998980.00240 6.24.479480.999370.00155 6.44.679380.999610.00098 6.64.879310.999770.00061 6.85.079280.999870.00037 7.05.279260.999920.00022 7.25.479250.999960.00013 7.45.679240.999980.00007 7.65.879240.999990.00004 7.86.079231.000000.00002 8.06.279231.000000.00001  Table 1: Numerical solution of the laminar boundary layer over a flat plate at zero angle of attack, obtained after the method of H.
 Blasius by L.
 Howarth.
 // === page 66 ===
-TABLE 1 (continued)   #mi(" n = \\gamma \\sqrt{\\frac{U_{\\infty}}{\\nu X}} ") #mi(" \\rho ") #mi(" f' = u / U_{\\infty} ") #mi(" f'' ")   8.2 6.47923 1.00000 0.00001   8.4 6.67923 1.00000 0.00000   8.6 6.87923 1.00000 0.00000   8.8 7.07923 1.00000 0.00000  
+TABLE 1 (continued)   #mi(" n = \\gamma \\sqrt{\\frac{U_{\\infty}}{\\nu X}} ") #mi(" \\rho ") #mi(" f' = u / U_{\\infty} ") #mi(" f'' ")   8.2 6.47923 1.00000 0.00001   8.4 6.67923 1.00000 0.00000   8.6 6.87923 1.00000 0.00000   8.8 7.07923 1.00000 0.00000
+// === page 67 ===
+// Figure 14
+#figure(
+  image("../../assets/figures-original/fig3-14.png"),
+  caption: [Horizontal velocity component vs.\ #mi("\\eta") in a laminar boundary layer over a flat plate at zero angle of attack.
+  #mi("\\eta") has been taken as the vertical axis because it is the dimensionless coordinate perpendicular to the plate's surface.
+  The quantity #mi("\\delta^*") is called the _displacement thickness_ and is equal to approximately #mi("1/3\\,\\delta").]
+) <fig:blasius-velocity-profile>
 // === page 68 ===
 the horizontal velocity component is nearly a linear function of the y coordinate, but as y increases the slope of the curve rapidly steepens as u approaches the potential-flow velocity #mi(" U_{\\infty} ").
 Notice that the free-stream velocity is attained asymptotically; i.e., that the boundary layer shades gradually into the exterior flow, so that the concept of "boundary-layer thickness" is ambiguous.
@@ -613,7 +679,7 @@ The corresponding Reynolds numbers based on x are #mi(" 4.02 \\times 10^4 "), #m
 The transverse component of velocity, v, can also be
 // === page 69 ===
 determined from the Blasius solution by substituting values for \rho and \rho' at each value of \eta desired into equation (46).
-The variation of the nondimensional quantity \frac{v}{U\_{\infty}} \sqrt{\frac{U\_{\infty}}{\nu}} with \eta is plotted in Figure 15.
+The variation of the nondimensional quantity \frac{v}{U\_{\infty}} \sqrt{\frac{U\_{\infty}}{\nu}} with \eta is plotted in @fig:transverse-velocity.
 As \eta approaches infinity v does not vanish, but instead attains the asymptotic value
 #mitex("v_{\\infty} = 0.865 U_{\\infty} \\sqrt{\\frac{\\nu}{x U_{\\infty}}}")
 Examining again the case of #mi("U_{\\infty} = 60") meters/second, we obtain
@@ -626,16 +692,23 @@ This is not the same as the flow separating entirely from the wall, a phenomenon
 The flat plate at zero angle of attack, it will be recalled, exhibits a zero pressure gradient.
 The Blasius solution enables us to determine the skin-friction drag on the flat plate with a laminar boundary layer by specializing the equation for the viscous drag on a surface in general, two-dimensional flow:
 // === page 70 ===
-Figure 15: Nondimensionalized transverse velocity component \frac{v}{U\_{\infty}} \sqrt{\frac{U\_{\infty} x}{\nu}} vs.
-#mi("\\eta") in a laminar boundary layer over a flat plate at zero angle of attack.
-Again, #mi("\\eta") has been taken as the vertical axis.
-Figure 15: Nondimensionalized transverse velocity component \frac{v}{U\_{\infty}} \sqrt{\frac{U\_{\infty} x}{\nu}} vs.
-vertical axis Figure 16: Notation used in determining the friction drag of an object of finite thickness in laminar flow.
+// Figure 15
+#figure(
+  image("../../assets/figures-original/fig3-15.png"),
+  caption: [Nondimensionalized transverse velocity component #mi("\\frac{v}{U_{\\infty}} \\sqrt{\\frac{U_{\\infty} x}{\\nu}}") vs.\ #mi("\\eta") in a laminar boundary layer over a flat plate at zero angle of attack.
+  Again, #mi("\\eta") has been taken as the vertical axis.]
+) <fig:transverse-velocity>
+
+// Figure 16
+#figure(
+  image("../../assets/figures-original/fig3-16.png"),
+  caption: [Notation used in determining the friction drag of an object of finite thickness in laminar flow.]
+) <fig:friction-drag-notation>
 
 // === page 71 ===
 #mitex("D_v = b \\int_{s=0}^l \\tau_0 \\cos \\phi \\, ds")
 where #mi(" \\tau_0 ") is the shearing stress at the wall, #mi(" b ") is the span of the object (dimension transverse to the flow), and #mi(" l ") is distance measured around the object's profile from front to rear.
-The notation of equation (58) is explained pictorially in Figure 16.
+The notation of equation (58) is explained pictorially in @fig:friction-drag-notation.
 For a flat plate of negligible thickness the angle #mi("\\phi") is zero everywhere, so #mi("\\cos \\phi = 1.0").
 In such a case the differential path length #mi("ds") is also equal to #mi("dx"), so
 #mitex("D_v = b \\int_{x=0}^{l} \\tau_0 \\, dx")
@@ -662,11 +735,15 @@ To use them in calculating the overall drag coefficient of a model rocket, one m
 This procedure will be described later on.
 === The Turbulent Boundary Layer on a Smooth, Flat Plate <sec:turbulent-boundary-layer>
 At a certain value of the Reynolds number, the fluid flow in the boundary layer above a given surface will change from laminar to turbulent -- a phenomenon known as transition.
-Plate 3 illustrates a case of transition occurring in a channel of water.
+@plate:reynolds-experiment illustrates a case of transition occurring in a channel of water.
 As the Reynolds number increases from subcritical (fully laminar flow) to supercritical (fully turbulent flow) values, a thread of dye injected into the fluid is subjected
 // === page 73 ===
-Plate 3: The Reynolds dye experiment, illustrating the transition from laminar to turbulent flow in a channel of liquid.
-A thread of dye injected into the flowing fluid at first remains smooth and straight (a), but farther down the channel the critical Reynolds number of the flow has been exceeded and the stream is turbulent (b), causing the dye to be mixed.
+// Plate 3
+#figure(
+  image("../../assets/figures-original/plate3-3.png"),
+  caption: [The Reynolds dye experiment, illustrating the transition from laminar to turbulent flow in a channel of liquid.
+  A thread of dye injected into the flowing fluid at first remains smooth and straight (a), but farther down the channel the critical Reynolds number of the flow has been exceeded and the stream is turbulent (b), causing the dye to be mixed.]
+) <plate:reynolds-experiment>
 // === page 74 ===
 to increasing mixing action until finally the entire channel is colored.
 In this section we will consider the structure of the fully-turbulent boundary layer in the flow over a smooth, flat plate, noting how the velocity profiles, boundary-layer thickness, and skin-friction drag differ from the laminar case.
@@ -682,7 +759,7 @@ Turbulent flow must still observe the no-slip condition at the wall, however, an
 turbulence which dominate the rest of the boundary layer.
 Since the conditions of flow in this very thin region -- perhaps 1/8 or so of the total turbulent boundary layer thickness -- are essentially laminar, it is known as the laminar sublayer.
 Despite its small thickness, the sublayer plays a vital role in determining the magnitude of the viscous shearing stress at the wall and hence the turbulent skin-friction drag.
-We shall encounter it again in Section 5.4 when we examine drag due to surface roughness.
+We shall encounter it again in @sec:roughness-drag when we examine drag due to surface roughness.
 Because of its extensive applicability, we would like to determine the turbulent skin-friction drag on a smooth, flat plate as we did in the laminar-flow case.
 The same general methods of derivation cannot, however, be used again owing to two major difficulties: (a) very little is known about the nature of the transition that occurs as one passes upward from the laminar sublayer to the turbulent region; and (b) the laws of friction which are effective in the sublayer are also unknown.
 We proceed, then, on a different tack, by assuming that the boundary-layer velocity distribution over a plate is similar to that within a circular pipe.
@@ -705,7 +782,7 @@ Then in the case of laminar flow, since (u/U\_\infty) = f' ,
 (68)
 // === page 77 ===
 This is approximately #mi("1/8") of the boundary-layer thickness defined by equation (54).
-Now we may relate #mi("\\theta") to the skin-friction drag in the following manner: consider a flat plate surrounded by a rectangular control surface (an imaginary surface in space — a concept often used in the analysis of fluid-flow problems) identified by its corner points, #mi("A_1B_1B"), as in Figure 17.
+Now we may relate #mi("\\theta") to the skin-friction drag in the following manner: consider a flat plate surrounded by a rectangular control surface (an imaginary surface in space — a concept often used in the analysis of fluid-flow problems) identified by its corner points, #mi("A_1B_1B"), as in @fig:turbulent-control-surface.
 Segment #mi("A_1B_1"), parallel to the plate, is sufficiently far from the wall that it lies in the region of undisturbed velocity #mi("U_\\infty").
 Pressure forces in such a case are constant over the whole control surface, so one need not consider their contribution to the fluid momentum.
 Due to symmetry, moreover, segment AB contributes nothing to the momentum in the x-direction.
@@ -718,7 +795,11 @@ This expression applies to a plate wetted on only one side; to obtain the drag f
 // === page 78 ===
   Cross-Section Rate of Flow Momentum Flux in x-Direction   AB 0 0   AA1 b \int\_0^h U\_{\infty} \, dy \int b \int\_0^h U\_{\infty}^2 \, dy   BB1 -b \int\_0^h u \, dy -\int b \int\_0^h u^2 \, dy   A1B1 -b \int\_0^h (U\_{\infty} - u) \, dy -\int b \int\_0^h U\_{\infty}(U\_{\infty} - u) \, dy   sum = control surface total net rate of flow = 0 total momentum flux = drag   Table 2: Volume flow and momentum flux accounting associated with the control surface pictured in Figure 17, for use in calculating turbulent skin-friction drag.
 // === page 79 ===
-Figure 17: Control surface for calculating the friction drag due to a turbulent boundary layer over a flat plate at zero angle of attack.
+// Figure 17
+#figure(
+  image("../../assets/figures-original/fig3-17.png"),
+  caption: [Control surface for calculating the friction drag due to a turbulent boundary layer over a flat plate at zero angle of attack.]
+) <fig:turbulent-control-surface>
 // === page 80 ===
 Two remarks concerning these integrals should be made here.
 First, equation (70) is applicable to any symmetrical cylindrical body, not only a flat plate; in the case of a cylindrical body #mi(" b ") is merely replaced by the circumference of the cylinder.
@@ -779,25 +860,29 @@ If they decay, the flow is considered stable; if, instead, they grow in magnitud
 flow is regarded as unstable and transition to a turbulent pattern may result.
 The ultimate object of the stability theory is a prediction of the critical Reynolds number, #mi(" R_{crit} "), for which transition may be expected.
 The results of the stability analysis for a flat plate will not be presented here (readers interested in this analysis may consult Reference 15), as they are not directly applicable to the three-dimensional boundary layer on a model rocket.
-Instead, we shall investigate briefly the effects of the pressure gradient in the external flow on boundary-layer stability, and then present the hypothetical model of transition on model rockets which will be used for the calculation of drag coefficients in Section 6.
+Instead, we shall investigate briefly the effects of the pressure gradient in the external flow on boundary-layer stability, and then present the hypothetical model of transition on model rockets which will be used for the calculation of drag coefficients in @sec:zero-lift-drag-calc.
 The great English scientist, Lord Rayleigh (1842-1919) was the first to propose that velocity profiles with a point of inflection (point at which the curvature reverses) are unstable.
-Figure 18 compares such a profile with one found in a region of stable flow.
+@fig:inflection-profiles compares such a profile with one found in a region of stable flow.
 Rayleigh's observation is of great practical significance, because there is a direct relationship between the existence of an inflection point and the nature of the local pressure gradient.
 The pressure distribution on a surface in fluid flow (for cases in which there is no separation of the boundary layer) is determined by the theory of potential flow, which, it will be remembered, applies to the inviscid, "perfect" fluid.
 In real cases it is found that this theoretical pressure distribution agrees very closely with measured pressure distributions, as if the boundary layer were not present.
 In a sense, then, the external flow impresses its pressure distribution
 // === page 86 ===
-Diagram (a) shows a boundary layer velocity profile u(y) versus height y .
-Profile (a) has a point of inflection; that is, a point at which the curvature of the velocity profile reverses.
-Profile (b) is fully convex in the direction of flow.
-The flow of profile (a) is unstable, while that of (b) is stable.
+// Figure 18
+#figure(
+  image("../../assets/figures-original/fig3-18.png"),
+  caption: [Diagram (a) shows a boundary layer velocity profile u(y) versus height y.
+  Profile (a) has a point of inflection; that is, a point at which the curvature of the velocity profile reverses.
+  Profile (b) is fully convex in the direction of flow.
+  The flow of profile (a) is unstable, while that of (b) is stable.]
+) <fig:inflection-profiles>
 // === page 87 ===
 on the boundary layer.
-Along a surface with a favorable pressure gradient; that is, with the pressure decreasing in the downstream direction, the boundary-layer velocity profiles will be full and without inflection points, as in Figure 18b.
-In the presence of an adverse pressure gradient; i.e., where the pressure increases downstream, the velocity profiles will generally develop inflection points, as in Figure 18a.
+Along a surface with a favorable pressure gradient; that is, with the pressure decreasing in the downstream direction, the boundary-layer velocity profiles will be full and without inflection points, as in @fig:inflection-profiles (b).
+In the presence of an adverse pressure gradient; i.e., where the pressure increases downstream, the velocity profiles will generally develop inflection points, as in @fig:inflection-profiles (a).
 In summary, then, a favorable pressure gradient tends to stabilize the flow in the boundary layer, while an adverse pressure gradient tends to destabilize it.
 The point of minimum pressure on a body is therefore of considerable importance; it determines the point of transition, and the two are generally in close proximity.
-For an object such as a circular cylinder held with its axis perpendicular to the stream, the region of minimum pressure occurs near the shoulder as seen in Figure 24 (the angles #mi("\\varphi = 0^\\circ") and #mi("180^\\circ") correspond to the front and rear stagnation points, respectively).
+For an object such as a circular cylinder held with its axis perpendicular to the stream, the region of minimum pressure occurs near the shoulder as seen in @fig:cylinder-pressure (the angles #mi("\\varphi = 0^\\circ") and #mi("180^\\circ") correspond to the front and rear stagnation points, respectively).
 This experimental fact could also be deduced from equation (23): since the flow must be accelerated initially to pass over the upstream half of the cylinder, there is a corresponding decrease in static pressure in this region.
 Along the downstream side (in the ideal case) the flow is decelerated to its original undisturbed velocity and static pressure.
 Something analogous to this process occurs on the nose of a model rocket: the flow is accelerated slightly and a point of minimum pressure is attained somewhere in the vicinity of the body-to-nosecone joint.
@@ -860,17 +945,26 @@ height and flow velocity at the point in the boundary layer corresponding to the
 #mitex("R_k = \\frac{k u_k}{\\nu}")
 It is possible to express #mi(" \\eta_k ") as a function of #mi(" R_k / \\sqrt{R_x} "), assuming the velocity and temperature distribution throughout the boundary layer is known.
 In Reference 3, these calculations have been carried out for the cases of two-dimensional flow past a flat plate and three-dimensional flow past a conical body held with its axis parallel to the stream.
-The relationships thus obtained are presented graphically in Figures 19 and 20.
+The relationships thus obtained are presented graphically in Figures #ref(<fig:roughness-flat-plate>, supplement: none) and #ref(<fig:roughness-cone>, supplement: none).
 To use these charts, it is necessary to choose a value of the critical roughness Reynolds number #mi(" (R_k)_t ").
 Attempts to measure #mi(" (R_k)_t ") experimentally have yielded values anywhere from 250 to 600, but Reference 3 suggests that the higher value is the most accurate.
-Once #mi(" (R_k)_t ") is selected, the value of #mi(" k ") required to induce transition at a given distance #mi(" x ") from the nose or leading edge can then be determined by calculating the ratio #mi(" (R_k)_t / \\sqrt{R_x} ") and reading the corresponding value of #mi(" \\eta_k ") from Figure 19 or 20; this value of #mi(" \\eta_k ") is used in equation (91) to give
+Once #mi(" (R_k)_t ") is selected, the value of #mi(" k ") required to induce transition at a given distance #mi(" x ") from the nose or leading edge can then be determined by calculating the ratio #mi(" (R_k)_t / \\sqrt{R_x} ") and reading the corresponding value of #mi(" \\eta_k ") from Figure #ref(<fig:roughness-flat-plate>, supplement: none) or #ref(<fig:roughness-cone>, supplement: none); this value of #mi(" \\eta_k ") is used in equation (91) to give
 #mitex("k_t = \\frac{2 x \\eta_k}{\\sqrt{R_x}}")
 By way of example, if we take #mi(" (R_k)_t ") as 600 and base #mi(" R_x ") on #mi(" U_{\\infty} = 60 ") meters/second, we have
 #mitex("\\frac{(R_k)_t}{\\sqrt{R_x}} = \\frac{0.299}{\\sqrt{x}} \\quad \\text{(for $ x $ given in meters)}")
 Suppose, now, we want to know the particle size needed to induce
 // === page 93 ===
-Figure 19: \eta\_k , the nondimensionalized roughness particle height required to cause transition from laminar to turbulent flow, plotted as a function of \frac{R\_k}{\sqrt{R\_x}} , the ratio of the "roughness Reynolds number" to the square root of the "station Reynolds number" for a flat plate at zero angle of attack.
-Figure 20: \eta\_k , the nondimensionalized roughness particle height required to cause transition from laminar to turbulent flow, plotted as a function of \frac{R\_k}{\sqrt{R\_x}} , the ratio of the "roughness Reynolds number" to the square root of the "station Reynolds number" for a cone whose axis is at zero angle of attack.
+// Figure 19
+#figure(
+  image("../../assets/figures-original/fig3-19.png"),
+  caption: [#mi("\\eta_k"), the nondimensionalized roughness particle height required to cause transition from laminar to turbulent flow, plotted as a function of #mi("\\frac{R_k}{\\sqrt{R_x}}"), the ratio of the "roughness Reynolds number" to the square root of the "station Reynolds number" for a flat plate at zero angle of attack.]
+) <fig:roughness-flat-plate>
+
+// Figure 20
+#figure(
+  image("../../assets/figures-original/fig3-20.png"),
+  caption: [#mi("\\eta_k"), the nondimensionalized roughness particle height required to cause transition from laminar to turbulent flow, plotted as a function of #mi("\\frac{R_k}{\\sqrt{R_x}}"), the ratio of the "roughness Reynolds number" to the square root of the "station Reynolds number" for a cone whose axis is at zero angle of attack.]
+) <fig:roughness-cone>
 // === page 94 ===
 transition at a distance of 3 cm.
 (.03 meter) from the nose or leading edge of the surface in question.
@@ -885,23 +979,26 @@ First, a zero pressure gradient has been assumed in its derivation; it seems lik
 Second, the critical roughness Reynolds number #mi(" (R_k)_t ") can be assumed to have the constant value of 600 only if the roughness elements are
 // === page 95 ===
 completely submerged in the laminar boundary layer.
-The height of the roughness particles compared with the boundary-layer thickness can be determined from the value of #mi("\\eta_k") found for a particular case and the boundary-layer velocity profiles of Figures 21a and 21b (3).
+The height of the roughness particles compared with the boundary-layer thickness can be determined from the value of #mi("\\eta_k") found for a particular case and the boundary-layer velocity profiles of Figures #ref(<fig:laminar-velocity-profiles-3d>, supplement: none) (a) and #ref(<fig:laminar-velocity-profiles-3d>, supplement: none) (b) (3).
 The values of #mi("\\eta_k") found for the example above are seen to lie well within the boundary layer.
-The reader should note at this point that the variable #mi("\\eta") as used in Reference 3, from which Figures 19 through 21 are taken, is not the same as the variable #mi("\\eta") used in the presentation of the Blasius solution of Section 3.3.
+The reader should note at this point that the variable #mi("\\eta") as used in Reference 3, from which Figures #ref(<fig:roughness-flat-plate>, supplement: none) through #ref(<fig:laminar-velocity-profiles-3d>, supplement: none) are taken, is not the same as the variable #mi("\\eta") used in the presentation of the Blasius solution of @sec:laminar-boundary-layer.
 If we identify the #mi("\\eta") of Ref. 3 as #mi("\\eta_3") and the #mi("\\eta") of Blasius by #mi("\\eta_B"), we have
 3 as #mi("\\eta_3") and the #mi("\\eta") of Blasius by #mi("\\eta_B"), we have
 #mitex("\\eta_3 = \\frac{y}{2x} \\sqrt{R_x} = \\frac{y}{2x} \\sqrt{\\frac{U_{\\infty} x}{\\nu}} = \\frac{y}{2} \\sqrt{\\frac{U_{\\infty}}{\\nu x}}")
 #mitex("\\eta_B = y \\sqrt{\\frac{U_{\\infty}}{\\nu x}}")
 so that
 #mitex("\\eta_B = 2 \\eta_3")
-The two-dimensional boundary-layer profile of Figure 21a is thus identical to that of Figure 14, except for a scale factor of two in the vertical coordinate.
+The two-dimensional boundary-layer profile of @fig:laminar-velocity-profiles-3d (a) is thus identical to that of @fig:blasius-velocity-profile, except for a scale factor of two in the vertical coordinate.
 The station #mi("x = 3") cm.
 generally corresponds to a position on the nosecone or fins of a model rocket.
 As #mi("x") is increased, the boundary layer becomes thicker (varying as #mi("\\sqrt{x}") for a laminar boundary layer in zero pressure gradient) and the particle size required to induce transition at that value of #mi("x") is also increased.
 Eventually, the increase in downstream distance from the nose or leading edge will result in a value of #mi("R_x") sufficiently great
 // === page 96 ===
-Figure 21: Boundary layer velocity profiles for laminar flow over flat plates (a) and cones (b).
-Figure 21: Boundary layer velocity profiles for laminar flow over flat plates (a) and cones (b).
+// Figure 21
+#figure(
+  image("../../assets/figures-original/fig3-21.png"),
+  caption: [Boundary layer velocity profiles for laminar flow over flat plates (a) and cones (b).]
+) <fig:laminar-velocity-profiles-3d>
 // === page 97 ===
 to cause natural transition without the presence of any surface roughness.
 Calculations of induced transition due to surface roughness are, of course, applicable only for values of #mi("R_x") less than the critical Reynolds number #mi("R_{\\text{crit}}").
@@ -935,14 +1032,18 @@ where the laminar and turbulent skin-friction coefficients are evaluated from th
 Approximate values of B for several possible values of #mi(" R_{crit} ") are listed below (15):   Rcrit 3 \times 10^5 5 \times 10^5 1 \times 10^6 3 \times 10^6   B 1050 1700 3300 8700   In order to apply equation (101) in a particular case, the value of #mi(" R_{crit} ") must be known.
 Since no value of this quantity has been determined for a model rocket, we shall assume an average value for calculation purposes of #mi(" R_{crit} = 5 \\times 10^5 "), corresponding to a B of about 1700.
 Since this value is near the lower end of the #mi(" R_{crit} ") range for flat plates (#mi(" 3 \\times 10^5 ") to #mi(" 3 \\times 10^6 ")), the results obtained should be somewhat conservative, making it unlikely that the drag will be underestimated.
-Section 6 discusses the matter of critical Reynolds number for model rockets further in the light of data gathered by Mark Mercer.
-The transition curve described by equation (101) for #mi("B = 1700") is plotted as function C in Figure 22, along with the pure laminar and pure turbulent functions from equations (63) (function A) and (86) (function B).
-Figure 22 can be used directly to find skin-friction coefficients for use in the method described in Section 6.
+@sec:zero-lift-drag-calc discusses the matter of critical Reynolds number for model rockets further in the light of data gathered by Mark Mercer.
+The transition curve described by equation (101) for #mi("B = 1700") is plotted as function C in @fig:skin-friction-coefficient, along with the pure laminar and pure turbulent functions from equations (63) (function A) and (86) (function B).
+@fig:skin-friction-coefficient can be used directly to find skin-friction coefficients for use in the method described in @sec:zero-lift-drag-calc.
 
 === Three-Dimensional Corrections to the Flat-Plate Skin-Friction Coefficients <sec:3d-skin-friction>
 Approximate methods have been developed for estimating
 // === page 100 ===
-Figure 22: Skin friction coefficient for flow over a flat plate with boundary layer transition, based on the assumption of #mi(" R_{crit} = 5 \\times 10^5 ") (corresponding to #mi(" B = 1740 ") in equation (101)).
+// Figure 22
+#figure(
+  image("../../assets/figures-original/fig3-22.png"),
+  caption: [Skin friction coefficient for flow over a flat plate with boundary layer transition, based on the assumption of #mi("R_{crit} = 5 \\times 10^5") (corresponding to #mi("B = 1740") in equation (101)).]
+) <fig:skin-friction-coefficient>
 // === page 101 ===
 the effects of three-dimensionality on the values of the skin-friction coefficients derived for the flat plate.
 The results of an approximate method described in Reference 9, which can be used to correct two-dimensional skin-friction coefficients for application to three-dimensional surfaces, are presented below.
@@ -964,7 +1065,7 @@ Assuming a length-to-diameter ratio of 10 and the same Reynolds number, we have 
 Then the adjusted skin-friction coefficient is
 #mi("(C_f')_{turb} = \\frac{.074}{(R_L)^{1/6}} + \\frac{1.6 \\times 10^{-3}(l/d)}{(R_L)^{2/5}} = .0045593")
 with equation (105) accounting for a 1.3% increase from the flat-plate value -- a bit less than 1/3 the percentage increase for the laminar case.
-In Section 6, corrections of these magnitudes will be used to determine the skin-friction drag on the constant-diameter body tube sections of a model rocket.
+In @sec:zero-lift-drag-calc, corrections of these magnitudes will be used to determine the skin-friction drag on the constant-diameter body tube sections of a model rocket.
 
 ==== Fin Corrections <sec:fin-corrections> 
 A model rocket fin is generally not quite thin enough to be represented as a flat plate.
@@ -973,16 +1074,16 @@ The
 // === page 103 ===
 friction drag coefficient of a flat plate wetted on both sides, with the planform area (area of one side only) used as the reference area, is (106) #mi(" C_{Df} = 2C_f ") Now the increase in friction drag with thickness is proportional to the increment in dynamic pressure caused by the increase in flow velocity required for the air to negotiate a fin of finite thickness.
 This increment, in turn, is proportional to the thickness ratio #mi(" t/c "), where #mi(" t ") denotes fin maximum thickness and #mi(" c ") denotes fin chord: (107) #mi(" \\frac{\\Delta C_{Df}}{2C_f} = \\frac{\\Delta q}{q} = 2 \\frac{t}{c} ") Then for the fin drag coefficient, based on fin planform area, corrected for thickness effects, we obtain (108) #mi(" C_{Df}' = 2C_f (1 + 2 \\frac{t}{c}) ") For a typical model rocket fin having a thickness ratio of 0.05 the correction introduced by the use of equation (108) is seen to be 10%.
-Again, we shall have occasion to return to these formulae in Section 6.
+Again, we shall have occasion to return to these formulae in @sec:zero-lift-drag-calc.
 In that section also, procedures for converting skin-friction drag coefficients based on body tube lateral area and fin planform area to coefficients based on maximum frontal area will be presented.
 // === page 104 ===
 == Pressure Drag <sec:pressure-drag>
 === Introduction <sec:pressure-drag-intro>
 
-Pressure drag was defined previously in Section 2 as the integral over the body surface of the components of pressure forces acting directly opposite the direction of the rocket's motion; that is,
+Pressure drag was defined previously in @sec:basic-concepts as the integral over the body surface of the components of pressure forces acting directly opposite the direction of the rocket's motion; that is,
 #mitex("D_p = \\iint_S p \\cos(\\hat{n}, \\vec{V}) \\, ds")
-where the unit vector #mi(" \\hat{n} ") is everywhere normal to the surface (you may wish to refresh your memory in regard to the notation by consulting Figure 11 again).
-For purposes of analysis, it is useful to divide this integral into two parts: first, the integral over the base area of the rocket, called base drag, which will be discussed in Section 4.4; and second, the integral over the remainder of the rocket body and fins (pressure foredrag), to be discussed in Section 4.3.
+where the unit vector #mi(" \\hat{n} ") is everywhere normal to the surface (you may wish to refresh your memory in regard to the notation by consulting @fig:surface-integral-notation again).
+For purposes of analysis, it is useful to divide this integral into two parts: first, the integral over the base area of the rocket, called base drag, which will be discussed in @sec:base-drag; and second, the integral over the remainder of the rocket body and fins (pressure foredrag), to be discussed in @sec:forebody-fin-pressure-drag.
 The existence of pressure drag is intimately associated with the phenomenon of boundary-layer separation.
 In general, for a rocket with a streamlined nose, streamlined fin profile, and no launch lug, the base drag will be considerably larger than the pressure foredrag.
 This is because separation of the boundary layer from the rear of the rocket, unavoidable due to the presence of the opening into which the engine casing must be inserted, creates a relatively large component of pressure drag.
@@ -990,36 +1091,43 @@ In the event that extensive flow separation occurs on the forebody, however -- a
 // === page 105 ===
 be quite large, perhaps several times the base drag.
 
-Since an understanding of the mechanism and prevention of boundary-layer separation is essential to the study of pressure drag, we begin with a discussion of this phenomenon in Section 4.2.
+Since an understanding of the mechanism and prevention of boundary-layer separation is essential to the study of pressure drag, we begin with a discussion of this phenomenon in @sec:bl-separation.
 Unfortunately, there is very little quantitative information available concerning the two most important sources of pressure drag on well-constructed model rockets: the launch lug (if the model has one) and the base.
-Section 4.3 discusses Mark Mercer's data concerning the first question, and in Section 
-4.4 the empirically-derived expression which is used to evaluate base drag is presented, although it is noted that this formula does not take into account either the effects of stabilizing fins or the influence of the engine exhaust on the base drag.
+@sec:forebody-fin-pressure-drag discusses Mark Mercer's data concerning the first question, and in @sec:base-drag the empirically-derived expression which is used to evaluate base drag is presented, although it is noted that this formula does not take into account either the effects of stabilizing fins or the influence of the engine exhaust on the base drag.
 
 === Boundary-Layer Separation <sec:bl-separation>
-The skin-friction coefficients which were derived in Section 3 for laminar and turbulent flow presuppose that the boundary layer remains attached to the solid surface on which it is formed.
+The skin-friction coefficients which were derived in @sec:viscous-drag for laminar and turbulent flow presuppose that the boundary layer remains attached to the solid surface on which it is formed.
 This assumption is generally valid for a flat plate, as the pressure gradient along the plate's surface #mi("dp/dx") is zero; but in regions of increasing pressure (#mi("dp/dx") positive, a so-called adverse pressure gradient) the boundary layer may be unable to follow the contour of the body surface beyond a certain point and it will break away from the surface.
-When this happens, the skin-friction coefficients of Section 3 are not applicable beyond the point of separation.
-To illustrate this phenomenon, we examine the flow past a blunt body, such as the circular cylinder shown in Figure
+When this happens, the skin-friction coefficients of @sec:viscous-drag are not applicable beyond the point of separation.
+To illustrate this phenomenon, we examine the flow past a blunt body, such as the circular cylinder shown in
 // === page 106 ===
-23.
+@fig:cylinder-flow.
 In the inviscid flow of a "perfect" fluid, the fluid elements are accelerated from point A to point B, and are decelerated from point B to point C.
 In accordance with Bernoulli's equation, there is an increase in static pressure between A and B and a corresponding decrease along the downstream surface from B to C.
-This theoretical pressure distribution (which appears in Figure 24 as the curve #mi(" C_p = 1 - 4 \\sin^2 \\varphi ")) is impressed upon the boundary layer in real fluid flow; that is, at any station in the boundary layer the pressure over the thickness of the layer is virtually constant and is taken as equal to the pressure in the exterior flow at the same station.
+This theoretical pressure distribution (which appears in @fig:cylinder-pressure as the curve #mi(" C_p = 1 - 4 \\sin^2 \\varphi ")) is impressed upon the boundary layer in real fluid flow; that is, at any station in the boundary layer the pressure over the thickness of the layer is virtually constant and is taken as equal to the pressure in the exterior flow at the same station.
 An element in the exterior flow, because of the pressure distribution, undergoes a continual change in kinetic energy as it moves from the front to the rear of the cylinder, first increasing, then decreasing.
 Because there is no dissipation of energy in inviscid flow, the theory of perfect fluids predicts that a fluid element will arrive at C with the same velocity it had at A.
 Within the boundary layer, however, fluid elements are subjected to large frictional forces which consume much of the kinetic energy gained in travelling from A to B.
 Hence an element near the wall will not have sufficient kinetic energy to overcome the positive pressure gradient on the downstream side of the cylinder, and at some point its motion will be arrested.
 Acting under the influence of the pressure gradient, it will then reverse the direction of its motion so that it is actually moving against the exterior airstream.
-This process and its consequences are depicted in Figure 25, which shows how the velocity profiles in the boundary layer
+This process and its consequences are depicted in @fig:boundary-layer-separation, which shows how the velocity profiles in the boundary layer
 // === page 107 ===
-Figure 23: Flow about a circular cylinder held transverse to the airstream.
-Inviscid ("potential") theory predicts that the flow near the surface of the cylinder will be accelerated from point A to point B and decelerated again from B to C.
-In actuality, the boundary layer develops an inflection point due to the adverse pressure gradient between B and C, and separation occurs at S.
+// Figure 23
+#figure(
+  image("../../assets/figures-original/fig3-23.png"),
+  caption: [Flow about a circular cylinder held transverse to the airstream.
+  Inviscid ("potential") theory predicts that the flow near the surface of the cylinder will be accelerated from point A to point B and decelerated again from B to C.
+  In actuality, the boundary layer develops an inflection point due to the adverse pressure gradient between B and C, and separation occurs at S.]
+) <fig:cylinder-flow>
 // === page 108 ===
-Figure 24: Theoretical and experimental variation of pressure coefficient in flow about a circular cylinder.
-The theoretical curve obtained from potential flow theory is displayed and compared with average curves of experimental data taken at the subcritical Reynolds number #mi(" 6 \\times 10^4 ") and the supercritical Reynolds number #mi(" 3 \\times 10^5 ") (based on cylinder diameter).
-The angle #mi(" \\varphi ") is the angle between a line drawn from the cylinder axis to point A in Figure 23 and a line drawn from the axis to any other point on the cylinder periphery.
-Point B in Figure 23 thus corresponds to #mi(" \\varphi = 90^\\circ ") and point O to #mi(" \\varphi = 180^\\circ ").
+// Figure 24
+#figure(
+  image("../../assets/figures-original/fig3-24.png"),
+  caption: [Theoretical and experimental variation of pressure coefficient in flow about a circular cylinder.
+  The theoretical curve obtained from potential flow theory is displayed and compared with average curves of experimental data taken at the subcritical Reynolds number #mi("6 \\times 10^4") and the supercritical Reynolds number #mi("3 \\times 10^5") (based on cylinder diameter).
+  The angle #mi("\\varphi") is the angle between a line drawn from the cylinder axis to point A in @fig:cylinder-flow and a line drawn from the axis to any other point on the cylinder periphery.
+  Point B in @fig:cylinder-flow thus corresponds to #mi("\\varphi = 90^\\circ") and point O to #mi("\\varphi = 180^\\circ").]
+) <fig:cylinder-pressure>
 
 // === page 109 ===
 are altered near a point of separation.
@@ -1031,44 +1139,59 @@ The condition of zero normal velocity gradient at the wall is expressed mathemat
 Downstream of c, the separation point, the layers of fluid nearest the wall reverse their motion, a vortex is formed, and the general accumulation of fluid in the boundary layer leads to a rapid increase of boundary-layer thickness (points d and e).
 The layer becomes so thick, in fact, that the original assumptions which were made in the derivation of the boundary-layer equations (equations 38 and 39) are no longer valid and a "boundary layer" as such can no longer be said to exist.
 Hence, the boundary-layer approximations apply only up to the point of separation, and resort must be had to experiment to determine the conditions on the rear of the body from which the flow has separated.
-The remarkable series of photographs in Plates 4a through 4j, made by Prandl and Tietjens (Reference 12), illustrates the actual development of separation at the rear of a circular cylinder.
-In Plate 4a, the flow has just begun; the boundary layer is very thin, and conditions conform very closely to ideal,
+The remarkable series of photographs in @plate:boundary-layer-separation (a) through (j), made by Prandl and Tietjens (Reference 12), illustrates the actual development of separation at the rear of a circular cylinder.
+In @plate:boundary-layer-separation (a), the flow has just begun; the boundary layer is very thin, and conditions conform very closely to ideal,
 // === page 110 ===
-Plate 4: Flow around the rear end of a blunt body, illustrating the onset of boundary layer separation due to an adverse pressure gradient.
+// Plate 4
+#figure(
+  image("../../assets/figures-original/plate3-4.png"),
+  caption: [Flow around the rear end of a blunt body, illustrating the onset of boundary layer separation due to an adverse pressure gradient.]
+) <plate:boundary-layer-separation>
 // === page 111 ===
-e g h i j
+#figure(
+  image("../../assets/figures-original/plate3-4(1).png"),
+  caption: [Plate 4 (continued): panels e, g, h, i, j.]
+) <plate:boundary-layer-separation-2>
 // === page 112 ===
 inviscid potential flow.
 In the next picture, some particles nearest the wall have been retarded by the adverse pressure gradient; they appear as bright, white dots.
-This corresponds to the velocity profile of point c in Figure 25.
-These particles have acquired a backwards velocity in Plate 4c, and a line of stationary fluid now exists at some distance from the wall, as at points d and e in Figure 25.
+This corresponds to the velocity profile of point c in @fig:boundary-layer-separation.
+These particles have acquired a backwards velocity in @plate:boundary-layer-separation (c), and a line of stationary fluid now exists at some distance from the wall, as at points d and e in @fig:boundary-layer-separation.
 The external flow persists in forward (left-to-right) motion outside this line.
 The instability of the dividing line is demonstrated in the concluding plates of the sequence as it breaks up into separate vortices, grossly altering the pressure distribution beyond the separation point.
-Figure 24 compares the theoretical pressure distribution (C\_p = 1 - 4\sin^2\phi) on a circular cylinder with experimental results obtained at various Reynolds numbers.
+@fig:cylinder-pressure compares the theoretical pressure distribution (C\_p = 1 - 4\sin^2\phi) on a circular cylinder with experimental results obtained at various Reynolds numbers.
 Because of the symmetry of the theoretical curve, integration of the pressure forces over the surface of the cylinder will yield a pressure drag of zero -- the same result obtained for an object of any shape using potential-flow theory alone.
 In the experimental cases, however, the pressure over the rear of the cylinder never attains its original value at \phi = 0^\circ .
 Pressure recovery is thus said to be incomplete.
 The suction forces due to the negative pressure coefficient at the rear will predominate over the suction forces acting on the upstream side, and a net positive pressure drag (force in the direction of the stream) will result.
 The existence of a point of inflection in the velocity distribution is a necessary condition for separation (15).
 // === page 113 ===
-Figure 25: The development of boundary layer separation from a surface due to the influence of a positive (adverse) pressure gradient.
+// Figure 25
+#figure(
+  image("../../assets/figures-original/fig3-25.png"),
+  caption: [The development of boundary layer separation from a surface due to the influence of a positive (adverse) pressure gradient.]
+) <fig:boundary-layer-separation>
 // === page 114 ===
-In Section 3 we saw that the stability of a laminar flow is also related to this characteristic of the velocity profile: the existence of a point of inflection is a necessary and sufficient condition for the amplification of turbulent disturbances.
-The significance of this correlation is revealed when one considers the variation of the drag coefficient of a sphere or circular cylinder with Reynolds number, as shown in Figure 26.
+In @sec:viscous-drag we saw that the stability of a laminar flow is also related to this characteristic of the velocity profile: the existence of a point of inflection is a necessary and sufficient condition for the amplification of turbulent disturbances.
+The significance of this correlation is revealed when one considers the variation of the drag coefficient of a sphere or circular cylinder with Reynolds number, as shown in @fig:drag-vs-reynolds-blunt.
 At a Reynolds number of about #mi("3 \\times 10^5") for a sphere, and about #mi("5 \\times 10^5") for a circular cylinder held transverse to the flow, the drag coefficient exhibits a sudden and considerable decrease.
 This phenomenon is due to the transition of the boundary layer from laminar to turbulent flow, causing the separation point to move downstream -- and, therefore, causing the total width of the "stagnant" or "dead-air" region created by the separation to decrease.
-This effect is also demonstrated in the experimental pressure distributions of Figure 24, as for supercritical (post-transition) Reynolds numbers, the pressure recovery is more complete than at subcritical (pre-transition) Reynolds numbers.
+This effect is also demonstrated in the experimental pressure distributions of @fig:cylinder-pressure, as for supercritical (post-transition) Reynolds numbers, the pressure recovery is more complete than at subcritical (pre-transition) Reynolds numbers.
 Hence the fluid flow resembles frictionless flow more closely, and the pressure drag is correspondingly reduced.
 The magnitude of the decrease in pressure drag is considerably greater than the increase in the friction drag due to the attached turbulent boundary layer.
 This accounts for the sharpness of the drag coefficient curve's slope at the critical Reynolds number.
 A striking flow-visualization experiment, originally performed by Prandtl (12), demonstrates the validity of these assertions.
 // === page 115 ===
-Figure 26: Variation of drag coefficient with Reynolds number based on diameter for circular cylinders (a) and spheres (b).
-The curves shown are average values obtained from a large number of experiments.
+// Figure 26
+#figure(
+  image("../../assets/figures-original/fig3-26.png"),
+  caption: [Variation of drag coefficient with Reynolds number based on diameter for circular cylinders (a) and spheres (b).
+  The curves shown are average values obtained from a large number of experiments.]
+) <fig:drag-vs-reynolds-blunt>
 // === page 116 ===
-He placed a sphere in subcritical flow and observed the resulting flow pattern, made visible by smoke (Plate 5a).
+He placed a sphere in subcritical flow and observed the resulting flow pattern, made visible by smoke (@plate:sphere-flow (a)).
 As expected, the laminar flow separated just before the shoulder, and there was a very wide wake trailing the body.
-When a thin wire ring was mounted upstream of the sphere's equator, artificially inducing turbulence as a subcritical Reynolds number (see Section 3.5), the separation point moved well downstream as shown in Plate 5b.
+When a thin wire ring was mounted upstream of the sphere's equator, artificially inducing turbulence as a subcritical Reynolds number (see @sec:bl-transition), the separation point moved well downstream as shown in @plate:sphere-flow (b).
 This movement was accompanied by a decrease in the measured drag coefficient, similar to that achieved at supercritical Reynolds numbers.
 The experiment is thus a convincing demonstration that the sharp decline in the drag coefficient of spheres and cylinders observed at the critical Reynolds number can only be interpreted as a boundary-layer phenomenon (15).
 It remains to be explained why transition affects the position of the separation point.
@@ -1076,9 +1199,13 @@ The physical phenomenon determining this behavior is that a turbulent boundary l
 This results from the mixing action present in the turbulent layer, which transfers momentum from the outer layers of the flow to the strata of fluid near the wall, permitting them to continue their forward motion for greater distances against adverse pressure gradients than would otherwise be the case.
 This same mechanism accounts for the low drag of many bodies with streamlined aftersections, such as airplane fuselages: the transition of the boundary layer to turbulent flow prevents the flow from separating in the relatively mild adverse pressure gradient at the rear of such a body, and
 // === page 117 ===
-Plate 5: Flow about a sphere at a subcritical Reynolds number.
-In (a) the laminar boundary layer separates slightly upstream of the shoulder.
-In (b) the presence of a wire ring "trips" the boundary layer, artificially inducing transition to turbulent flow and delaying separation until the flow is far downstream of the shoulder.
+// Plate 5
+#figure(
+  image("../../assets/figures-original/plate3-5.png"),
+  caption: [Flow about a sphere at a subcritical Reynolds number.
+  In (a) the laminar boundary layer separates slightly upstream of the shoulder.
+  In (b) the presence of a wire ring "trips" the boundary layer, artificially inducing transition to turbulent flow and delaying separation until the flow is far downstream of the shoulder.]
+) <plate:sphere-flow>
 // === page 118 ===
 thus the pressure drag is very small.
 Since the skin friction of such a body in fluids such as air is also small, the overall drag coefficient is close to zero.
@@ -1098,42 +1225,55 @@ The data of Mark Mercer's
 investigation suggest that this approximation is a good one for a typical model rocket, since Mercer found changes in nosecone shape to cause the same absolute increment in drag coefficient for both the blunt-finned and the streamline-finned version of the model he tested.
 We first examine the flow about a half-body for an incompressible, inviscid -- that is, perfect -- fluid (12).
 The mathematics of this problem are such that it cannot be solved unless some specifications are made regarding the pressure at the rear of the body.
-To circumvent this difficulty, aerodynamicists assume that, at a sufficient distance from the nose, there exists a slot into which the surrounding pressure penetrates (Figure 27).
+To circumvent this difficulty, aerodynamicists assume that, at a sufficient distance from the nose, there exists a slot into which the surrounding pressure penetrates (@fig:half-body-pressure-drag).
 The pressure drag on such a half-body is then the resultant integral of pressure over the surface of the "amputated" forebody.
 The techniques of potential-flow theory, involving the mathematical concepts of sources and sinks, could be used to obtain the pressure drag, but a simpler model is presented here (12).
-As in Figure 27, we enclose the half-body in a wide, hollow cylinder and integrate over a right, cylindrical control surface as indicated by the dotted line.
+As in @fig:half-body-pressure-drag, we enclose the half-body in a wide, hollow cylinder and integrate over a right, cylindrical control surface as indicated by the dotted line.
 Denoting the cross-sectional area of the cylinder as #mi(" A_1 "), and the frontal area of the half-body as #mi(" A_2 "), the requirement of mass conservation yields
 #mitex("\\text{(III)} \\quad A_1 u_1 = (A_1 - A_2) u_2")
 or, letting #mi(" R_a = A_2 / A_1 ").
 // === page 120 ===
-Figure 27: Scheme for computing the pressure drag of a half-body.
-#mi("A_1") is the frontal cross-section area of the control surface; #mi("A_2") is the frontal cross-section area of the half-body.
+// Figure 27
+#figure(
+  image("../../assets/figures-original/fig3-27.png"),
+  caption: [Scheme for computing the pressure drag of a half-body.
+  #mi("A_1") is the frontal cross-section area of the control surface; #mi("A_2") is the frontal cross-section area of the half-body.]
+) <fig:half-body-pressure-drag>
 // === page 121 ===
-Drag, it will be recalled, represents the *momentum flux* through the control surface (as in the friction-drag calculations of Section 3).
+Drag, it will be recalled, represents the *momentum flux* through the control surface (as in the friction-drag calculations of @sec:viscous-drag).
 Hence, (115) #mi(" D = A_1 (p_1 - p_2) + A_1 \\rho u_1^2 - (A_1 - A_2) \\rho u_2^2 ") Applying the condition of mass conservation, (116) #mi(" D = A_1 (p_1 - p_2) + A_1 \\rho u_1 (u_1 - u_2) ") From equation (113), then, (117) #mi(" D = A_1 \\frac{\\rho}{2} u_2^2 \\left\\{ 1 - (1 - R_a)^2 + 2 \\left[ (1 - R_a)^2 - 1 + R_a \\right] \\right\\} ") Finally, simplifying the algebra, one obtains (118) #mi(" D = A_1 \\frac{\\rho}{2} u_2^2 R_a^2 = A_2 \\frac{\\rho}{2} u_2^2 R_a ") or #mi(" C_D = R_a ").
 If we let the cross-sectional area #mi(" A_1 ") of the enclosing cylinder become infinitely large, #mi(" R_a ") goes to zero -- resulting in the prediction that the drag of a half-body in a fluid flow of infinite extent is zero.
 A better understanding of this result can be had by examining
 // === page 122 ===
 the pressure distribution over the nose of the half-body under the assumption that the flow remains attached to the surface.
-The streamlines (Figure 28a) near the stagnation point are convex toward the body; this causes an excess pressure in that region.
+The streamlines (@fig:half-body-streamlines (a)) near the stagnation point are convex toward the body; this causes an excess pressure in that region.
 As the flow proceeds downstream along the nose, however, the streamlines turn their concave sides to the body, indicating the existence of a diminished pressure.
-The net effect, as can be seen in Figure 28b, is an equilibrium between positive pressures and suction (negative pressure increments), yielding zero pressure drag.
+The net effect, as can be seen in @fig:half-body-streamlines (b), is an equilibrium between positive pressures and suction (negative pressure increments), yielding zero pressure drag.
 Although this result was derived for inviscid flow, it has important applications to real fluid flow.
 Consider, for instance, a nose shape with a smooth, gently-sloping profile, such as a paraboloid or tangent ogive.
 We do not expect the flow over such shapes to differ much from that predicted by potential theory, as separation does not occur.
 The streamlines will be displaced outward some small distance by the boundary layer, but they will retain essentially the same contours.
 Hence, it seems reasonable to assume that the pressure drag of a streamlined nosecone should be very close to zero in real fluid flow.
 There is a considerable body of experimental data supporting this contention.
-Figure 29, due to Hoerner (9), presents a variety of possible nose shapes with their tested values of pressure foredrag coefficient (based on frontal cross-sectional area).
+@fig:nose-foredrag-coefficients, due to Hoerner (9), presents a variety of possible nose shapes with their tested values of pressure foredrag coefficient (based on frontal cross-sectional area).
 As we surmised, the first two shapes, having no sharp edges or blunt surfaces, have pressure drag coefficients near zero.
 Furthermore, as the "degree of bluntness" increases
 // === page 123 ===
-Figure 28: Streamlines and pressure distribution in flow about a half-body.
-Drawing (a) shows the streamline pattern and the ratio of local static pressure to free-stream dynamic pressure, while drawing (b) shows the distribution of pressure over the surface.
-Note that there is positive pressure on the forward part of the nose region and suction on the after portion of the nose.
-According to potential theory the two effects counteract each other and the drag of a half-body is zero.
-Figure 29: Pressure foredrag coefficients of various nose shapes.
-The rounded shapes exhibit very low drag coefficients, in good agreement with the potential-flow prediction for a half-body.
+// Figure 28
+#figure(
+  image("../../assets/figures-original/fig3-28.png"),
+  caption: [Streamlines and pressure distribution in flow about a half-body.
+  Drawing (a) shows the streamline pattern and the ratio of local static pressure to free-stream dynamic pressure, while drawing (b) shows the distribution of pressure over the surface.
+  Note that there is positive pressure on the forward part of the nose region and suction on the after portion of the nose.
+  According to potential theory the two effects counteract each other and the drag of a half-body is zero.]
+) <fig:half-body-streamlines>
+
+// Figure 29
+#figure(
+  image("../../assets/figures-original/fig3-29.png"),
+  caption: [Pressure foredrag coefficients of various nose shapes.
+  The rounded shapes exhibit very low drag coefficients, in good agreement with the potential-flow prediction for a half-body.]
+) <fig:nose-foredrag-coefficients>
 // === page 124 ===
 (from top to bottom in the diagram) the drag coefficient shows a corresponding increase.
 Evidently the first shape, which might represent a conic section (ellipsoid, paraboloid, or hyperboloid of revolution), is superior for model rocketry applications; in fact, an ellipsoid of revolution whose length is about twice its base diameter is considered near-optimum by many designers.
@@ -1141,33 +1281,46 @@ Its negative pressure drag coefficient is due to the predominance of suction for
 This result can be understood by reexamining the experimental pressure distributions determined for a circular cylinder held transverse to the flow.
 The flow over the forward half of the cylinder is the two-dimensional analog of the three-dimensional flow about a nosecone of rounded profile, and it can be seen that integration of the coefficient of pressure over the cylinder's forward half (#mi(" \\varphi \\leq 90^\\circ ")) will result in a negative pressure drag coefficient.
 A comparison of shapes #3 and #6 reveals what even a small amount of rounding of sharp edges can accomplish.
-The quantitative variation of drag coefficient with "rounding radius" for a variety of two-dimensional and three-dimensional shapes is illustrated in Figure 30.
-At a value of #mi(" r/h \\geq 0.1 ") for three-dimensional shapes, #mi(" C_D ") declines sharply in a manner analogous to its behavior at the critical Reynolds number (Figure 26).
+The quantitative variation of drag coefficient with "rounding radius" for a variety of two-dimensional and three-dimensional shapes is illustrated in @fig:rounding-radius-drag.
+At a value of #mi(" r/h \\geq 0.1 ") for three-dimensional shapes, #mi(" C_D ") declines sharply in a manner analogous to its behavior at the critical Reynolds number (@fig:drag-vs-reynolds-blunt).
 The physical cause of this behavior is not transition, however, but a progressive decrease in separation from the forward edges.
 The "critical radius ratio" #mi(" r/h = 0.1 ") is then the minimum value above which the effects of separation on the pressure drag are
 // === page 125 ===
-Figure 30: Variation of drag coefficient with rounding radius for two-dimensional and three-dimensional bodies.
-The two-dimensional result can be applied to fin design, while the three-dimensional curve is applicable to nosecones.
-Both curves are averages of experimental data.
+// Figure 30
+#figure(
+  image("../../assets/figures-original/fig3-30.png"),
+  caption: [Variation of drag coefficient with rounding radius for two-dimensional and three-dimensional bodies.
+  The two-dimensional result can be applied to fin design, while the three-dimensional curve is applicable to nosecones.
+  Both curves are averages of experimental data.]
+) <fig:rounding-radius-drag>
 // === page 126 ===
   Nosecone shape Nosecone designation C0 of Javelin with airfoiled fins C0 of Javelin with square edged fins    BC-70 0.41 2.10    BC-78 0.41 2.13    BC-72 0.42 2.12    BC-76 0.42 2.14    BC-74 0.43 (0.70) 2.15 (2.35) [2.76]    BC-79 0.51 2.14    Hemisphere 0.51 2.16    60° cone 0.59 2.24    45° cone 0.61 2.24    Slightly rounded 0.87 2.51    Flat 1.32 2.77    Plug 1.75 3.26  
 // === page 127 ===
-Figure 31: Drag coefficient of the Javelin rocket with various nosecone shapes and fin profiles.
-The first column displays diagrams of the nose shapes tested.
-The second lists designations for the shapes (designations beginning with BC- are catalog numbers used by the Centuri Engineering Company, producers of the cones and of the Javelin rocket).
-The third column lists drag coefficients obtained for the Javelin rocket sanded, painted, and with airfoiled fins using each nose shape.
-The fourth column lists drag coefficients obtained for a sanded and painted Javelin with no airfoiling on the fins.
-Figures in parentheses were obtained after adding a launch lug; the figure in brackets is for an unsanded, unpainted Javelin with a launch lug and without fin airfoiling.
-Figure 32: Variation in the drag coefficient of a paraboloidal nose shape with fineness ratio L/d.
+// Figure 31
+#figure(
+  image("../../assets/figures-original/fig3-31.png"),
+  caption: [Drag coefficient of the Javelin rocket with various nosecone shapes and fin profiles.
+  The first column displays diagrams of the nose shapes tested.
+  The second lists designations for the shapes (designations beginning with BC- are catalog numbers used by the Centuri Engineering Company, producers of the cones and of the Javelin rocket).
+  The third column lists drag coefficients obtained for the Javelin rocket sanded, painted, and with airfoiled fins using each nose shape.
+  The fourth column lists drag coefficients obtained for a sanded and painted Javelin with no airfoiling on the fins.
+  Figures in parentheses were obtained after adding a launch lug; the figure in brackets is for an unsanded, unpainted Javelin with a launch lug and without fin airfoiling.]
+) <fig:javelin-nose-drag>
+
+// Figure 32
+#figure(
+  image("../../assets/figures-original/fig3-32.png"),
+  caption: [Variation in the drag coefficient of a paraboloidal nose shape with fineness ratio L/d.]
+) <fig:paraboloid-fineness-drag>
 // === page 128 ===
 negligible.
 It appears from tests that #mi("(r/h)_{crit}") is a slowly-varying function of Reynolds number, decreasing as #mi("R") is increased.
-Mark Mercer (10) has wind-tunnel tested all seven of the shapes in Figure 29, plus some additional ones of interest, on an actual model rocket -- the Javelin, a commercially-available kit produced by the Centuri Engineering Company, which he modified to various configurations for test purposes.
-The trend toward greater drag with increasing nosecone bluntness is clearly demonstrated in his measurements (Figure 31).
-Note particularly that the five shapes exhibiting the lowest drag (Centuri stock nosecones, catalog numbers BC-70, BC-78, BC-72, BC-76 and BC-74) are roughly similar to the first shape in Figure 29; furthermore they are representative of what might be considered "typical" model rocket nosecones.
+Mark Mercer (10) has wind-tunnel tested all seven of the shapes in @fig:nose-foredrag-coefficients, plus some additional ones of interest, on an actual model rocket -- the Javelin, a commercially-available kit produced by the Centuri Engineering Company, which he modified to various configurations for test purposes.
+The trend toward greater drag with increasing nosecone bluntness is clearly demonstrated in his measurements (@fig:javelin-nose-drag).
+Note particularly that the five shapes exhibiting the lowest drag (Centuri stock nosecones, catalog numbers BC-70, BC-78, BC-72, BC-76 and BC-74) are roughly similar to the first shape in @fig:nose-foredrag-coefficients; furthermore they are representative of what might be considered "typical" model rocket nosecones.
 The essential features which distinguish these shapes from the others tested are (a) a length-to-diameter ratio of at least 2; (b) a smooth transition between nosecone and body, the nosecone being generally tangent to the tube at its base; (c) a smooth boundary curve with its convex side toward the flow; and (d) no blunt surfaces facing the flow.
 Mercer's data may thus be considered an empirical guide to model rocket nosecone streamlining.
-The importance of the length-to-diameter ratio in nosecone streamlining is demonstrated quantitatively in Figure 32, taken from Stine (18).
+The importance of the length-to-diameter ratio in nosecone streamlining is demonstrated quantitatively in @fig:paraboloid-fineness-drag, taken from Stine (18).
 The pressure drag coefficient is reduced significantly as the ratio #mi("L/d") of the paraboloidal shape is increased up to about 2.0; further extension of the nose reduces the drag only slightly.
 This behavior accounts for the relatively slight differences in drag among the five streamlined nosecones
 // === page 129 ===
@@ -1175,7 +1328,7 @@ in Mercer's tests.
 
 ==== Fin Pressure Drag <sec:fin-pressure-drag>
 Since the fin surfaces are generally parallel to the flow direction, any pressure drag due to the fins must result from separation of the flow from the leading and/or trailing edges.
-Mercer's data indicate that the effect of blunt fin edges, as opposed to streamlined edges, is considerable in this respect (Figure 31).
+Mercer's data indicate that the effect of blunt fin edges, as opposed to streamlined edges, is considerable in this respect (@fig:javelin-nose-drag).
 The Javelin rocket used in his tests experienced an increase in #mi("C_D") from 0.70 to 2.35 when all the fin edges were left squared off, rather than rounded at the leading edges and tapered at the trailing edges — a 236% increase in drag over that of the streamlined-fin configuration.
 At the thickness-to-chord ratios commonly encountered in model rocketry (usually 0.02 or greater), the separated flow from a blunt leading edge will reattach itself to the fin at some point downstream.
 If the trailing edge is also squared off, separation will occur there also, resulting in a "base drag" analogous to that of the rocket's main body.
@@ -1184,8 +1337,8 @@ Adequate streamlining can usually be accomplished simply by providing a rounded 
 One must compromise with structural durability requirements here, since a paper-thin trailing edge is very easily damaged.
 The profile of a well-streamlined model rocket fin is illustrated
 // === page 130 ===
-in Figure 38.
-The character of the lateral edges of the profile -- whether they are flat or "airfoiled" -- does not substantially affect pressure drag, but it does play an important role in determining drag due to lift as discussed in Section 5.
+in @fig:fin-lift-induced-drag.
+The character of the lateral edges of the profile -- whether they are flat or "airfoiled" -- does not substantially affect pressure drag, but it does play an important role in determining drag due to lift as discussed in @sec:other-drag.
 
 ==== Launch Lug Drag <sec:launch-lug-drag>
 A remarkable aspect of aerodynamic drag is that small changes in the shape of a body can produce large variations in its drag coefficient.
@@ -1208,7 +1361,7 @@ The general expression for the drag coefficient increment due to a body-mounted 
 (119) #mi("(\\Delta C_D)_{lug} = 5.75 \\frac{A_{lug}}{A_r} = 5.75 \\left( \\frac{d_{lug}}{dr} \\right)^2") Data taken by Douglas J.
 Malewicki (20) indicate that placing the launch lug in one of the joints between the model's fins and its body can substantially decrease the launch lug drag increment.
 Malewicki determined an overall #mi("C_D") of about 0.50 for his Skychute XI rocket tested with a launch lug at Reynolds numbers (#mi("R_l = 2.5 \\times 10^5")) about the same as those of Mercer's tests.
-Since, according to the methods of Section 6, the #mi("C_D") of the Skychute XI without a launch lug is probably not less than 0.35, the increment in #mi("C_D") due to the presence of the lug located at the fin-body joint cannot be much more than 0.15 -- only 60% of the increase determined by Mercer for a body-mounted lug on a configuration of the same ratio #mi("A_{lug}/A_r").
+Since, according to the methods of @sec:zero-lift-drag-calc, the #mi("C_D") of the Skychute XI without a launch lug is probably not less than 0.35, the increment in #mi("C_D") due to the presence of the lug located at the fin-body joint cannot be much more than 0.15 -- only 60% of the increase determined by Mercer for a body-mounted lug on a configuration of the same ratio #mi("A_{lug}/A_r").
 The wind tunnel used by Malewicki (the low-speed tunnel at Wichita State University near Wichita, Kansas) may have had a significantly lower air turbulence level than that used by Mercer, so it is not necessarily accurate to compare their results directly.
 Given the extremely limited nature of the data concerning this important problem presently available to model rocketeers, however, the best we can do is to present the following tentative formula for the drag coefficient increment due to a launch lug mounted at the fin-body joint: (120) #mi("(\\Delta C_D)_{lug} = 3.45 \\frac{A_{lug}}{A_r} = 3.45 \\left( \\frac{d_{lug}}{dr} \\right)^2") The development of accurate, empirical expressions for #mi("(\\Delta C_D)_{lug}") covering variations in lug configuration, size, and placement is a problem requiring considerable further research.
 // === page 133 ===
@@ -1228,14 +1381,18 @@ Complications arise from the following sources: (a) The boundary layer separates
 The last two problems, peculiar to rocketry, have not been well researched on either the hobby or the professional level for subsonic flow.
 The empirical expression for base drag presented here is consequently unable to take either of the last two phenomena into account.
 Base drag is essentially a separation phenomenon.
-Figure 33 depicts the flow to be expected about the base of a model rocket when the engine is not firing.
+@fig:base-flow-boattail depicts the flow to be expected about the base of a model rocket when the engine is not firing.
 The boundary layer separates and then converges downstream, enclosing a volume known as the "dead-air" region.
 This term is actually a misnomer, as there is considerable motion of the air in this region
 // === page 135 ===
-Figure 33: Flow about the base of a model rocket with a conical boattail.
-#mi(" \\epsilon ") is the boattail angle and #mi(" \\Delta \\delta ") is the boundary-layer thickness.
-The boundary layer thickens as the flow passes over the boattail and then separates when the flat base is reached, forming a region of low pressure -- the "base pressure" #mi(" p_b ") -- and then reattaching at point R downstream of the rocket.
-Viscous effects cause the circulation pattern shown in the base pressure region.
+// Figure 33
+#figure(
+  image("../../assets/figures-original/fig3-33.png"),
+  caption: [Flow about the base of a model rocket with a conical boattail.
+  #mi("\\epsilon") is the boattail angle and #mi("\\Delta\\delta") is the boundary-layer thickness.
+  The boundary layer thickens as the flow passes over the boattail and then separates when the flat base is reached, forming a region of low pressure --- the "base pressure" #mi("p_b") --- and then reattaching at point R downstream of the rocket.
+  Viscous effects cause the circulation pattern shown in the base pressure region.]
+) <fig:base-flow-boattail>
 // === page 136 ===
 resulting from mixing along the free shear layer -- the boundary region between the dead-air volume and the free stream -- and from flow reversal at the convergence point (16).
 The character of the flow as a whole, as Hoerner (9) suggests, is somewhat like a jet pump: the external flow, acting as a "jet", mixes with the "dead air" and tries to "pump" it away.
@@ -1245,23 +1402,27 @@ An increase in boundary-layer thickness therefore results in a smaller reduction
 We have seen that the boundary-layer thickness is proportional to the skin-friction drag (for example, compare equations (54), (59), and (60)).
 If we now define a forebody friction drag coefficient #mi("C_{fb}") such that
 #mitex("C_{fb} = \\frac{D_{forebody,friction}}{q S_b} = C_f' \\frac{S_s}{S_b}")
-where #mi(" S_s ") is the wetted area of the body exclusive of the base, #mi(" S_b ") is the area of the base, and #mi(" C_f' ") is the forebody skin-friction coefficient as determined by the methods of Section 3, we expect (on the basis of the above discussion) that
+where #mi(" S_s ") is the wetted area of the body exclusive of the base, #mi(" S_b ") is the area of the base, and #mi(" C_f' ") is the forebody skin-friction coefficient as determined by the methods of @sec:viscous-drag, we expect (on the basis of the above discussion) that
 #mitex("C_{Db} = f(C_{fb})")
 The nature of this relationship -- that is, the form of the
 // === page 137 ===
-function \rho -- can be determined from a plot of experimental data, as in Figure 34.
+function \rho -- can be determined from a plot of experimental data, as in @fig:base-drag-vs-friction.
 The empirical function that has been determined for equation (124) is
 #mitex("C_{Db} = \\frac{0.029}{\\sqrt{C_{fb}}} \\equiv \\frac{D_b}{q S_b}")
 As we expected, an increase in the body viscous drag (which includes the effects of roughness) produces a decrease in base drag.
 Equation (125), however, as previously stated, does not take into account the effects of fins or rocket exhaust.
 Although there has been some experimentation with trading increased friction drag for reduced base drag by varying the roughness of a model's surface finish, model rocketeers are generally limited to variations in rocket geometry to effect reductions in base drag.
 The most widely-used technique, employed on models which require a main body tube section greater in diameter than that which would be a "glove fit" to the engine, is referred to as boattailing.
-A gradually-tapered section (see Figure 33) is added to the rear of the rocket body, to guide the flow downstream to a reduced base area.
+A gradually-tapered section (see @fig:base-flow-boattail) is added to the rear of the rocket body, to guide the flow downstream to a reduced base area.
 If the boattail angle #mi("\\epsilon") is small enough (about 5 or 10 degrees) the flow will not separate from the boattail lateral surface, and the increase in base pressure due to pressure recovery along the boattail reduces the base drag.
 The technique is limited in usefulness to those models which, for some reason, must use a main body section significantly greater in diameter than the engine casing; there is, of course, no sense in enlarging the diameter of a rocket just to enable it to be built with a boattail!
 // === page 138 ===
-Figure 34: Variation of the base drag coefficient of a body of revolution with forebody friction drag coefficient.
-The curve and semiempirical function shown represent a "best fit" to a large collection of experimental data.
+// Figure 34
+#figure(
+  image("../../assets/figures-original/fig3-34.png"),
+  caption: [Variation of the base drag coefficient of a body of revolution with forebody friction drag coefficient.
+  The curve and semiempirical function shown represent a "best fit" to a large collection of experimental data.]
+) <fig:base-drag-vs-friction>
 // === page 139 ===
 An expression for the base drag of a boattailed configuration can be developed from equation (125).
 If the body maximum frontal area is denoted #mi(" S_m "), and its associated body diameter #mi(" d_m "), then
@@ -1279,7 +1440,7 @@ or, simplifying algebraically,
 #mitex("(C_{Db})_m = \\left( \\frac{d_b}{d_m} \\right)^3 \\frac{0.029}{\\sqrt{C_{Df}}}")
 It is apparent that #mi(" (C_{Db})_m ") can be reduced, either by decreasing the ratio #mi(" d_b/d_m ") or by increasing the skin-friction drag of the body.
 The first technique is limited by the diameter of the engine itself.
-The danger of separation from the boattail as the boattail angle #mi(" \\epsilon ") (as defined in Figure 33) is
+The danger of separation from the boattail as the boattail angle #mi(" \\epsilon ") (as defined in @fig:base-flow-boattail) is
 // === page 140 ===
 increased also imposes a lower limit on #mi("d_b/d_m") for a given boattail length.
 The maximum permissible value of #mi("\\epsilon") generally lies somewhere between #mi("5^\\circ") and #mi("10^\\circ"); if #mi("\\epsilon") is greater than this value separation will occur on the boattail and equation (131) will not apply.
@@ -1296,7 +1457,7 @@ and finally,
 // === page 141 ===
 The largest value of #mi(" C_{Df} ") for which an increase in #mi(" C_{Df} ") will result in a decrease in overall drag occurs for the limiting case #mi(" d_b/d_m = 1.0 "), and even then #mi(" C_{Df} ") must be less than 0.059.
 Model rockets do not have body skin-friction drag coefficients this small.
-A typical value of #mi("C_{Df}") for a well-designed model rocket is three or more times this value (see Section 6).
+A typical value of #mi("C_{Df}") for a well-designed model rocket is three or more times this value (see @sec:zero-lift-drag-calc).
 This is because well-designed model rockets have a fineness (length-to-diameter) ratio sufficiently great so that the ratio of wetted area to frontal area is relatively large, and so, therefore, is #mi("C_{Df}").
 Hence, insofar as equation (131) is valid, the contention that an increase in #mi("C_{Df}") cannot result in a decrease in base drag sufficient to lower the overall drag of the rocket is proved.
 Note that the means by which #mi(" C_{Df} ") is to be increased has not been specified in the derivation, and that equation (135) consequently refers to variations in #mi(" C_{Df} ") effected by any means whatsoever; i.e., whether by altering the length of the body to change #mi(" S_s ") or by altering the surface finish of the body to change #mi(" C_f' ").
@@ -1321,21 +1482,21 @@ We will
 restrict our attention to small angles of attack (less than about #mi("10^\\circ"), since at larger values of #mi("\\alpha") the relationship between drag and angle of attack is far more complex and, in any case, flight at large angles of attack generally indicates a dynamic stability problem necessitating a redesign of the rocket.
 Furthermore, only very simple single-stage model rocket configurations will be examined.
 Article 5.2 presents a practical method (from Reference 6) for calculating the drag coefficient at angles of attack, although (as with many methods discussed in this chapter) it still requires experimental data to confirm its applicability to model rockets.
-In Section 5.3 we examine the effects of rotation about the roll axis, which generally produces a drag increase.
+In @sec:rotation-drag we examine the effects of rotation about the roll axis, which generally produces a drag increase.
 It will be found that the increase in drag coefficient due to spin is usually small compared to that due to the mechanism which induces the rotation (usually canted fins).
-Previously, in Section 3.5.2, it was seen that surface roughness due to single or distributed particles can lead to premature transition, and hence to an increase in the skin friction.
+Previously, in @sec:surface-roughness, it was seen that surface roughness due to single or distributed particles can lead to premature transition, and hence to an increase in the skin friction.
 In a purely turbulent region surface imperfections, since they represent obstacles to the flow, have a viscous drag of their own.
-This component of model rocket drag will be examined in Section 5.4.
+This component of model rocket drag will be examined in @sec:roughness-drag.
 
 === Drag at Small Angles of Attack <sec:aoa-drag>
 Due to forces which may arise from causes such as wind gusts, off-center thrust, misaligned fins, or staging transients, a model rocket may assume an angle of attack \alpha to the instantaneous
 // === page 144 ===
-velocity vector, as seen in Figure 37.
+velocity vector, as seen in @fig:trial-rocket.
 If the vehicle is aerodynamically stable the angle is usually quite small and quickly reduced by the restoring moment and damping moment characteristic of a stable model.
 During the time in which the response to the disturbance produces discernable angles of attack, however, the drag may be increased considerably.
 A knowledge of the extent to which the drag coefficient of a given rocket increases with angle of attack is therefore of considerable value.
-In Sections 5.2.1 and 5.2.2 expressions will be presented for estimating the increase in drag coefficient of the body and tailfin assembly alone, respectively, with angle of attack.
-The magnitude of the corrections required due to fin-body interference will be discussed in 5.2.3, and the overall variation of #mi("C_D") with angle of attack, as found by experiment and through semiempirical formulae, is analyzed in 5.2.4.
+In Sections #ref(<sec:body-aoa-drag>, supplement: none) and #ref(<sec:fin-aoa-drag>, supplement: none) expressions will be presented for estimating the increase in drag coefficient of the body and tailfin assembly alone, respectively, with angle of attack.
+The magnitude of the corrections required due to fin-body interference will be discussed in @sec:fin-body-interference-drag, and the overall variation of #mi("C_D") with angle of attack, as found by experiment and through semiempirical formulae, is analyzed in @sec:total-aoa-drag.
 
 ==== Body Drag at Angle of Attack <sec:body-aoa-drag>
 The drag of a slender body (such as that of a model rocket) at an angle of attack is closely related to its side force (if any) and drag at zero angle of attack.
@@ -1344,19 +1505,19 @@ The total drag coefficient of a model rocket body (nosecone plus cylindrical bod
 where
 #mitex("(C_{D_0})_B \\text{ is the body drag at zero angle of attack.}")
 // === page 145 ===
-A detailed method of estimating this quantity is presented in Section 6.
+A detailed method of estimating this quantity is presented in @sec:zero-lift-drag-calc.
 A typical value for a slender model rocket is #mi("(C_{D_0})_B = 0.27") at a Reynolds number of #mi("1 \\times 10^6").
 This coefficient includes base drag.
 #mi("C_{DB}(\\alpha)") is the drag coefficient of the body due to angle of attack (the notation is read " #mi("C_{DB}") as a function of #mi("\\alpha") ", or simply " #mi("C_{DB}") of #mi("\\alpha") "), which will be discussed herein.
 When a model rocket assumes a very small angle of attack (about 2 degrees or less), the external flow is not significantly disturbed from its behavior at zero incidence.
-Since it was shown in Section 4 that (for a streamlined nose) this external flow resembles closely that predicted for an inviscid fluid, it is reasonable to attempt the use of potential flow theory for the determination of aerodynamic forces at very small angles of attack -- and, indeed, such analyses have been carried out.
+Since it was shown in @sec:pressure-drag that (for a streamlined nose) this external flow resembles closely that predicted for an inviscid fluid, it is reasonable to attempt the use of potential flow theory for the determination of aerodynamic forces at very small angles of attack -- and, indeed, such analyses have been carried out.
 The forces produced are a side force, perpendicular to the free-stream flow direction, and a much smaller drag force, parallel to #mi("U_{\\infty}").
 Potential theory predicts a side force (also referred to as "lift") coefficient which varies linearly with angle of attack.
 According to Van Dyke (6), the body lift-curve slope at zero incidence is given by
 #mitex("\\frac{dC_L}{d\\alpha} = \\frac{2(k_2 - k_1)}{S_m} S_0")
 so that the lift coefficient #mi("C_L") is given by
 // === page 146 ===
-C\_L = \frac{2(k\_2 - k\_1) S\_0}{S\_m} \alpha Applying the approximation \sin (\alpha) \approx \alpha, valid for small angles, we then have C\_{Dg}(\alpha) = \alpha C\_L = \frac{2(k\_2 - k\_1) S\_0}{S\_m} \alpha where (k\_2 - k\_1) is the "apparent mass factor" as determined by Munk, given in Figure 35 as a function of body fineness ratio.
+C\_L = \frac{2(k\_2 - k\_1) S\_0}{S\_m} \alpha Applying the approximation \sin (\alpha) \approx \alpha, valid for small angles, we then have C\_{Dg}(\alpha) = \alpha C\_L = \frac{2(k\_2 - k\_1) S\_0}{S\_m} \alpha where (k\_2 - k\_1) is the "apparent mass factor" as determined by Munk, given in @fig:apparent-mass-factor as a function of body fineness ratio.
 #mi(" x ") is the distance from the nosecone tip measured along the longitudinal body axis.
 #mi(" x_0 ") is the body station where the flow ceases to obey the predictions of potential theory.
 This location can be found from the expression (140) #mi(" x_0 = 0.55\\, x_1 + 0.36\\, l_B ") #mi(" x_1 ") is the body station where the rate of change of cross-sectional area with #mi(" x ") (#mi(" dS_x/dx ")) first reaches its minimum value.
@@ -1366,8 +1527,17 @@ This location can be found from the expression (140) #mi(" x_0 = 0.55\\, x_1 + 0
 These terms will be clarified when a numerical example is computed shortly.
 It should be noted that equation (140)
 // === page 147 ===
-Figure 35: Apparent mass factor (#mi(" k_2 - k_1 ")) as a function of body fineness ratio (#mi(" l_b / d ")).
-Figure 36: Ratio of the drag coefficient of a circular cylinder of finite length to the drag coefficient of a circular cylinder of infinite length, #mi(" \\eta "), as a function of cylinder fineness ratio (#mi(" l_b / d ")).
+// Figure 35
+#figure(
+  image("../../assets/figures-original/fig3-35.png"),
+  caption: [Apparent mass factor (#mi("k_2 - k_1")) as a function of body fineness ratio (#mi("l_b / d")).]
+) <fig:apparent-mass-factor>
+
+// Figure 36
+#figure(
+  image("../../assets/figures-original/fig3-36.png"),
+  caption: [Ratio of the drag coefficient of a circular cylinder of finite length to the drag coefficient of a circular cylinder of infinite length, #mi("\\eta"), as a function of cylinder fineness ratio (#mi("l_b / d")).]
+) <fig:cylinder-length-drag>
 // === page 148 ===
 has been constructed by slope and intercept extrapolation from a graph contained in Reference 6, and that the validity of this extrapolation has not as yet been demonstrated.
 As the angle of attack increases beyond about two degrees, separation of the boundary layer from the leeward side of the body occurs and potential theory no longer yields an accurate result; the normal (i.e., perpendicular) forces, and hence the lift, increase nonlinearly with angle of attack.
@@ -1377,7 +1547,7 @@ The method we will present here assumes, as before, that the flow is potential o
 On the aft part of the body, where the flow is assumed entirely viscous, lift and drag arise solely from cross-flow forces.
 Then, according to Hopkins (6),
 #mitex("\\begin{align*} (141) \\quad C_L &= \\frac{2(k_2 - k_1)S_0}{S_m} \\alpha + \\frac{2\\alpha^2}{S_m} \\int_{x_0}^{l_b} \\eta r_x C_{Dc} dx \\\\ (142) \\quad C_{Dg}(\\alpha) &= \\frac{2(k_2 - k_1)S_0}{S_m} \\alpha^2 + \\frac{2\\alpha^3}{S_m} \\int_{x_0}^{l_b} \\eta r_x C_{Dc} dx \\end{align*}")
-where #mi(" \\eta ") is the ratio of the cross-flow drag on a cylinder of finite length to the cross-flow drag on a cylinder of infinite length, given in Figure 36;
+where #mi(" \\eta ") is the ratio of the cross-flow drag on a cylinder of finite length to the cross-flow drag on a cylinder of infinite length, given in @fig:cylinder-length-drag;
 // === page 149 ===
 #mi(" C_{Dc} ") is the experimental steady-state cross-flow drag coefficient of a circular cylinder of infinite length.
 #mi("C_{Dc} ") is equal to 1.2 for all practical model rocket problems; and #mi("r_x") is the body radius at any station #mi("x").
@@ -1386,23 +1556,27 @@ In most cases, equation (142) is quite simple to apply to model rockets, as #mi(
 The quantity #mi("S_o/S_m") thus usually equals 1.0, and the integral, since #mi("\\eta"), #mi("r_x"), and #mi("C_{Dc}") are all constant along the aft section of a rocket having no shoulder or boattail, involves only an exact differential #mi("dx").
 In such a case,
 #mitex("\\int_{x_0}^{l_b} \\eta r_x C_{Dc} \\, dx = (l_b - x_0) \\eta r_x C_{Dc}")
-In order to acquire some "feel" for the kind of numerical results one obtains from equation (142), we shall employ the simple, single-stage model rocket configuration shown in Figure 37.
+In order to acquire some "feel" for the kind of numerical results one obtains from equation (142), we shall employ the simple, single-stage model rocket configuration shown in @fig:trial-rocket.
 Its length, 13 inches (33 cm.) and body diameter, 0.813 inch (2.06 cm.), are identical to the corresponding dimensions of the Aerobee-Hi for which Stine (18) has reported the experimentally-determined variation of the total #mi("C_D") with #mi("\\alpha").
 We do not seek or expect good agreement with Stine's data, as the methods of this and the following sections are approximate, and as the trial rocket is somewhat different from the Aerobee-Hi.
 Specifically, the trial rocket has 4 fins as opposed to 3 for the Aerobee-Hi,
 // === page 150 ===
-Figure 37: Trial rocket used to compute drag increase due to nonzero angle of attack.
-All dimensions are given in centimeters.
+// Figure 37
+#figure(
+  image("../../assets/figures-original/fig3-37.png"),
+  caption: [Trial rocket used to compute drag increase due to nonzero angle of attack.
+  All dimensions are given in centimeters.]
+) <fig:trial-rocket>
 // === page 151 ===
 a different fin shape, no launch lug, and is without the Aerobee's longitudinal fairings.
 Comparing the experimental results with analytical predictions for a rocket of roughly similar configuration, however, will give us a "feel" for whether our results are, in the colloquialism of engineering, "in the right ball park".
-From Figure 37, #mi("\\ell_b/d = 16"), for which Figure 35 yields #mi("(k_2 - k_1) = 0.97").
+From @fig:trial-rocket, #mi("\\ell_b/d = 16"), for which @fig:apparent-mass-factor yields #mi("(k_2 - k_1) = 0.97").
 The quantity #mi("dS_{x}/dx") attains its minimum value, zero, at the body-nosecone junction, so #mi("x_1 = 8.9") cm.
 We determine #mi("x_{o}") from equation (140) as follows:
 #mitex("x_{o} = .55(8.9) + .36(33) = 16.8 \\text{ cm}.")
 Since #mi("x_{o}") is located on the cylindrical body, #mi("S_{o}/S_{m} = 1.0") ; the first term in equation (142) then becomes
 #mitex("2(k_{2} - k_{1}) \\frac{S_{o}}{S_{m}} \\alpha^{2} = 1.94 \\alpha^{2}")
-From Figure 36, #mi("\\eta = 0.74").
+From @fig:cylinder-length-drag, #mi("\\eta = 0.74").
 The body radius #mi("r_{x}") is a constant, 1.03 cm., between #mi("x_{o}") and #mi("\\ell_{b}") .
 Hence,
 #mitex("\\frac{2 \\alpha^{3}}{S_{m}} \\eta r_{x} C_{D_c} (\\ell_b - x_o) = \\alpha^3 \\left[ \\frac{2 \\times .74 \\times 1.03 \\times 1.2 \\times 16.2}{\\pi \\times (1.03)^2} \\right]")
@@ -1414,24 +1588,32 @@ For #mi("\\alpha = 0.022") radian (about #mi("1.25^{\\circ}") ), the #mi("\\alph
 This essentially defines the range of validity for the potential-flow solution.
 The
 // === page 152 ===
-Figure 39: Trailing vortices and effective aspect ratio.
-The fin is held at an angle of attack #mi("\\alpha"), causing the force #mi("\\vec{F}") to act through the center of pressure.
-#mi("\\vec{F}") is tilted back at the angle #mi("\\alpha"); and is resolved into lift #mi("\\vec{L}") and induced drag #mi("\\vec{D}_i").
-Figure 39: Trailing vortices and effective aspect ratio.
-An airplane wing or a pair of diametrically opposed rocket fins sheds trailing vortices from its tips (a).
-As viewed from behind the wing the left vortex rotates clockwise; the right one counterclockwise as shown.
-The vortices descend after leaving the wing and also "tuck in" slightly, reducing the effective span of the wing and therefore reducing the effective aspect ratio, since the aspect ratio #mi("\\mathcal{R}") is defined as the span divided by the average chord.
-Panel (b) shows the change in effective aspect ratio and vortex core position (dotted line) measured for a number of different tip shapes on wings of #mi("\\mathcal{R} = 3.0").
-Since wings of higher #mi("\\mathcal{R}") can generate a given lift at lower angle of attack and lower induced drag than wings of lower #mi("\\mathcal{R}"), zero or positive values of #mi("\\Delta\\mathcal{R}") are desirable.
-// === page 153 ===
+// Figure 38
+#figure(
+  image("../../assets/figures-original/fig3-38.png"),
+  caption: [The origin of induced drag.
+  The fin is held at an angle of attack #mi("\\alpha"), causing the force #mi("\\vec{F}") to act through the center of pressure.
+  #mi("\\vec{F}") is tilted back at the angle #mi("\\alpha_i") and is resolved into lift #mi("\\vec{L}") and induced drag #mi("\\vec{D}_i").]
+) <fig:fin-lift-induced-drag>
 
+// Figure 39
+#figure(
+  image("../../assets/figures-original/fig3-39.png"),
+  caption: [Trailing vortices and effective aspect ratio.
+  An airplane wing or a pair of diametrically opposed rocket fins sheds trailing vortices from its tips (a).
+  As viewed from behind the wing the left vortex rotates clockwise; the right one counterclockwise as shown.
+  The vortices descend after leaving the wing and also "tuck in" slightly, reducing the effective span of the wing and therefore reducing the effective aspect ratio, since the aspect ratio #mi("\\mathcal{R}") is defined as the span divided by the average chord.
+  Panel (b) shows the change in effective aspect ratio and vortex core position (dotted line) measured for a number of different tip shapes on wings of #mi("\\mathcal{R} = 3.0").
+  Since wings of higher #mi("\\mathcal{R}") can generate a given lift at lower angle of attack and lower induced drag than wings of lower #mi("\\mathcal{R}"), zero or positive values of #mi("\\Delta\\mathcal{R}") are desirable.]
+) <fig:trailing-vortices>
+// === page 153 ===
 // === page 154 ===
 two terms are of equal magnitude at #mi("\\alpha = 12.5^\\circ").
 It should be noted here that #mi("C_{DB}(\\alpha)") is independent of velocity, a result which agrees with the predictions of slender-body theory for incompressible flow.
 
 ==== Fin Drag at Angle of Attack <sec:fin-aoa-drag>
 A model rocket fin, which is here assumed to have a symmetrical, streamlined section profile, will behave like an aircraft wing when it is inclined at an angle to the flow.
-It will naturally produce a side force, or "lift", as shown in Figure 38 — which, after all, is why rockets have fins in the first place.
+It will naturally produce a side force, or "lift", as shown in @fig:fin-lift-induced-drag — which, after all, is why rockets have fins in the first place.
 Due to the deflection of the flow in the vicinity of the fin, however, the total aerodynamic normal force #mi("N") will not be perpendicular to the free-stream flow.
 Instead, it is turned backwards to some angle #mi("\\alpha_i") to the line perpendicular to the free stream, so that it exhibits a drag component.
 This drag component is known as the induced drag of the fin, and its associated drag coefficient is denoted #mi("C_{Di}").
@@ -1452,11 +1634,11 @@ Then
 You should note here that the fin planform area used includes the imaginary extension of the fins within the body tube, and that "planform" refers to the fact that only the area of one side of the fins is used.
 The assumption of square chordwise edges (squared tips) in the above calculations is of some significance, as the shape of the fin tip can affect the value of the induced drag considerably.
 When a fin is producing lift, it has a lower pressure on its upper, or "suction" side, than on its lower side.
-This phenomenon is associated with the formation of trailing vortices (see Figure 39a) near the fin tips as the air from below tries to "curl up" around the tips.
+This phenomenon is associated with the formation of trailing vortices (see @fig:trailing-vortices (a)) near the fin tips as the air from below tries to "curl up" around the tips.
 Depending on the fin tip shape, the distance between the resulting vortex cores may be less than the
 // === page 156 ===
 actual span of the fins, leading to a reduction in effective span -- and therefore, to a reduction in effective aspect ratio.
-Figure 39b depicts several possible fin-tip shapes, with their changes in effective aspect ratio #mi("\\Delta R") and the location of the vortex core in each case.
+@fig:trailing-vortices (b) depicts several possible fin-tip shapes, with their changes in effective aspect ratio #mi("\\Delta R") and the location of the vortex core in each case.
 Those shapes for which #mi("\\Delta R") is positive or zero are most desirable, since they produce low induced drag.
 Of the shapes shown, this category would include numbers 1, 5, and 6.
 One shape not shown, but popular among designers of high-performance model rockets, is the elliptical fin.
@@ -1480,17 +1662,25 @@ where
 #mitex("K_{B(F)} = \\frac{\\text{body lift in the presence of the fins}}{\\text{fin lift alone}}")
 \frac{dC\_L}{d\alpha} is the lift-curve slope of the fin at \alpha = 0 ; and S\_e is the exposed fin planform area.
 #mitex("S_e \\text{ is the exposed fin planform area.}")
-The functions #mi(" K_{F(B)} ") and #mi(" K_{B(F)} ") are both given in Figure 40.
+The functions #mi(" K_{F(B)} ") and #mi(" K_{B(F)} ") are both given in @fig:fin-body-interference.
 We can now determine #mi(" \\Delta C_{D_i} ") for our trial rocket.
 The total fin span b is 7.14 cm.
 and the body diameter d is 2.06 cm., so #mi(" d/b = .289 ").
-This gives, from Figure 40, #mi(" K_{B(F)} = 0.44 ") and #mi(" K_{F(B)} = 1.25 ").
+This gives, from @fig:fin-body-interference, #mi(" K_{B(F)} = 0.44 ") and #mi(" K_{F(B)} = 1.25 ").
 Since only two fins are assumed to be producing
 // === page 158 ===
-Figure 40: Fin-body interference coefficients for flight at nonzero angle of attack.
-d is the diameter of the body tube, while b is the span of a diametrically opposed pair of fins.
-Figure 41: Increase in drag coefficient with angle of attack for the trial rocket of Figure 37 (semiempirical) and for a scale model Aerobee-Hi tested by G.
-Harry Stine, assuming the same drag coefficient for both rockets at zero angle of attack.
+// Figure 40
+#figure(
+  image("../../assets/figures-original/fig3-40.png"),
+  caption: [Fin-body interference coefficients for flight at nonzero angle of attack.
+  d is the diameter of the body tube, while b is the span of a diametrically opposed pair of fins.]
+) <fig:fin-body-interference>
+
+// Figure 41
+#figure(
+  image("../../assets/figures-original/fig3-41.png"),
+  caption: [Increase in drag coefficient with angle of attack for the trial rocket of @fig:trial-rocket (semiempirical) and for a scale model Aerobee-Hi tested by G. Harry Stine, assuming the same drag coefficient for both rockets at zero angle of attack.]
+) <fig:aoa-drag-comparison>
 // === page 159 ===
 lift, #mi(" S_e = 12.95 \\ \\text{cm}^2 "), and
 #mitex("S_m = \\pi r^2 = 3.33 \\text{ cm}^2 \\quad \\frac{dC_L}{d\\alpha} = \\frac{1}{.32} = 3.12")
@@ -1503,17 +1693,17 @@ If we now combine the results of 5.2.1, 5.2.2, and 5.2.3, we obtain an expressio
 #mitex("C_D(\\alpha) = C_{D_B}(\\alpha) + C_{D_i}' + \\Delta C_{D_i}")
 For our trial rocket, the result is
 #mitex("C_D(\\alpha) = 16.83 \\alpha^2 + 8.9 \\alpha^3")
-This function, along with its constituent functions, is tabulated in Table 4 and is plotted in Figure 41.
+This function, along with its constituent functions, is tabulated in Table 4 and is plotted in @fig:aoa-drag-comparison.
 In order to compare equation (149) with the experimental data for G.
 Harry Stine's Aerobee-H1, the trial rocket has been assumed to have the same zero-lift drag coefficient as the Aerobee-H1 (about 0.75).
 The trial vehicle would probably have a much lower zero-lift drag coefficient in actuality (unless its surface were very rough), but the assumption of equal zero-lift drag for the two vehicles makes it more convenient to compare their drag increments due to angle of attack.
 The agreement between the curves for the
 // === page 160 ===
-Table 4: Increase in drag coefficient with angle of attack for the trial rocket of Figure 37.
+Table 4: Increase in drag coefficient with angle of attack for the trial rocket of @fig:trial-rocket.
 // === page 161 ===
 two vehicles is surprisingly close, considering the physical differences between the rockets and the simplifying assumptions made in the derivation of equation (149) -- a result which tends to confirm the validity of the semiempirical approach.
-It is, however, hoped that experiments will be performed in the near future on rockets similar to that of Figure 37 (with and without launch lug), to determine with greater precision the accuracy of this computational method.
-One fact is clearly established in Figure 41: that the increase in drag at small angles of attack can be a sizeable portion of the zero-lift drag.
+It is, however, hoped that experiments will be performed in the near future on rockets similar to that of @fig:trial-rocket (with and without launch lug), to determine with greater precision the accuracy of this computational method.
+One fact is clearly established in @fig:aoa-drag-comparison: that the increase in drag at small angles of attack can be a sizeable portion of the zero-lift drag.
 For the Aerobee-Hi model, the drag coefficient is doubled at an incidence of ten degrees.
 Clearly, then, for maximum altitude performance, it is desirable to design a rocket such that all oscillations resulting from in-flight disturbances are damped out as quickly as possible.
 We observe that equation (149) is dominated by the #mi("\\alpha^2") term over the entire range of angles of attack of interest in model rocketry; up to #mi("\\alpha = 5^\\circ"), the #mi("\\alpha^3") term may be neglected with less than 5% error in the final result.
@@ -1531,19 +1721,26 @@ Equation (150) is conservative (that is, it slightly overestimates the drag) ove
 A model rocket, rotating about its longitudinal -- or roll -- axis in flight, will experience an increase in drag due to the thickening of the boundary layer resulting from the circumferential velocity of the body tube surface.
 We shall denote this circumferential velocity component by #mi(" u ").
 This thickening of the boundary layer could conceivably cause separation on the forebody and fins, and an increased dead-air volume aft of the base, if #mi(" u ") is sufficiently large.
-The drag increase due to rotation may be estimated by examining Figure 42.
+The drag increase due to rotation may be estimated by examining @fig:rotation-drag.
 The circumferential velocity is given by
 #mitex("u = \\pi d n")
 where #mi(" d ") is the diameter of the body and #mi(" n ") is the number of
+// === page 163 ===
+// Figure 42
+#figure(
+  image("../../assets/figures-original/fig3-42.png"),
+  caption: [Increase in the drag coefficient of a finless projectile due to rotation (spinning) about the longitudinal axis.
+  u is the tangential velocity of the projectile's surface due to the spin; U is the longitudinal free-stream velocity.]
+) <fig:rotation-drag>
 // === page 164 ===
 revolutions per second.
 If we assume that the trial rocket of our numerical example (diameter = 2.06 cm.) has been given a roll rate of 100 radians per second (15.9 revolutions/second) at an airspeed of 60 meters (6000 cm.) per second, we obtain
 #mitex("\\frac{u}{U} = 0.0172")
-The effect of such small ratios of body tube circumferential velocity to vehicle airspeed -- ratios typical of model rockets -- is too small to be read from the curve of Figure 42.
+The effect of such small ratios of body tube circumferential velocity to vehicle airspeed -- ratios typical of model rockets -- is too small to be read from the curve of @fig:rotation-drag.
 One may therefore conclude that, as far as the finless body is concerned, rotation does not exert a significant influence on model rocket drag.
 The mechanism for inducing rotation in a model rocket purposefully is usually fin geometry -- that is, by canting the fins, giving them an asymmetrical section profile, or adding spinnerons.
 Of these three techniques, fin canting is the most commonly used.
-Since canting merely creates a permanent, artificially-induced angle of attack for the fins, the drag due to fin cant can be estimated using the methods of Chapter 2 and the results of Section 5.2.2 of the present chapter.
+Since canting merely creates a permanent, artificially-induced angle of attack for the fins, the drag due to fin cant can be estimated using the methods of Chapter 2 and the results of @sec:fin-aoa-drag of the present chapter.
 According to equations (90), (115), (116), and (117) of Chapter 2, canting the fins of our trial rocket will give it a roll rate determined by
 \omega\_z = .1672 U \theta
 For \omega\_z = 100 radians/second at U = 6000 cm./sec., a fin cant angle \theta almost exactly 0.1 radian is required (0.1 radian = 5.73^\circ).
@@ -1570,9 +1767,9 @@ Such separation could result in a gross magnification of pressure drag.
 While the angle of cant at which such phenomena become significant has not as yet been established with precision, it has been generally accepted for a number of years that cant angles greater than 15° produce reductions in performance so severe as to be detectable with the naked eye.
 
 === Drag Due to Surface Roughness in Turbulent Flow <sec:roughness-drag> 
-In Section 3.5 we examined the critical height of roughness elements necessary to induce premature transition in the boundary layer from laminar to turbulent flow.
+In @sec:bl-transition we examined the critical height of roughness elements necessary to induce premature transition in the boundary layer from laminar to turbulent flow.
 Within the turbulent boundary layer which is prevalent over most of a model rocket at higher Reynolds numbers, roughness can affect the drag in another manner: if the individual roughness particles protrude above the thin laminar sublayer, they will have a viscous drag of their own.
-The turbulent skin-friction coefficient derived in Section 3 (equation 86) applies only to "hydraulically smooth" surfaces; that is, surfaces on which the grain size #mi("k") of roughness particles is less than the thickness of the laminar sublayer.
+The turbulent skin-friction coefficient derived in @sec:viscous-drag (equation 86) applies only to "hydraulically smooth" surfaces; that is, surfaces on which the grain size #mi("k") of roughness particles is less than the thickness of the laminar sublayer.
 The admissible height #mi("k_{adm}") for roughness particles is defined as the maximum height of the particles which gives no increase in the drag compared with a smooth wall.
 A simple, conservative formula for determining #mi("k_{adm}") for a flat plate is (15):
 // === page 167 ===
@@ -1587,10 +1784,10 @@ If we let #mi(" U = 60 ") meters/second, for instance, and #mi(" \\nu = 1.495 \\
 #mitex("k_{adm} \\leq 2.48 \\times 10^{-5} \\text{ meter} = 2.48 \\times 10^{-3} \\text{ cm.}")
 This result applies specifically to sand grains, for which equation (155) was empirically determined, but it can be used as an approximate guide for other forms of roughness.
 Hence, at a velocity typical of model rocket flight, the surface of the model downstream of the transition point may be regarded as hydraulically smooth if the size of distributed roughness grains does not exceed about 0.0025 cm.
-If this condition is satisfied, the smooth turbulent skin-friction coefficient of Section 3 may be used in calculations.
+If this condition is satisfied, the smooth turbulent skin-friction coefficient of @sec:viscous-drag may be used in calculations.
 It should be noted that the calculated
 // === page 168 ===
-value of #mi(" k_{adm} ") is considerably less than the roughness height required to induce premature transition as determined in Section 3.5.
+value of #mi(" k_{adm} ") is considerably less than the roughness height required to induce premature transition as determined in @sec:bl-transition.
 If the criterion of this section is satisfied, therefore, transition will not be induced prematurely.
 Table 5 provides information on grain sizes in microns (1 micron = 1 \times 10^{-6} \text{ meter} = 1 \times 10^{-4} \text{ cm.}) for various surfaces.
 It indicates that the finish on a model rocket should be about as smooth as that of paint on mass-produced aircraft, or better.
@@ -1615,7 +1812,7 @@ If, for example, we examine a turbulent boundary layer over a surface at relativ
 As the velocity (and therefore the Reynolds number) increases, the boundary layer becomes thinner, and the roughness elements begin to protrude from the sublayer.
 This process is initiated near the nose, or leading edge, where the boundary layer is thinnest, and progresses downstream with increasing #mi("R").
 When a surface is in this "transition" state between a completely smooth and a completely rough appearance, its skin-friction coefficient will have a value intermediate between those determined from equations (86) and (157).
-Note that this process proceeds along a body in a direction opposite to that of laminar-to-turbulent boundary-layer transition, as described in Section 3.5.1.
+Note that this process proceeds along a body in a direction opposite to that of laminar-to-turbulent boundary-layer transition, as described in @sec:pressure-gradient-re.
 Two final observations can be made regarding drag due to roughness.
 First, since equation (157) is independent of velocity, #mi("C_f") is a constant for any given ratio #mi("\\frac{l_b}{k}") .
 In accordance with equation (18), it may then be concluded that
@@ -1623,7 +1820,7 @@ In accordance with equation (18), it may then be concluded that
 hydraulically rough surfaces obey the quadratic drag law exactly.
 Furthermore, equation (155) for #mi("k_{adm}") is independent of body length; hence any two rockets travelling at the same velocity under identical atmospheric conditions have identical values of #mi("k_{adm}").
 The maximum velocity attained by a rocket determines the minimum value of #mi("k_{adm}").
-If this minimum grain size is not exceeded anywhere on the surface, the rocket may be regarded as hydraulically smooth throughout its flight, and the friction drag equations of Section 3 are applicable to the calculation of its drag coefficient.
+If this minimum grain size is not exceeded anywhere on the surface, the rocket may be regarded as hydraulically smooth throughout its flight, and the friction drag equations of @sec:viscous-drag are applicable to the calculation of its drag coefficient.
 
 == Calculation of the Zero-Lift Drag of Simple Model Rockets <sec:zero-lift-drag-calc>
 === The United States Air Force Stability and Control Datcom Method <sec:datcom-method>
@@ -1647,7 +1844,7 @@ According to the Datcom, the zero-lift drag coefficient of a fin-body combinatio
 #mitex("(C_{D_0})_{FB} = (C_{D_0})_F \\frac{S_F}{S_m} + (C_{D_0})_B")
 where
 // === page 173 ===
-S\_F is the total planform area of all the fins; S\_m is the maximum body cross-sectional area; (C\_{D\_0})\_F is the zero-lift drag coefficient of the fins as derived in Section 3.6, equation (108):
+S\_F is the total planform area of all the fins; S\_m is the maximum body cross-sectional area; (C\_{D\_0})\_F is the zero-lift drag coefficient of the fins as derived in @sec:3d-skin-friction, equation (108):
 #mi("(C_{D_0})_F = 2(C_f)_F \\left(1 + 2\\frac{t}{c}\\right)")
 #mi("(C_{D_0})_B") is the zero-lift drag coefficient of the body, which is further subdivided into the forebody drag and the base drag:
 #mi("(C_{D_0})_B = (C_{D_f})_b + C_{D_b}")
@@ -1655,24 +1852,31 @@ where
 #mi("(C_{D_f})_b = (C_f)_b \\left[1 + \\frac{60}{(l_b/d_m)^3} + 0.0025\\left(\\frac{l_b}{d_m}\\right)\\right] \\frac{S_s}{S_m}")
 #mi("C_{D_b} = \\frac{0.029 (d_b/d_m)^3}{\\sqrt{(C_{D_f})_b}}")
 (C\_{D\_0})\_{FB} is based on the maximum body frontal area S\_m.
-Figure 43 explains most of the notation pertaining to rocket geometry used in equations (159) through (162).
-Additional explanatory discussion may be found in Sections 6.1.1 and 6.1.2, where we shall examine in detail the calculation of (C\_{D\_0})\_F and (C\_{D\_0})\_B, respectively.
+@fig:datcom-notation explains most of the notation pertaining to rocket geometry used in equations (159) through (162).
+Additional explanatory discussion may be found in Sections #ref(<sec:datcom-fin-drag>, supplement: none) and #ref(<sec:datcom-body-drag>, supplement: none), where we shall examine in detail the calculation of (C\_{D\_0})\_F and (C\_{D\_0})\_B, respectively.
 
 ==== Zero-Lift Drag Coefficient of the Fins <sec:datcom-fin-drag>
 The Datcom expression for the drag coefficient of the fins at zero angle of attack is equation (159), which we repeat here for convenience:
 // === page 174 ===
-Figure 43: Notation used in the Datcom method for computing the drag of simple model rockets at zero angle of attack.
-Note that the variable b as used here refers to the span of a single fin, from root to tip; elsewhere in this chapter it usually refers to the span of a diametrically opposed pair of fins, tip to tip.
-Figure 44: Obtaining the gross planform area of various fin shapes (shapes after G.
-Harry Stine).
-  Delta Rectangular Swept   Trapezoidal Aerobee-HI Python-2   
+// Figure 43
+#figure(
+  image("../../assets/figures-original/fig3-43.png"),
+  caption: [Notation used in the Datcom method for computing the drag of simple model rockets at zero angle of attack.
+  Note that the variable b as used here refers to the span of a single fin, from root to tip; elsewhere in this chapter it usually refers to the span of a diametrically opposed pair of fins, tip to tip.]
+) <fig:datcom-notation>
+
+// Figure 44
+#figure(
+  image("../../assets/figures-original/fig3-44.png"),
+  caption: [Obtaining the gross planform area of various fin shapes (shapes after G. Harry Stine).]
+) <fig:fin-planform-area>
 // === page 175 ===
 #mi("(C_{D_0})_F = 2 (C_f)_F (1 + 2 \\frac{t}{c}) \\frac{S_F}{S_m}")
 where t/c is the average streamwise thickness ratio of the fins;
 #mitex("(C_f)_F")
 is the flat-plate skin-friction coefficient of the fins; #mi("S_F") is the total fin planform area; and #mi("S_m") is the maximum body frontal, or cross-sectional, area.
 In the interest of clarity, certain of these terms are explained in greater detail below: For the purpose of these calculations, the planform area of a fin is considered to be the sum of its actual, exposed planform area and the planform area of its imaginary extension into the body tube.
-Figure 44 illustrates the procedure for obtaining this "gross area", denoted by #mi("G_F"), for a number of possible fin planforms.
+@fig:fin-planform-area illustrates the procedure for obtaining this "gross area", denoted by #mi("G_F"), for a number of possible fin planforms.
 For most fins, #mi("G_F") can be obtained by simply extending the leading and trailing edges until they intersect the body longitudinal axis.
 For shapes like that of the Python-2 (18), where the trailing edge intersects the body tube at a very shallow angle, it is better to extend straight lines from the leading and trailing edges of the root chord, parallel to the base, until they intersect the body centerline as shown.
 For a rocket with #mi("n") identical fins, the total fin planform area #mi("S_F") is equal to #mi("nG_F").
@@ -1696,9 +1900,9 @@ can be used, while for more complicated shapes the determination can be made acc
 where #mi("\\sigma_E") denotes the exposed planform area of one fin and #mi("b") is the fin span, or radial distance from root to tip.
 The skin-friction coefficient of the fins, #mi("(C_f)_F"), can be determined from the results of the preceding sections.
 Equation (63) may be used if the flow is completely laminar, while equation (101) applies in cases where transition occurs.
-Alternatively, the designer may choose to read the skin-friction coefficient from Figure 22 to save the work of making a calculation.
+Alternatively, the designer may choose to read the skin-friction coefficient from @fig:skin-friction-coefficient to save the work of making a calculation.
 The Reynolds number used in the determination of #mi("(C_f)_F") is based on the average fin chord: #mi("R_c = \\frac{U_{\\infty} c}{\\nu}").
-Since the local chord may be considerably larger than this average value at certain locations on the fin, it is possible that transition will occur at lower velocities than predicted on the basis of #mi("R_c"), and that the skin-friction coefficient will be underestimated when using equations (63) or (101), or Figure 22.
+Since the local chord may be considerably larger than this average value at certain locations on the fin, it is possible that transition will occur at lower velocities than predicted on the basis of #mi("R_c"), and that the skin-friction coefficient will be underestimated when using equations (63) or (101), or @fig:skin-friction-coefficient.
 Fortunately, the danger of this is not very great, as the flow over the fins is almost entirely laminar throughout the flight for all but a few model rockets, owing to the extremely high airspeeds and large chords necessary to effect transition on a model rocket fin.
 The implications of this problem will be further explored later on.
 Equation (159) is valid for fins without separated flow at the leading or trailing edges; hence it is valid only for streamlined fins.
@@ -1713,14 +1917,22 @@ The Datcom expression for the drag coefficient of the body at zero angle of atta
 where #mi("(C_{Df})_B") is given by equation (161), and is also the first term in equation (166); #mi("l_b") is the total length of the rocket body; #mi("S_S") is the total wetted surface area of the body, excluding the base; #mi("S_m") is the maximum frontal cross-sectional area of the body; #mi("d_b") is the diameter of the base; and #mi("(C_f)_B") is the applicable skin-friction coefficient for the body.
 Again, a more detailed explanation of these terms may prove useful in cases of practical application.
 Strictly speaking, equation (166) is valid for bodies of revolution, a class of geometrical shapes to which most model rockets belong.
-The fineness ratio #mi("l_b/d_m") for several body configurations is defined in Figure 45.
+The fineness ratio #mi("l_b/d_m") for several body configurations is defined in @fig:fineness-ratio-definition.
 An excellent approximation to the drag coefficient of an object which is not a body
 // === page 179 ===
-Figure 45: Definition of fineness ratio for various bodies of revolution.
-The fineness ratio of the nose is given by #mi("\\frac{l_n}{d_n}"); for the other three shapes the fineness ratio is defined as #mi("\\frac{l_b}{d_m}").
-Figure 46: Ratio of surface area to maximum frontal area #mi("S_s/S_m") as a function of fineness ratio #mi("\\frac{l}{d_m}") for various component shapes.
-The functions for ellipsoids, cones, and ogives are approximate and are terminated at the lower limit of fineness ratio for which they give acceptable accuracy.
-[image
+// Figure 45
+#figure(
+  image("../../assets/figures-original/fig3-45.png"),
+  caption: [Definition of fineness ratio for various bodies of revolution.
+  The fineness ratio of the nose is given by #mi("\\frac{l_n}{d_n}"); for the other three shapes the fineness ratio is defined as #mi("\\frac{l_b}{d_m}").]
+) <fig:fineness-ratio-definition>
+
+// Figure 46
+#figure(
+  image("../../assets/figures-original/fig3-46.png"),
+  caption: [Ratio of surface area to maximum frontal area #mi("S_s/S_m") as a function of fineness ratio #mi("\\frac{l}{d_m}") for various component shapes.
+  The functions for ellipsoids, cones, and ogives are approximate and are terminated at the lower limit of fineness ratio for which they give acceptable accuracy.]
+) <fig:surface-area-ratio>
 // === page 180 ===
 of revolution can, however, be computed by utilizing the equivalent diameter given by
 #mitex("d_{\\text{equiv.}} = \\sqrt{\\frac{\\text{Cross-sectional area}}{0.7854}}")
@@ -1732,29 +1944,33 @@ For a circular, cylindrical body tube #mi(" P(x) ") is a constant #mi(" P = \\pi
 #mitex("(S_S)_{\\text{cyl.}} = \\pi d_m l_b")
 Since #mi(" (S_m)_{\\text{cyl.}} = \\pi r_m^2 = \\pi \\frac{d_m^2}{4} "), we then have
 #mitex("\\left( \\frac{S_S}{S_m} \\right)_{\\text{cyl.}} = \\frac{\\pi d_m l_b}{\\pi d_m^2 / 4} = 4 \\frac{l_b}{d_m}")
-In Figure 45 #mi(" S_S / S_m ") is plotted as a function of component fineness ratio for the cylinder, as well as for ellipsoidal, conical, and tangent-ogive nose and afterbody shapes.
+In @fig:surface-area-ratio #mi(" S_S / S_m ") is plotted as a function of component fineness ratio for the cylinder, as well as for ellipsoidal, conical, and tangent-ogive nose and afterbody shapes.
 The following equations may also be used to determine #mi(" S_S / S_m ") for a variety of nosecone shapes:
 // === page 181 ===
 (171a) #mi("\\left(\\frac{S_s}{S_m}\\right)_{\\text{ELLIP.}} = 1 + \\frac{2\\ell/d_m}{\\sqrt{1 - \\frac{d_m^2}{4\\ell^2}}} \\sin^{-1} \\sqrt{1 - \\frac{d_m^2}{4\\ell^2}}") (171b) #mi("\\left(\\frac{S_s}{S_m}\\right)_{\\text{ELLIP.}} \\approx (1 + \\pi \\frac{\\ell}{d_m})") for #mi("\\frac{\\ell}{d_m} \\gg 1") (171c) #mi("\\left(\\frac{S_s}{S_m}\\right)_{\\text{OGIVE}} \\approx 2.67 \\frac{\\ell}{d_m}") for #mi("\\frac{\\ell}{d_m} > 1.5") (171d) #mi("\\left(\\frac{S_s}{S_m}\\right)_{\\text{CONE}} = 2 \\sqrt{\\frac{1}{4} + (\\ell/d_m)^2}") (171e) #mi("\\left(\\frac{S_s}{S_m}\\right)_{\\text{CONE}} \\approx 2 \\frac{\\ell}{d_m}") for #mi("\\frac{2\\ell}{d_m} \\gg 1") The above shapes, or combinations thereof, may be taken as good approximations to most model rocket nosecone shapes.
-The geometrical definitions of these shapes are illustrated in Figure 47.
+The geometrical definitions of these shapes are illustrated in @fig:nose-shapes.
 The ellipsoidal nose is constructed by first forming an ellipse (which is done by passing a plane through a cone at some angle less than a right angle to the cone axis, but greater than the half-angle of the cone itself), then dividing the ellipse about its minor axis, and finally revolving the remaining half-ellipse about its semimajor axis.
 As geometers know, parabolas and hyperbolas can also be constructed from the intersections of cones and planes; a parabola is formed by passing the plane through the cone at an angle to its axis equal to the cone half-angle, while a hyperbola results if the intersection occurs at a lesser angle.
 Paraboloidal and hyperboloidal nosecones can, of course, also be constructed, but they are not as good as ellipsoids because they do not become tangent to the body tube at their bases.
 Half the lateral section of a tangent-ogive nosecone is formed by the area bounded by a circle, a diameter of that circle, and a half-chord
 // === page 182 ===
-Figure 47: Geometrical definitions of common nose shapes.
-(a): An ellipse is formed by passing a plane through a cone at an angle to the cone axis greater than the cone's half-angle.
-The ellipse is divided along its minor axis and spun about its semimajor axis to form an ellipsoidal nose.
-(b): A parabola is formed by passing a plane through a cone at an angle equal to the half-angle of the cone and is then rotated to produce a paraboloidal nose.
-(c): A hyperbola is formed by passing a plane through a cone at an angle less than the cone half-angle and is rotated to produce a hyperboloidal nose.
-(d): A chord line is passed through a circle; the smaller segment thus formed is bisected by a radial line and the shaded half-segment is revolved about the chord line, forming a tangent ogive nose.
-(e): A right triangle is revolved about its altitude to form a conical nose.
+// Figure 47
+#figure(
+  image("../../assets/figures-original/fig3-47.png"),
+  caption: [Geometrical definitions of common nose shapes.
+  (a): An ellipse is formed by passing a plane through a cone at an angle to the cone axis greater than the cone's half-angle.
+  The ellipse is divided along its minor axis and spun about its semimajor axis to form an ellipsoidal nose.
+  (b): A parabola is formed by passing a plane through a cone at an angle equal to the half-angle of the cone and is then rotated to produce a paraboloidal nose.
+  (c): A hyperbola is formed by passing a plane through a cone at an angle less than the cone half-angle and is rotated to produce a hyperboloidal nose.
+  (d): A chord line is passed through a circle; the smaller segment thus formed is bisected by a radial line and the shaded half-segment is revolved about the chord line, forming a tangent ogive nose.
+  (e): A right triangle is revolved about its altitude to form a conical nose.]
+) <fig:nose-shapes>
 // === page 183 ===
 of the circle perpendicular to the diameter.
 The familiar tangent ogive nose shape is generated by revolving this section about the chord line.
 The cone, simplest of the shapes, is generated by revolving a right triangle about its altitude.
 The cone suffers from the same shortcoming as the parabola and hyperbola in that the intersection of the nose with the body tube is not smooth.
-Its sharp point, however, gives it favorable drag characteristics in supersonic flight, as we shall see in Section 7.
+Its sharp point, however, gives it favorable drag characteristics in supersonic flight, as we shall see in @sec:transonic-supersonic-drag.
 When computing the ratio #mi(" \\left( \\frac{S_s}{S_m} \\right) ") for a boattail, account must be taken of the fact that the geometrical solid in whose shape the boattail has been made is truncated by the presence of the blunt base.
 For a conical boattail of maximum diameter #mi(" d_m ") and base diameter #mi(" d_b "), the ratio of surface area to maximum cross-sectional area is given by
 #mitex("\\left( \\frac{S_s}{S_m} \\right)_{\\text{BOATTAIL}} = \\frac{2(d_m - d_b) l_r}{d_m^2} \\sqrt{1 + \\left( \\frac{d_m - d_b}{2 l_r} \\right)^2}")
@@ -1766,24 +1982,28 @@ If the body, nose, and boattail (if any) have the same maximum diameter, the ove
 The original Datcom method employs the turbulent skin-friction coefficient of the body for #mi("(C_f)_B") and the turbulent skin-friction coefficient of the fins for #mi("(C_f)_F") in all its calculations.
 This, presumably, is because the Datcom was devised for the purpose of providing drag coefficient predictions for full-scale aircraft and rockets.
 The Reynolds numbers of such vehicles are much higher than those commonly encountered in model rocketry.
-In the numerical example treated in Section 6.2, we shall begin the calculations by assuming completely turbulent flow over the rocket body and see how the estimate of the drag coefficient thus obtained compares with experimental values.
+In the numerical example treated in @sec:datcom-javelin, we shall begin the calculations by assuming completely turbulent flow over the rocket body and see how the estimate of the drag coefficient thus obtained compares with experimental values.
 The body friction drag coefficient given in equation (161), which is also the first term on the right of equation (166), is of the form
 #mitex("(174) \\quad (C_{Df})_b = (C_f)_B (1 + a) \\frac{S_s}{S_m}")
-The quantity #mi("a"), which typically has a value of about 0.05, may be thought of as a three-dimensional correction to #mi("C_f") as discussed in Section 3.6.
+The quantity #mi("a"), which typically has a value of about 0.05, may be thought of as a three-dimensional correction to #mi("C_f") as discussed in @sec:3d-skin-friction.
 The term #mi("0.0025 \\frac{l_b}{d_m}"), according to the Datcom, is the pressure-drag contribution of the body due to the effect of its "thickness", or cross-sectional area.
 In the Datcom method, therefore, the pressure drag of a streamlined body is reckoned for the purposes of practical calculation as part of its friction drag.
-The second — i.e., base-drag — term in equation (166) requires no further discussion here, as it was presented previously in Section 4.4.
+The second — i.e., base-drag — term in equation (166) requires no further discussion here, as it was presented previously in @sec:base-drag.
 // === page 185 ===
 === The Datcom Method Applied to the Javelin Rocket <sec:datcom-javelin>
 To illustrate the application of the equations presented in the preceding section, I shall perform the zero-lift drag coefficient calculation for a specific model rocket: the Javelin, a kit produced by the Centuri Engineering Company, and the same model for which Mercer has published experimentally-determined information on drag obtained through wind-tunnel tests.
 The availability of published data gives us a standard by which to measure the accuracy of the Datcom results.
-The Javelin, a simple, single-staged vehicle with a tangent-ogive nose, is shown in Figure 48.
+The Javelin, a simple, single-staged vehicle with a tangent-ogive nose, is shown in @fig:javelin-rocket.
 I shall begin the calculation by making the following assumptions: (a) the angle of attack is zero; (b) the model has no launch lug; (c) the airspeed is 60 meters/second and \nu = 1.495 \times 10^{-5} meter^2 /second; (d) the finish is hydraulically smooth at the given velocity; (e) the flow over the fins is completely laminar; (f) the flow over the body is completely turbulent; and (g) the flow does not separate from fins or body, except at the base.
 The determination then proceeds as follows: Step 1: forebody drag coefficient (C\_{Df})\_b
 #mitex("(C_{Df})_b = (C_f)_B \\left[ 1 + \\frac{60}{(L_b/d_m)^3} + 0.0025 \\frac{L_b}{d_m} \\right] \\frac{S_S}{S_m}")
 // === page 186 ===
-Figure 48: The Javelin rocket, produced in kit form by the Centuri Engineering Company of Phoenix, Arizona, shown with its stock BC-74 nosecone.
-All dimensions are given in centimeters.
+// Figure 48
+#figure(
+  image("../../assets/figures-original/fig3-48.png"),
+  caption: [The Javelin rocket, produced in kit form by the Centuri Engineering Company of Phoenix, Arizona, shown with its stock BC-74 nosecone.
+  All dimensions are given in centimeters.]
+) <fig:javelin-rocket>
 // === page 187 ===
 Assume #mi(" (C_f)_B ") given by equation (86):
 #mitex("(C_f)_B = (C_f)_{turb} = \\frac{.074}{(R_e)^{1/6}}")
@@ -1798,7 +2018,7 @@ The ratio of wetted area to cross-sectional area is
 #mitex("\\frac{S_s}{S_m} = \\left( \\frac{S_s}{S_m} \\right)_{cyl} + \\left( \\frac{S_s}{S_m} \\right)_{ogive}")
 For the cylindrical body we find from
 #mitex("\\left( \\frac{S_s}{S_m} \\right)_{cyl} = 4 \\frac{l}{d_m} = \\frac{22.61}{1.93} = 46.9")
-and for the ogival nose Figure 46 or equation (171c) gives
+and for the ogival nose @fig:surface-area-ratio or equation (171c) gives
 #mitex("\\left( \\frac{S_s}{S_m} \\right)_{ogive} \\cong 2.7 \\frac{l}{d_m} = 2.7 \\frac{9.14}{1.93} = 12.8")
 So
 #mi("\\frac{S_s}{S_m} = 46.9 + 12.8 = 59.7")
@@ -1824,8 +2044,8 @@ which gives
 Fins made of #mi("3/32\"") balsa give #mi("t = 0.238") cm., so
 #mitex("\\frac{t}{c} = \\frac{0.238}{3.02} = 0.079")
 // === page 189 ===
-The gross area \sigma\_F of a single fin can be determined by resolving the Javelin fin into rectangles and right triangles, as shown in Figure 49b; this method simplifies the calculation of \sigma\_F and, although it results in a slightly larger value than that obtained by the standard method (shown in Figure 49a), the difference is not very significant.
-Following Figure 49b, then, Area of region I = #mi(" \\frac{1}{2} \\times 1.90 \\times 4.19 = 3.98 ") cm.#mi("^2") Area of region II = #mi(" 2.07 \\times 4.19 = 8.68 ") cm.#mi("^2") Area of region III = #mi(" 3.21 \\times 0.965 = 3.10 ") cm.#mi("^2")
+The gross area \sigma\_F of a single fin can be determined by resolving the Javelin fin into rectangles and right triangles, as shown in @fig:javelin-planform (b); this method simplifies the calculation of \sigma\_F and, although it results in a slightly larger value than that obtained by the standard method (shown in @fig:javelin-planform (a)), the difference is not very significant.
+Following @fig:javelin-planform (b), then, Area of region I = #mi(" \\frac{1}{2} \\times 1.90 \\times 4.19 = 3.98 ") cm.#mi("^2") Area of region II = #mi(" 2.07 \\times 4.19 = 8.68 ") cm.#mi("^2") Area of region III = #mi(" 3.21 \\times 0.965 = 3.10 ") cm.#mi("^2")
 #mitex("\\sigma_F = (3.98 + 8.68 + 3.10) \\text{ cm.}^2 = 15.76 \\text{ cm.}^2")
 Since the Javelin has four fins,
 #mitex("S_F = 4 \\sigma_F \\cong 63 \\text{ cm.}^2")
@@ -1835,10 +2055,14 @@ and hence the fin drag coefficient is
 #mitex("(C_{D_0})_F = 2 \\times 0.00382 \\times 1.158 \\times \\frac{63}{2.92} = .190")
 Summing the results of steps 1, 2, and 3, we obtain the total zero-lift drag coefficient of the rocket:
 #mitex("(C_{D_0})_{Fg} = .279 + .055 + .190 = .524")
-This value is about 25% greater than the drag coefficient measured by Mercer for the Javelin rocket with a Centuri BG-74 nosecone (see Figure 31).
+This value is about 25% greater than the drag coefficient measured by Mercer for the Javelin rocket with a Centuri BG-74 nosecone (see @fig:javelin-nose-drag).
 // === page 190 ===
-Figure 49: Standard and approximate methods of determining the gross fin planform area of the Javelin rocket.
-The approximate method (b) is preferred to the standard method (a) because it is more conservative; that is, it results in a larger value of \sigma\_F .
+// Figure 49
+#figure(
+  image("../../assets/figures-original/fig3-49.png"),
+  caption: [Standard and approximate methods of determining the gross fin planform area of the Javelin rocket.
+  The approximate method (b) is preferred to the standard method (a) because it is more conservative; that is, it results in a larger value of #mi("\\sigma_F").]
+) <fig:javelin-planform>
 // === page 191 ===
 Now suppose we see what happens if I rescind assumption (\rho) above and replace it with the more accurate assumption that the flow over the body is partly laminar and partly turbulent, with transition occurring at the critical Reynolds number #mi(" R_{\\text{crit}} = 5 \\times 10^5 ").
 Step 1: forebody drag coefficient #mi("(C_{Df})_b") The body skin-friction coefficient will now be given by equation (101):
@@ -1903,7 +2127,7 @@ In conclusion, it would appear that full adaptation of the Datcom method to the 
 ==== The General Configuration Rocket (GCR) <sec:gcr>
 The preceding section was intended to familiarize the reader with the application of the Datcom method to a particular problem.
 In this section the drag coefficient equations will be cast into special forms, particularly applicable to model rockets, which will clarify the relationships between rocket geometry and drag.
-This general, nondimensional approach will be utilized to discover the behavior of the drag coefficient and the drag force with respect to changing Reynolds number in Sections 6.3.2 and 6.3.3.
+This general, nondimensional approach will be utilized to discover the behavior of the drag coefficient and the drag force with respect to changing Reynolds number in Sections #ref(<sec:gcr-cd-re>, supplement: none) and #ref(<sec:gcr-drag-re>, supplement: none).
 We begin by listing in general form the functional dependence of the drag coefficients upon the variables of the Datcom equations (equations (158) through (162)): (175) #mi("(C_{Df})_b = G_1 (B, R_L, \\frac{l_b}{d_m}, \\frac{S_S}{S_m})") (176) #mi("C_{Db} = G_2 (B, R_L, \\frac{l_b}{d_m}, \\frac{S_S}{S_m}, \\frac{d_b}{d_m})") (177) #mi("(C_{Do})_B = G_3 (B, R_L, \\frac{l_b}{d_m}, \\frac{S_S}{S_m}, \\frac{d_b}{d_m})") (178) #mi("(C_{Do})_F = G_4 (B, R_C, \\frac{t}{c}, \\frac{S_F}{S_m})") (179) #mi("(C_{Do})_{FB} = G_5 (B, R_L, \\frac{l_b}{d_m}, \\frac{S_S}{S_m}, \\frac{d_b}{d_m}, R_C, \\frac{t}{c}, \\frac{S_F}{S_m})") where the right-hand sides of the equations are read as "G\_1 of B, R\_L, #mi(" \\frac{l_b}{d_m} "), #mi(" \\frac{S_S}{S_m} ")", and so on.
 They are simply a form of mathematical shorthand to indicate that the drag coefficients depend on the quantities in parentheses on the right in some (as yet unspecified) fashion.
 Theoretically, we could obtain a graphical relationship between any one of the above drag coefficients and one of its
@@ -1911,15 +2135,19 @@ Theoretically, we could obtain a graphical relationship between any one of the a
 variables by assigning constant values to all the other variables in the function.
 As a practical matter, however, this would not be very illuminating, as variables like #mi("S_s/S_m") and #mi("S_f/S_m") do not convey any concept of shape and are difficult to visualize.
 They can be converted to expressions involving only linear dimensions, though, if we assume specific shapes for the nosecone, fins, main body and boattail (if any) of the rocket.
-For this reason, we adopt as the basis for the remainder of the analysis in this section the configuration shown in Figure 50: a rocket consisting of an ogive nosecone, a circular cylindrical body, rectangular fins, and a conical boattail.
+For this reason, we adopt as the basis for the remainder of the analysis in this section the configuration shown in @fig:gcr-configuration: a rocket consisting of an ogive nosecone, a circular cylindrical body, rectangular fins, and a conical boattail.
 This class of vehicles will henceforth be referred to as the General Configuration Rocket (GCR), since by varying its proportions one can obtain reasonable approximations to the shape of many single-staged model rockets.
 It should be noted that the fins enter the Datcom equations only through their surface area #mi("S_F") and the thickness ratio t/c; hence no generality is lost by assuming rectangular fins for the GCR.
 The shape of the fins is important only in determining the drag and side force due to a nonzero angle of attack, whereas the Datcom equations presented here involve only the determination of the zero-lift drag coefficient.
-Furthermore, the GCR has no specific size until a numerical value for one of its linear dimensions is specified; the variations depicted in Figure 50 could be ten centimeters or one meter in length.
+Furthermore, the GCR has no specific size until a numerical value for one of its linear dimensions is specified; the variations depicted in @fig:gcr-configuration could be ten centimeters or one meter in length.
 This "nondimensionality" is the most valuable property of the GCR concept.
 We can now write for the GCR,
 // === page 198 ===
-Figure 50: The General Configuration Rocket (GCR), shown with its nomenclature and three of its possible variations.
+// Figure 50
+#figure(
+  image("../../assets/figures-original/fig3-50.png"),
+  caption: [The General Configuration Rocket (GCR), shown with its nomenclature and three of its possible variations.]
+) <fig:gcr-configuration>
 // === page 199 ===
 (180) #mi(" \\left( \\frac{S_s}{S_m} \\right)_{GCR} = \\left( \\frac{S_s}{S_m} \\right)_{OGIVE} + \\left( \\frac{S_s}{S_m} \\right)_{CYL} + \\left( \\frac{S_s}{S_m} \\right)_{BOATTAIL} ") The approximate expression for the ogive nose is (181) #mi(" \\left( \\frac{S_s}{S_m} \\right)_{OGIVE} \\equiv 2.7 \\frac{l_N}{d_m} \\qquad (l_N > 1.5) ") and the exact equation for the cylindrical body is (182) #mi(" \\left( \\frac{S_s}{S_m} \\right)_{CYL} = 4 \\frac{l_c}{d_m} ") For the conical boattail, (183a) #mi(" \\left( \\frac{S_s}{S_m} \\right)_{BOATTAIL} = \\frac{2(d_m - d_b) l_T}{d_m^2} \\sqrt{1 + \\left( \\frac{d_m - d_b}{2 l_T} \\right)^2} ") which, for any practical boattail, can be accurately approximated as (183b) #mi(" \\left( \\frac{S_s}{S_m} \\right)_{BOATTAIL} \\approx 2 \\left( 1 - \\frac{d_b}{d_m} \\right) \\frac{l_T}{d_m} ") Hence, (184) #mi(" \\left( \\frac{S_s}{S_m} \\right)_{GCR} = 2.7 \\frac{l_N}{d_m} + 4 \\frac{l_s}{d_m} + 2 \\left( 1 - \\frac{d_b}{d_m} \\right) \\frac{l_T}{d_m} ") Equations (175), (176), and (177) can also be written (185) #mi(" (C_{Df})_b = H_1 (B, R_L, \\frac{d_b}{d_m}, \\{ \\frac{l_b}{d_m}, \\frac{l_N}{d_m}, \\frac{l_S}{d_m}, \\frac{l_T}{d_m} \\}) ") (186) #mi(" C_{Db} = H_2 (B, R_L, \\frac{d_b}{d_m}, \\{ \\frac{l_b}{d_m}, \\frac{l_N}{d_m}, \\frac{l_S}{d_m}, \\frac{l_T}{d_m} \\}) ") (187) #mi(" (C_{Df})_g = H_3 (B, R_L, \\frac{d_b}{d_m}, \\{ \\frac{l_b}{d_m}, \\frac{l_N}{d_m}, \\frac{l_S}{d_m}, \\frac{l_T}{d_m} \\}) ") where the letters H again just refer to the fact that the value of the quantity on the left-hand side of each equation depends upon the values of the quantities in parentheses on the right-hand side.
 #mitex("\\left(\\frac{S_s}{S_m}\\right)_{GCR} = \\left(\\frac{S_s}{S_m}\\right)_{OGIVE} + \\left(\\frac{S_s}{S_m}\\right)_{CYL} + \\left(\\frac{S_s}{S_m}\\right)_{BOATTAIL}")
@@ -1967,7 +2195,7 @@ If the relationship between drag coefficient and #mi("R_L") is known, therefore,
 #mitex("(C_f)_F = \\frac{0.118}{(R_e)^{1/5}} - \\frac{17,900}{R_e} \\quad (R_e \\geq 5.14 \\times 10^6)")
 and the overall zero-lift drag coefficient is therefore
 #mitex("(C_{D_0})_{FB} = 82.8 (C_f)_B + \\frac{0.0149}{\\sqrt{82.8 (C_f)_B}} + 46.4 (C_f)_F")
-The results obtained for Reynolds numbers between #mi("1 \\times 10^4") and #mi("1 \\times 10^7") are summarized in Table 6 and presented graphically in Figure 51.
+The results obtained for Reynolds numbers between #mi("1 \\times 10^4") and #mi("1 \\times 10^7") are summarized in Table 6 and presented graphically in @fig:gcr-drag-vs-reynolds.
 The total drag coefficient #mi("(C_{D_0})_{FB}") has a very interesting shape which exhibits three main phases.
 At Reynolds numbers less than #mi("5 \\times 10^5") the flow over the entire rocket is laminar and Phase I behavior of the total drag coefficient is observed.
 At small Reynolds numbers, #mi("(C_{D_0})_{FB}") is extremely large, achieving a value of 3.08 for #mi("R_e = 1 \\times 10^4").
@@ -1981,15 +2209,19 @@ Simultaneously, however, there is pure laminar
 // === page 205 ===
   R2 cDb (cD0)B (cD0)F (cD0)FB  1 x 104.0141.1141.9703.080 5 x 104.021.513.8831.396 7 x 104.023.438.7481.186 1 x 105.025.373.6271.000 1.5 x 105.028.312.510.822 2 x 105.030.276.441.717 3 x 105.033.233.359.592 4 x 105.036.210.312.522 5 x 105.038.194.279.473 6 x 105.034.223.255.478 7 x 105.033.242.236.478 8 x 105.031.257.221.478 9 x 105.031.266.208.474 1 x 106.030.272.197.469 1.25 x 106.030.284.176.460 1.5 x 106.029.289.161.450 2 x 106.029.293.139.432 3 x 106.029.292.112.404 4 x 106.029.287.098.385 5 x 106.030.281.089.370 6 x 106.030.276.102.378 8 x 106.031.268.122.390 1 x 107.031.261.135.396  Table 6: Drag coefficient of the GCR-x rocket at various Reynolds numbers.
 // === page 206 ===
-Figure 51: Variation of #mi(" (C_{D0})_{FB} ") with Reynolds number for the GCR-x rocket.
-Also shown are the constituent drag functions #mi(" (C_{D0})_B ") and #mi(" (C_{D0})_F ") and the base drag coefficient #mi(" C_{Db} ").
-At Reynolds numbers below #mi(" 5 \\times 10^5 ") the flow over the entire rocket is laminar.
-Between #mi(" 5 \\times 10^5 ") and #mi(" 5 \\times 10^6 ") (region (2) on the graph) transition to turbulent flow occurs partway down the body but the flow over the fins is laminar.
+// Figure 51
+#figure(
+  image("../../assets/figures-original/fig3-51.png"),
+  caption: [Variation of #mi("(C_{D0})_{FB}") with Reynolds number for the GCR-x rocket.
+  Also shown are the constituent drag functions #mi("(C_{D0})_B") and #mi("(C_{D0})_F") and the base drag coefficient #mi("C_{Db}").
+  At Reynolds numbers below #mi("5 \\times 10^5") the flow over the entire rocket is laminar.
+  Between #mi("5 \\times 10^5") and #mi("5 \\times 10^6") (region (2) on the graph) transition to turbulent flow occurs partway down the body but the flow over the fins is laminar.]
+) <fig:gcr-drag-vs-reynolds>
 Above a Reynolds number of #mi(" 5 \\times 10^6 ") transition to turbulent flow occurs partway back on the fins as well (region (3) on the graph).
 Region (2) is referred to as the body transition zone; region (3) is called the fin transition zone.
 // === page 207 ===
 flow over the fins, and from equation (204a) it is seen that #mi("(C_{D0})_F") will decrease with increasing Reynolds number.
-The net effect of these two opposing trends is to hold #mi("(C_{D_0})_{FB}") virtually constant in this phase, denoted the body transition zone on the graph of Figure 51.
+The net effect of these two opposing trends is to hold #mi("(C_{D_0})_{FB}") virtually constant in this phase, denoted the body transition zone on the graph of @fig:gcr-drag-vs-reynolds.
 #mi("(C_{D_0})_B") does not increase indefinitely, however, as it too is subject to opposing phenomena.
 From #mi("R_L = 5 \\times 10^5") to #mi("R_L = 2 \\times 10^6"), the increase in skin-friction drag due to the growing turbulent region on the body is greater than the decrease experienced in both the laminar and turbulent regions due to the inverse variation of #mi("(\\sigma_f)_B") with #mi("R_L") (see equations (203a) and (203b)); thus #mi("(C_{D_0})_B") increases.
 At #mi("R_L = 2.5 \\times 10^6"), however, the body is mostly turbulent and the important effect becomes the reduction in #mi("(C_f)_B") with increasing Reynolds number.
@@ -1998,19 +2230,19 @@ Phase 2 is the flight regime of greatest interest to the model rocketeer, as mos
 A 30-centimeter-long rocket is in Phase 2 flight whenever its velocity is between about 30 and 300 meters/second.
 At a Reynolds number of #mi("5.14 \\times 10^6") , the fins of the GCR-x experience the development of a turbulent boundary layer beginning near the trailing edge and the rocket enters Phase 3 flight.
 In this phase the behavior of #mi("(C_{D_0})_F") is completely analogous to that of #mi("(C_{D_0})_B") in Phase 2.
-If Figure 51 were extended to higher Reynolds numbers, #mi("(C_{D_0})_F") would be seen to attain a peak and then decrease again.
+If @fig:gcr-drag-vs-reynolds were extended to higher Reynolds numbers, #mi("(C_{D_0})_F") would be seen to attain a peak and then decrease again.
 In essence, the roles of #mi("(C_{D_0})_B") and #mi("(C_{D_0})_F") are reversed in Phases 2 and 3 with respect to their
 // === page 209 ===
 any model rocket which can be represented (even approximately) by some variation of the GCR.
 This category includes a great many slender (#mi(" \\frac{L_b}{d_m} \\geq 5 ")) single-staged model rockets.
 To determine the drag coefficient as a function of velocity #mi(" U_{\\infty} "), it is required to know only the values of #mi(" \\nu ") and #mi(" L_b ").
-While #mi(" \\nu ") does vary somewhat with altitude as discussed in Section 2.1, one may reasonably assume a constant value of #mi(" \\nu = 1.495 \\times 10^{-5} ") meter#mi("^2")/second, giving
+While #mi(" \\nu ") does vary somewhat with altitude as discussed in @sec:atmospheric-properties, one may reasonably assume a constant value of #mi(" \\nu = 1.495 \\times 10^{-5} ") meter#mi("^2")/second, giving
 #mitex("U_{\\infty} = \\frac{1.495 \\times 10^{-5}}{L_b} R_L")
-Multiplying the abscissa #mi(" R_L ") of Figure 51 by #mi(" \\frac{1.495 \\times 10^{-5}}{L_b} ") converts the Reynolds number axis to a velocity axis, measured in meters/second.
+Multiplying the abscissa #mi(" R_L ") of @fig:gcr-drag-vs-reynolds by #mi(" \\frac{1.495 \\times 10^{-5}}{L_b} ") converts the Reynolds number axis to a velocity axis, measured in meters/second.
 For a rocket of 30 centimeters length,
 #mitex("U_{\\infty} = 4.975 \\times 10^{-5} R_L")
 The body transition zone will then begin at an airspeed of 24.9 meters/second, and if the rocket has the same geometric proportions as the GCR-x, fin transition begins at 256 meters/second.
-In general, obtaining a plot of drag coefficient versus Reynolds number, as in Figure 51, requires a considerable amount of calculation.
+In general, obtaining a plot of drag coefficient versus Reynolds number, as in @fig:gcr-drag-vs-reynolds, requires a considerable amount of calculation.
 This work cannot be avoided if maximum accuracy is desired, as for theoretical predictions of altitude.
 As the following section will show, however, it is possible to choose a single value of the drag coefficient (#mi(" C_{D0} "))#mi("_{FB}") which, if used in performance calculations, yields a good approximation to the "exact" behavior predicted by the Datcom method.
 // === page 210 ===
@@ -2021,14 +2253,18 @@ and
 #mitex("U_{\\infty}^2 = \\frac{R_e^2 \\nu^2}{l_b^2}")
 Then
 #mitex("D = \\frac{1}{2} \\rho \\left( \\frac{R_e^2 \\nu^2}{l_b^2} \\right) C_D \\left( \\frac{\\pi d_m^2}{4} \\right)")
-and finally (209) #mi(" D = \\left[ \\frac{(\\pi/8) \\rho \\nu^2}{(l_b/d_m)^2} \\right] C_D R_e^2 ") Since #mi(" C_D ") is known as a function of #mi(" R_e ") from a plot like that of Figure 51, compiled from Datcom calculations, it is possible to determine the behavior of the drag force as a function of #mi(" R_e ") using equation (209).
+and finally (209) #mi(" D = \\left[ \\frac{(\\pi/8) \\rho \\nu^2}{(l_b/d_m)^2} \\right] C_D R_e^2 ") Since #mi(" C_D ") is known as a function of #mi(" R_e ") from a plot like that of @fig:gcr-drag-vs-reynolds, compiled from Datcom calculations, it is possible to determine the behavior of the drag force as a function of #mi(" R_e ") using equation (209).
 Assuming #mi(" \\nu = 1.495 \\times 10^{-5} ") meter#mi("^2")/sscond and #mi(" \\rho = 1.225 ") kilograms/meter#mi("^3") (sea-level atmosphere), and #mi(" \\frac{l_b}{d_m} = 18 ") as for the GCR-X, we have (210) #mi(" D = 3.33 \\times 10^{-13} \\ C_D R_e^2 ") for the drag force in newtons.
 The column headed #mi("D_e") in Table 7 summarizes the results
 // === page 211 ===
 Table 7: Comparison of the "exact" drag force in newtons on the GCR-X rocket, calculated using the variable drag coefficient obtained from the Datcom equations, with the approximate drag force calculated on the assumption of #mi("(C_{D0})_{FB} = 0.473") at various Reynolds numbers.
 // === page 213 ===
-Figure 52: Variation of drag force in newtons with Reynolds number for the GCR-X rocket.
-D\_e is the "exact" drag obtained using the variable drag coefficient computed by the Datcom method; D\_a is the approximate drag obtained by taking (C\_{D0})\_{FB} as 0.473.
+// Figure 52
+#figure(
+  image("../../assets/figures-original/fig3-52.png"),
+  caption: [Variation of drag force in newtons with Reynolds number for the GCR-X rocket.
+  #mi("D_e") is the "exact" drag obtained using the variable drag coefficient computed by the Datcom method; #mi("D_a") is the approximate drag obtained by taking #mi("(C_{D0})_{FB}") as 0.473.]
+) <fig:gcr-drag-force>
 
 // === page 214 ===
 D = 1.58 \times 10^{-13} R\_l^2
@@ -2036,26 +2272,26 @@ gives the approximate drag force in newtons.
 From inspection of Table 7, it may be seen that this function approximates #mi(" D_a ") quite closely over the range of Reynolds numbers of interest in model rocket flight, deviating less than 10% from the exact function for Reynolds numbers between #mi(" 4 \\times 10^5 ") and #mi(" 2.2 \\times 10^6 ").
 Furthermore, although the percentage error is large below #mi(" R_l = 4 \\times 10^5 ") (as #mi(" C_D ") attains large values in the exact calculation), the absolute magnitude of the drag force is so small that these deviations are insignificant in the calculation of model rocket performance.
 It is not necessary to know whether the drag force is 1/1000 of a newton or 2/1000 of a newton when the thrust and weight of the vehicle are both three or four orders of magnitude greater than these values.
-At higher Reynolds numbers -- that is, #mi(" R_l ") greater than #mi(" 5 \\times 10^5 ") -- #mi(" D_a ") represents a good approximation to the actual drag force because, as we saw in Figure 51, the drag coefficient is very nearly constant in the body transition zone.
-The value of #mi(" (C_{D0})_{FB} ") at #mi(" R_l = 5 \\times 10^5 ") was chosen as the approximate, constant #mi(" C_D ") for the calculations on which Table 7 and Figure 52 are based for two major reasons: first, because #mi(" R_l = 5 \\times 10^5 ") may be considered to represent the onset of body transition for all model rockets, regardless of configuration; and second, because the exact magnitude of the drag is obtainable from this value of #mi(" C_D ") to within 10% up to Reynolds numbers in the neighborhood of #mi(" 2.2 \\times 10^6 "), very nearly the practical limit of #mi(" R_l ").
+At higher Reynolds numbers -- that is, #mi(" R_l ") greater than #mi(" 5 \\times 10^5 ") -- #mi(" D_a ") represents a good approximation to the actual drag force because, as we saw in @fig:gcr-drag-vs-reynolds, the drag coefficient is very nearly constant in the body transition zone.
+The value of #mi(" (C_{D0})_{FB} ") at #mi(" R_l = 5 \\times 10^5 ") was chosen as the approximate, constant #mi(" C_D ") for the calculations on which Table 7 and @fig:gcr-drag-force are based for two major reasons: first, because #mi(" R_l = 5 \\times 10^5 ") may be considered to represent the onset of body transition for all model rockets, regardless of configuration; and second, because the exact magnitude of the drag is obtainable from this value of #mi(" C_D ") to within 10% up to Reynolds numbers in the neighborhood of #mi(" 2.2 \\times 10^6 "), very nearly the practical limit of #mi(" R_l ").
 // === page 215 ===
 encountered during the flight of small- to moderate-sized model rockets.
 This result can be stated in the form of a semiempirical rule: for single-staged model rockets not expected to exceed a Reynolds number of about #mi("3 \\times 10^6") in flight, the assumption of a constant #mi("C_D") with a value equal to that attained at #mi("R_l = 5 \\times 10^5") yields acceptable estimates of performance when used in closed-form altitude calculations requiring the assumption of a constant #mi("C_D").
-The Reynolds number axis of Figure 52, like that of Figure 51, can be converted to a velocity axis by applying the coordinate transformation given in equation (207).
+The Reynolds number axis of @fig:gcr-drag-force, like that of @fig:gcr-drag-vs-reynolds, can be converted to a velocity axis by applying the coordinate transformation given in equation (207).
 == Model Rocket Drag at Transonic and Supersonic Speeds <sec:transonic-supersonic-drag>
 === Limits on the Applicability of Incompressible Analysis <sec:incompressible-limits>
-As stated in Section 2.1.1, the results of the analyses and semiempirical treatments contained in the first six sections of this chapter can be assumed accurate on an a priori basis only if the compression of the atmosphere due to the airspeed of the model is relatively slight.
+As stated in @sec:density, the results of the analyses and semiempirical treatments contained in Sections #ref(<sec:basic-considerations>, supplement: none) through #ref(<sec:zero-lift-drag-calc>, supplement: none) of this chapter can be assumed accurate on an a priori basis only if the compression of the atmosphere due to the airspeed of the model is relatively slight.
 The reader may also recall from this discussion that the analytical criterion of "sufficiently slight" compression corresponds to a Mach number #mi("M") of less than 0.316, where
 #mitex("M = \\frac{U_{\\infty}}{c}")
 and #mi("c") is the speed with which sound waves travel through the air: the so-called "speed of sound".
 Strictly speaking, the Mach number associated with a given
 // === page 216 ===
 airspeed varies with atmospheric conditions, since c itself varies with atmospheric composition and temperature.
-In this connection you may again wish to consult Figure 4, which shows the variation of sound speed with altitude for the United States standard atmosphere.
+In this connection you may again wish to consult @fig:atm-sound-speed, which shows the variation of sound speed with altitude for the United States standard atmosphere.
 The dependence of c upon local temperature is given by
 #mitex("c = c_{\\text{std}} \\sqrt{\\frac{T}{T_{\\text{std}}}}")
 where #mi(" T_{\\text{std}} ") is the standard atmospheric temperature at the altitude in question and #mi(" T ") is the actual temperature at that altitude at the time in question, and where the temperatures must be measured on one of the absolute scales, Rankine or Kelvin.
-It is found from Figure 4 and equation (213), however, that the speed of sound varies only slightly -- a few percent at most -- over the range of temperatures for which it is practical to launch model rockets and over the range of altitudes present-day models can achieve.
+It is found from @fig:atm-sound-speed and equation (213), however, that the speed of sound varies only slightly -- a few percent at most -- over the range of temperatures for which it is practical to launch model rockets and over the range of altitudes present-day models can achieve.
 It is therefore reasonable to assume that c remains constant at its sea-level standard value of about 340 meters/second for all calculations of interest to model rocketeers.
 The maximum airspeed at which the results obtained from incompressible-flow theory can be considered analytically valid is therefore approximately 107 meters/second.
 Above this speed the influence of compressibility on the flow about the rocket makes its presence known through a number of phenomena.
@@ -2104,27 +2340,35 @@ Only our very highest-performance designs can accomplish this feat, and then onl
 The mathematical complexity associated with the analysis of compressible fluid flow about a finned body of revolution is too great to permit the practical calculation of transonic and supersonic drag coefficients directly from first principles.
 As was the case for subsonic flight, we must have recourse to semiempirical formulae based on experimental data in order to obtain values of #mi("C_D") for use in model rocket performance calculations.
 Hoerner (9) presents drag coefficient data for a number of small fin-body combinations tested at transonic and supersonic velocities.
-As shown in Figure 53a, the test results fall into two distinct categories: one containing rockets having sharp (ogival or conical) noses, and one comprised of models having rounded nose shapes.
+As shown in @fig:transonic-drag (a), the test results fall into two distinct categories: one containing rockets having sharp (ogival or conical) noses, and one comprised of models having rounded nose shapes.
 For the sharp-nosed rockets the drag coefficient #mi("C_D") rises to 1.7 times its subsonic value (denoted #mi("C_{Ds}")) at M = 1.05 and then declines again to about 1.27 #mi("C_{Ds}") as M approaches 2.0.
 The round-nosed configuration is more severely affected by compressibility: its #mi("C_D") peaks at 2.17#mi("C_{D_S}") at M = 1.2 and falls back only as far as 2.00#mi("C_{D_S}") for M approaching
 // === page 221 ===
-Figure 53: Variation of drag coefficient with Mach number for finned bodies of revolution.
-(a): Experimentally determined behavior of the drag coefficient of the rocket pictured, using both ogive and half-round noses.
-(b): Analytical functions described in equations (214) and (215) that approximate the experimental behavior to within 10%.
+// Figure 53
+#figure(
+  image("../../assets/figures-original/fig3-53.png"),
+  caption: [Variation of drag coefficient with Mach number for finned bodies of revolution.
+  (a): Experimentally determined behavior of the drag coefficient of the rocket pictured, using both ogive and half-round noses.
+  (b): Analytical functions described in equations (214) and (215) that approximate the experimental behavior to within 10%.]
+) <fig:transonic-drag>
 // === page 222 ===
 2.0
 The difference in behavior between the two configuration classes is due to a fundamental difference in nature between the shock associated with a sharp nose and the shock generated by a rounded nose.
 The oblique shock produced by a sharp nose in supersonic flight is an attached shock; i.e., the shock appears to be shed directly from the point of the nose like a cone suspended on a pencil point.
 The shock due to a rounded nose, on the other hand, it itself rounded at its forward extremity and is detached: it "stands off" slightly ahead of the front surface of the nose itself.
-Figure 54 illustrates the difference in structure between the two shock patterns, and also the shock/expansion pattern observed in the neighborhood of the base of a blunt-based body of revolution.
+@fig:shock-patterns illustrates the difference in structure between the two shock patterns, and also the shock/expansion pattern observed in the neighborhood of the base of a blunt-based body of revolution.
 As there is appreciably greater momentum transfer associated with the detached than with the attached shock, the rounded-nose configurations have higher drag coefficients at transonic and supersonic velocities.
-It is mathematically possible to construct formulae for the drag coefficients which will represent the curves of Figure 53a to a very high order of precision.
-Such a procedure is not really worth the trouble, though, since the data presented in Figure 53a are only approximate (in fact, the curves above Mach 1.5 are based on extrapolation) and their applicability to a wide range of model rocket configurations has not been established.
+It is mathematically possible to construct formulae for the drag coefficients which will represent the curves of @fig:transonic-drag (a) to a very high order of precision.
+Such a procedure is not really worth the trouble, though, since the data presented in @fig:transonic-drag (a) are only approximate (in fact, the curves above Mach 1.5 are based on extrapolation) and their applicability to a wide range of model rocket configurations has not been established.
 If one takes the liberty of initially assuming a high-performance rocket configuration (which in itself is justified by the fact that only the highest-performance model rockets are in fact capable of exceeding Mach one), however, it should prove possible
 // === page 223 ===
-Figure 54: Shock and expansion patterns about sharp-nosed and blunt-nosed bodies of revolution.
-Solid lines indicate shocks and compression waves; dotted lines indicate expansion waves or fans; wavy lines delineate the wakes of the bodies.
-The conical nose produces an attached shock (a) which results in a lower drag than the detached shock (b) formed in front of the rounded nose.
+// Figure 54
+#figure(
+  image("../../assets/figures-original/fig3-54.png"),
+  caption: [Shock and expansion patterns about sharp-nosed and blunt-nosed bodies of revolution.
+  Solid lines indicate shocks and compression waves; dotted lines indicate expansion waves or fans; wavy lines delineate the wakes of the bodies.
+  The conical nose produces an attached shock (a) which results in a lower drag than the detached shock (b) formed in front of the rounded nose.]
+) <fig:shock-patterns>
 // === page 224 ===
 to construct approximating functions that are relatively simple, yet will represent #mi(" C_D ") with reasonable accuracy over the Mach number range of interest to the hobbyist.
 One possible choice for such a function assumes a rise in #mi(" C_D ") given by a power function in Mach number, followed by a decline given by an exponential in Mach number.
@@ -2135,7 +2379,7 @@ It will be found that a reasonably accurate set of approximating functions of th
 and that a similar set for round-nosed rockets may be written
 #mitex("\\frac{C_D}{C_{D_5}} = 1.0 + 4.88 (M - 0.9)^{1.1} \\quad (0.9 \\leq M \\leq 1.2)")
 #mitex("\\frac{C_D}{C_{D_5}} = 2.0 + 0.3 e^{-5.75(M-1.2)} \\quad (1.2 \\leq M \\leq 2.0)")
-These approximating functions are displayed in Figure 53b and compared with the experimental data curves in Table 8.
+These approximating functions are displayed in @fig:transonic-drag (b) and compared with the experimental data curves in Table 8.
 Inspection of Table 8 reveals that even these relatively simple functions predict #mi(" C_D ") values within 10% of those determined by experiment over the Mach number range 0.9 through 2.0.
 I cannot emphasize strongly enough, however, that you should not regard equations (214) and (215) as having any valid basis in mathematical physics, or as having a precision anywhere
 // === page 225 ===
@@ -2161,7 +2405,13 @@ We therefore conclude this chapter with a brief discussion of three basic experi
 The most common experimental technique presently in use for determining drag coefficients, whether of model rockets or any other objects, is the wind-tunnel test.
 I will assume that readers of this volume already have some knowledge of wind tunnels, balances, and testing procedure; for the topic of wind-tunnel testing itself is a very broad one and would require far too lengthy a discussion for us to include it here.
 Those interested may find explanations of the various types of tunnels and balance systems, as well as information of use in designing and building wind tunnels, in an excellent book on the subject called Wind Tunnel Testing, by Alan Pope, published by John Wiley and Sons of New York in several editions over the last twenty years.
-Plate 6 shows a small wind tunnel and balance system capable of testing model rockets at airspeeds up to about 19
+@plate:wind-tunnel shows a small wind tunnel and balance system capable of testing model rockets at airspeeds up to about 19
+// === page 228 ===
+// Plate 6
+#figure(
+  image("../../assets/figures-original/plate3-6.png"),
+  caption: [A small wind tunnel that can be used to measure the drag coefficient of a model rocket.]
+) <plate:wind-tunnel>
 // === page 229 ===
 -487- meters/second.
 The particular version illustrated is a return-flow tunnel of the "single-return" variety, in which the air circulates clockwise through the closed, doughnut-like duct system.
@@ -2237,17 +2487,21 @@ between displacement and time:
 #mitex("x = -\\frac{m}{2k} \\ln \\left[ 1 - \\tanh^2 \\left( t \\sqrt{\\frac{g k}{m}} \\right) \\right]")
 Again, x will be found positive for all positive values of t.
 Equation (230) can be used in conjunction with computerized calculation methods to compile graphs which display time as a function of the variable (k/m) for various values of the "drop distance" x.
-One such "drop chart" is shown in Figure 55.
+One such "drop chart" is shown in @fig:drop-chart.
 Inspection of the chart reveals that a fairly sizeable drop distance is required to enable the determination of (k/m), and hence k, to a reasonable accuracy, since the velocity must be allowed to increase to the point at which drag has a significant influence on the model's behavior.
 The minimum distance needed for an accurate determination decreases as (k/m) increases, but something on the order of 10 meters seems to be the limit for any reasonable test model -- even if it is of lightweight construction and dropped without its engine.
 This means that a tower or building of some sort must be used for drop testing, and that the model must be cushioned at the end of its fall to avoid damage.
 Not all models can be tested in this manner; no amount of cushioning, for instance, can protect a model of the Saturn-V.
 The drop test, like the vertical wind tunnel, is suitable only for determining the drag parameter at a zero angle of attack -- but it also eliminates the need for a balance system and has the added advantage that the test takes place in the open air, so that there are no tunnel wall effects.
 // === page 235 ===
-Figure 55: A "drop chart" of the type that might be used in determining the drag parameter k of a model rocket from vertical drop tests.
-Curves are presented for drop distances of 10, 25, 50, and 100 meters.
-The curves flatten at the top because #mi("k/m") becomes great enough for the rocket to attain its terminal velocity within the specified drop distance, after which the drop time becomes roughly proportional to #mi("\\sqrt{\\frac{k}{m}}").
-For the smaller drop distances accurate determinations of k cannot be made without extremely accurate timing devices.
+// Figure 55
+#figure(
+  image("../../assets/figures-original/fig3-55.png"),
+  caption: [A "drop chart" of the type that might be used in determining the drag parameter k of a model rocket from vertical drop tests.
+  Curves are presented for drop distances of 10, 25, 50, and 100 meters.
+  The curves flatten at the top because #mi("k/m") becomes great enough for the rocket to attain its terminal velocity within the specified drop distance, after which the drop time becomes roughly proportional to #mi("\\sqrt{\\frac{k}{m}}").
+  For the smaller drop distances accurate determinations of k cannot be made without extremely accurate timing devices.]
+) <fig:drop-chart>
 // === page 236 ===
 === Conclusion <sec:ch3-conclusion>
 The relative merits of the three experimental techniques described above can only be properly judged at such time as all three have been tried in practice and developed to the highest level of effectiveness of which it is reasonable to believe they are capable.
