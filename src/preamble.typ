@@ -10,6 +10,10 @@
   "lb":   "upright(\"lb\")",
   "lbf":  "upright(\"lbf\")",
   "ft":   "upright(\"ft\")",
+  "degC": "upright(\"°C\")",
+  "degF": "upright(\"°F\")",
+  "degR": "upright(\"°R\")",
+  "K":    "upright(\"K\")",
 )
 
 // Drop-in replacement for unify's qty that handles custom units automatically
