@@ -35,6 +35,7 @@ LOAD_CONFIGS = {
     "qwen/qwen3.5-9b":              {"context_length": 16384, "flash_attention": True},
     "qwen3-4b-instruct-2507":       {"context_length": 16384, "flash_attention": True},
     "google/gemma-3-4b":            {"context_length": 8192,  "flash_attention": True},
+    "google/gemma-4-26b-a4b":        {"context_length": 8192,  "flash_attention": True},
 }
 
 from pathlib import Path
