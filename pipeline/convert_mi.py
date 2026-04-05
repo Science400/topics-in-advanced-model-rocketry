@@ -906,9 +906,11 @@ def llm_assist(path: Path, start_line: int, end_line: int,
         fail_reason = "unknown"
         for attempt in range(3):
             try:
-                with console.status(f"[cyan]{label}[/]..." +
-                                    (f" [yellow](retry {attempt})[/]" if attempt else "")):
-                    resp = '{"' + client.chat.completions.create(
+                retry_tag = f" [yellow](retry {attempt})[/]" if attempt else ""
+                chunks = ['{"']
+                tok = 0
+                with console.status(f"[cyan]{label}[/]{retry_tag}  [dim]0 tok[/]") as status:
+                    for chunk in client.chat.completions.create(
                         model=llm_model,
                         messages=[
                             {"role": "user",      "content": prompt},
@@ -919,7 +921,13 @@ def llm_assist(path: Path, start_line: int, end_line: int,
                         ],
                         max_tokens=512,
                         temperature=0.1,
-                    ).choices[0].message.content
+                        stream=True,
+                    ):
+                        delta = chunk.choices[0].delta.content or ""
+                        chunks.append(delta)
+                        tok += 1
+                        status.update(f"[cyan]{label}[/]{retry_tag}  [dim]{tok} tok[/]")
+                resp = "".join(chunks)
                 result = _parse_llm_response(resp)
                 break  # success
             except json.JSONDecodeError as ex:
@@ -969,8 +977,10 @@ def llm_assist(path: Path, start_line: int, end_line: int,
             wrapper = fmt_replacement(kind, typst_inner)
             fix_prompt = _FIX_PROMPT.format(wrapper=wrapper, error=compile_err[:400])
             try:
-                with console.status(f"[cyan]{label}[/] [red]compile error — asking LLM to fix (attempt {fix_attempts})[/]"):
-                    fix_resp = '{"' + client.chat.completions.create(
+                fix_chunks = ['{"']
+                fix_tok = 0
+                with console.status(f"[cyan]{label}[/] [red]fix attempt {fix_attempts}[/]  [dim]0 tok[/]") as fstatus:
+                    for chunk in client.chat.completions.create(
                         model=llm_model,
                         messages=[
                             {"role": "user",      "content": fix_prompt},
@@ -978,7 +988,13 @@ def llm_assist(path: Path, start_line: int, end_line: int,
                         ],
                         max_tokens=512,
                         temperature=0.1,
-                    ).choices[0].message.content
+                        stream=True,
+                    ):
+                        delta = chunk.choices[0].delta.content or ""
+                        fix_chunks.append(delta)
+                        fix_tok += 1
+                        fstatus.update(f"[cyan]{label}[/] [red]fix attempt {fix_attempts}[/]  [dim]{fix_tok} tok[/]")
+                fix_resp = "".join(fix_chunks)
                 fix_result = _parse_llm_response(fix_resp)
                 new_inner = _sanitize_typst(fix_result.get("typst_inner", "").strip())
                 if new_inner and fix_result.get("confidence") == "high":
