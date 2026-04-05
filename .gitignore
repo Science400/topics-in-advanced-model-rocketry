@@ -7,3 +7,4 @@ __pycache__/
 review/
 assets/figures-original/
 assets/figures-export/
+*.code-workspace
