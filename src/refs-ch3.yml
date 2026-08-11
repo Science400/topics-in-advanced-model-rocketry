@@ -1,3 +1,4 @@
+# 1
 model-rocket-drag-gregorek:
   type: Misc
   title: A Critical Examination of Model Rocket Drag for Use With Maximum Altitude Performance Charts
@@ -5,6 +6,7 @@ model-rocket-drag-gregorek:
   date: 1967
   note: Photocopy of original document
 
+# 2
 center-of-pressure:
   type: Report
   title: Calculating the Center of Pressure of a Model Rocket
@@ -13,6 +15,7 @@ center-of-pressure:
   organization: Centuri Engineering Company
   serial-number: TIR-33
 
+# 3
 roughness-transition:
   type: Report
   title: Simplified Method for Determination of Critical Height of Distributed Roughness Particles for Boundary-Layer Transition at Mach Numbers from 0 to 5
@@ -23,6 +26,7 @@ roughness-transition:
   organization: National Advisory Committee for Aeronautics
   serial-number: Technical Note 4363
 
+# 4
 power-on-base-drag:
   type: Article
   title: An Empirical Technique for Estimating Power-On Base Drag of Bodies-of-Revolution With a Single Jet Exhaust
@@ -35,6 +39,7 @@ power-on-base-drag:
     title: AGARD Conference Proceedings
     serial-number: CP-10
 
+# 5
 base-drag-recessing:
   type: Report
   title: Effects on Base Drag of Recessing the Bases of Conical Afterbodies at Subsonic and Transonic Speeds
@@ -43,6 +48,7 @@ base-drag-recessing:
   organization: National Aeronautics and Space Administration
   serial-number: TN D-4821
 
+# 6
 datcom:
   type: Report
   title: "United States Air Force Stability and Control Datcom"
@@ -53,6 +59,7 @@ datcom:
   organization: Douglas Aircraft Company, Inc.
   note: Revised July 1963. Prepared under contract for the Flight Control Division, Air Force Flight Dynamics Laboratory, Wright-Patterson Air Force Base, Ohio
 
+# 7
 exterior-ballistics:
   type: Book
   title: The Exterior Ballistics of Rockets
@@ -63,7 +70,7 @@ exterior-ballistics:
   date: 1958
   publisher: D. Van Nostrand Company, Inc.
   location: Princeton, New Jersey
-
+# 8
 aerodynamic-theory:
   type: Book
   title: "Aerodynamic Theory: A General Review of Progress"
@@ -73,6 +80,7 @@ aerodynamic-theory:
   location: New York
   note: 6 vols. Unabridged republication of 1936 work
 
+# 9
 fluid-dynamic-drag:
   type: Book
   title: Fluid-Dynamic Drag
@@ -81,6 +89,7 @@ fluid-dynamic-drag:
   publisher: Published by the author
   location: Midland Park, New Jersey
 
+# 10
 altitude-performance:
   type: Report
   title: Model Rocket Altitude Performance
@@ -89,6 +98,7 @@ altitude-performance:
   organization: Centuri Engineering Company
   serial-number: TIR-100
 
+# 11
 newtonian-aerodynamics:
   type: Report
   title: Newtonian Aerodynamics for Tangent Ogive Bodies of Revolution
@@ -97,6 +107,7 @@ newtonian-aerodynamics:
   organization: National Advisory Committee for Aeronautics
   serial-number: TN D-3337
 
+# 12
 applied-hydro-aeromechanics:
   type: Book
   title: Applied Hydro- and Aeromechanics
@@ -108,6 +119,7 @@ applied-hydro-aeromechanics:
   location: New York
   note: Unabridged republication of 1934 work
 
+# 13
 fundamentals-hydro-aeromechanics:
   type: Book
   title: Fundamentals of Hydro- and Aeromechanics
@@ -119,6 +131,7 @@ fundamentals-hydro-aeromechanics:
   location: New York
   note: Unabridged republication of 1934 work
 
+# 14
 missile-aerodynamics:
   type: Book
   title: Missile Aerodynamics
@@ -127,6 +140,7 @@ missile-aerodynamics:
   publisher: McGraw-Hill Book Company, Inc.
   location: New York
 
+# 15
 boundary-layer-theory:
   type: Book
   title: Boundary Layer Theory
@@ -136,6 +150,7 @@ boundary-layer-theory:
   publisher: McGraw-Hill Book Company, Inc.
   location: New York
 
+# 16
 review-base-drag:
   type: Article
   title: Review of Base Drag
@@ -146,6 +161,7 @@ review-base-drag:
     title: AGARD Conference Proceedings
     serial-number: CP-10
 
+# 17
 shape-and-flow:
   type: Book
   title: "Shape and Flow: The Fluid Dynamics of Drag"
@@ -155,6 +171,7 @@ shape-and-flow:
   location: Garden City, New York
   series: Science Study Series
 
+# 18
 handbook-model-rocketry:
   type: Book
   title: Handbook of Model Rocketry
@@ -163,6 +180,7 @@ handbook-model-rocketry:
   publisher: Follett Publishing Company
   location: Chicago
 
+# 19
 us-standard-atmosphere:
   type: Report
   title: United States Standard Atmosphere, 1962
@@ -170,6 +188,7 @@ us-standard-atmosphere:
   organization: U.S. Government Printing Office
   location: Washington, D.C.
 
+# 20
 drag-coefficient-measurements:
   type: Article
   title: Drag Coefficient Measurements

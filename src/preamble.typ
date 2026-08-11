@@ -17,11 +17,11 @@
 )
 
 // Drop-in replacement for unify's qty that handles custom units automatically
-#let qty(value, unit-str, ..args) = {
-  if unit-str in _raw-units {
-    _qty(value, _raw-units.at(unit-str), rawunit: true, ..args)
+#let qty(value, unit-str, per: "/", ..args) = {
+  if unit-str in _raw-units.keys() {
+    _qty(value, _raw-units.at(unit-str), rawunit: true, per: per, ..args)
   } else {
-    _qty(value, unit-str, ..args)
+    _qty(value, unit-str, per: per, ..args)
   }
 }
 

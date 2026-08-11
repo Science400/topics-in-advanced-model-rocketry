@@ -1,7 +1,7 @@
 #import "preamble.typ": *
 #import "@preview/ilm:2.0.0": *
 #import "@preview/zero:0.6.1"
-#import "@preview/unify:0.7.1": qty
+#import "@preview/unify:0.7.1": qty, num, numrange, qtyrange
 
 #set text(lang: "en", font: "EB Garamond")
 #show math.equation: set text(font: "Garamond-Math")
