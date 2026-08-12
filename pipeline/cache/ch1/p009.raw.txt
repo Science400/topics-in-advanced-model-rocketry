@@ -1,0 +1,12 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+mass of an object can be considered equivalent to its center of gravity, the notation C.G. will hereafter be used to refer to a model rocket's center of mass or center of gravity. The concepts of translation and rotation are illustrated by example in Figure 1.
+
+In the absence of any physical interrelation between the motion of the C.G. itself and the rotation of the model about its C.G. the differential equations describing the rocket's motion would possess a certain very useful and valuable property: the equations describing the rigid-body rotations would be decoupled from those describing the point-mass motions. That is to say that, if the rotation of the model about its C.G. in flight did not affect the net forces acting on it, and if the translational motion of the rocket as a point mass did not affect the moments tending to rotate the model about its C.G., the equations of motion of the C.G. and the equations of motion for the rigid-body rotations could be solved independently of one another. The practical effect of such a state of affairs would be to greatly simplify the mathematics involved, since the translational motion could be solved while ignoring rotation and the rotational motion could be solved while ignoring translation.
+
+For any extended body moving through the atmosphere in the Earth's gravitational field, however, there are external forces and moments which couple the rigid-body rotation to the C.G. translation. These external forces and moments arise from the various components of atmospheric resistance, or drag.

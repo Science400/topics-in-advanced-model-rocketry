@@ -1,0 +1,20 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+performed; that is, the independent variable (in this case time, or t) is referred to as the variable of integration, or running variable. The differential of the running variable is always written after the integrand to identify the running variable; hence the "dt" after F(t). The time values 0 and t_b are the limits of integration, and the integration is said to be performed between 0 and t_b, or from 0 to t_b.
+
+As far as model rocketeers are concerned there are two ways in which an actual number for I_t can be obtained from equation (3). The first of these can be used only if F(t) is given by some well-defined algebraic formula, in which case mathematicians have shown that there also exists an algebraic formula for \( \int F(t) dt \) (the integral written without limits is called an "indefinite integral" and is used to refer to the general functional form of the integral as opposed to the integral written with limits, or "definite integral", which refers to the actual value of the integral taken between specific limits). The integrals of a great many specific functions have been tabulated and listed in such books as Burington's Handbook of Mathematical Tables and Formulas and the CRC Standard Mathematical Tables, which are used as references by students of science and engineering. For instance, if the functional form of F(t) is given by
+
+\[
+F(t) = A t^n
+\]
+
+where A and n are constants, then
+
+\[
+\int F(t) dt = \frac{A}{n+1} t^{n+1} + C
+\]

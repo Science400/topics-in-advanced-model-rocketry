@@ -1,0 +1,16 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+I_t = 49.7 \times 0.1 = 4.97 \text{ N-sec}
+
+0.38 g = 1.0 \text{ N-sec}
+
+1.90 g = 5.0 \text{ N-sec}
+
+![Graph showing F(t) vs t (sec) with labeled area 4.97 N-sec](page_120_120_320_320.png)
+
+![Graph showing two labeled areas: 0.38 g = 1.0 N-sec and 1.90 g = 5.0 N-sec](page_520_120_320_320.png)

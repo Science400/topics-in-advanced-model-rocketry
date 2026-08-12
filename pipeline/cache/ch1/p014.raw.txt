@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 2: Origin of rocket thrust. In a time interval \( \Delta t \) the rocket expels the quantity of mass \( \Delta m_e \) at the exhaust velocity \( \vec{c} \) in the (-y) direction. "In the limit" as \( \Delta t \) becomes \( dt \) and \( \Delta m_e \) becomes \( dm_e \) the rate of mass expulsion -- or "mass flow rate" -- is \( dm_e/dt \) (also written \( \dot{m} \)). The thrust \( \vec{F} \) is given by the equation \( \vec{F} = -\vec{c}(dm_e/dt) \) and thus acts in the (+y) direction.

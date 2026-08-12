@@ -1,0 +1,10 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+from its nozzle. The engine itself is no more than an enclosed furnace in which the fuel is burned to produce a hot gas which then exits under extreme pressure from a small nozzle specially shaped so as to produce the greatest possible velocity of the exhaust stream. A chemical rocket, however, is a highly specialized type of furnace in that the oxygen required for the combustion of the fuel is obtained not from the air, but from an oxygen-rich chemical, or _oxidizer_, carried along with the fuel in the rocket itself. For this reason a rocket will continue to burn in the vacuum of outer space, and hence chemical rockets are used in spaceflight. In the case of the solid-propellant model rocket engine the fuel and oxidizer are mixed together to form a homogeneous _propellant grain_.
+
+To gain some understanding of how a rocket engine produces thrust, suppose we examine the hypothetical rocket of Figure 2, which is emitting gas at a constant exhaust velocity of magnitude c in the negative y direction. In some short interval of time, say \( \Delta t \), a mass of exhaust gas \( \Delta m_e \) leaves the nozzle, so that the mass of the rocket engine changes by the amount \( \Delta m_r = -\Delta m_e \). If the time interval is permitted to become so short as to be what mathematicians refer to as _infinitesimal_ it may be denoted by dt, also referred to in the language of calculus as the _differential_ of time. In this case the mass change experienced by the rocket will also become so small as to be considered a differential quantity, denoted by \( -\dot{m}_e \). The instantaneous rate at which the mass of the rocket is changing is then given by the ratio of the differential mass change to the differential

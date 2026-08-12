@@ -1,0 +1,32 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+where \( C \) is a "constant of integration" which must generally be determined by physical considerations called the "initial conditions" of the problem. Of particular interest is the case \( n = 0 \), which describes a thrust that is constant over the burn time:
+
+\[
+F(t) = At^0 \\
+= A
+\]
+
+Then
+\[
+\int F(t) dt = At + C
+\]
+
+It will be found that, in all problems of computing total impulse, \( C \) is zero. Now it is a basic rule of calculus that the value of a definite integral is equal to the value of the integral taken at the upper limit _minus_ the value taken at the lower limit. That is, in this case,
+
+\[
+\int_{0}^{t_b} F(t) dt = [At]_{t=t_b} - [At]_{t=0} \\
+= At_b - A \cdot 0 \\
+= At_b
+\]
+
+So you can see that for the case of constant thrust the total impulse is just equal to the thrust multiplied by the burn time. In fact, the total impulse is always equal to the _average_ thrust multiplied by the burn time, but for all cases other than that of constant thrust the average thrust itself must be calculated from the total impulse, which has been determined from (3), according to
+
+\[
+F_{av} = I_t / t_b
+\]

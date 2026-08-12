@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+Figure 3: The concept of a derivative, as illustrated by the rate of mass change of a model rocket engine due to the expulsion of exhaust gases. Two approximate methods for the computation of derivatives are illustrated: graphical solution by the use of a "tangent" line (a) and numerical solution using a table (b). Note that \( \Delta m \) is negative because mass _decreases_ as time _increases_. \( \frac{dm}{dt} \) as illustrated here is just the negative of \( \frac{dm_e}{dt} \).

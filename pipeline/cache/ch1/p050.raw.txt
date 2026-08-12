@@ -1,0 +1,12 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+the model's rigid-body rotations, and that they do not originate from any aerodynamic sources at all. Mechanical perturbations would arise even if one attempted to fly a model rocket in the hard vacuum of outer space. Examples of mechanical disturbances are those caused by thrust misalignment due to imperfect engine mounting or nozzle abnormalities, propulsive instabilities resulting in an oscillating thrust vector, force transients arising as the vehicle leaves the launch rod or tower, and forces due to a staging ignition sequence.
+
+Mechanical disturbances arising from launch departure effects or staging are unidirectional in nature and are of extremely short duration, while those arising from thrust misalignment or thrust vector oscillation are of relatively long duration. Thrust oscillation effects are sinusoidal with an angular frequency determined by the rapidity of the oscillation itself. In the case of a spinning rocket the frequency of the thrust oscillation will be superimposed upon the model's roll rate. A constant thrust misalignment will be unidirectional in nature if the vehicle is not spinning, and sinusoidal with an angular frequency equal to the roll rate if it is.
+
+All the perturbing effects mentioned here and in Section 3.1 will be discussed in detail, modeled mathematically, and treated as input moments ("inputs" or "forcing functions") causing the model to undergo various rigid-body rotations in Chapter 2. While reading Chapter 2 you may wish to consult Figure 10, in which a number of situations which will produce aerodynamic or mechanical disturbances have been illustrated.

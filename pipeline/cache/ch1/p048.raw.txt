@@ -1,0 +1,9 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+Figure 10: Examples of aerodynamic and mechanical disturbances.
+A horizontal wind (a) produces step forcing of constant intensity, while mismounted fins (b) cause a step disturbance of intensity proportional to the square of the airspeed. If only one fin is canted the rocket will spin, producing roll-coupled sinusoidal forcing. Torsionally vibrating fins (c) produce sinusoidal forcing of intensity proportional to the square of the airspeed. A mismounted or malfunctioning engine (d) produces step forcing proportional to the thrust level. Launch rod whip at departure (e) causes an impulse disturbance, as does staging (f). Since the lower stage has been blown to the right by the blow-through/ignition sequence, the base of the upper stage is pushed to the left. Cases (a), (b), and (c) are aerodynamic disturbances, while (d), (e), and (f) are mechanical disturbances.

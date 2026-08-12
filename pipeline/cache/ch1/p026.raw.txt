@@ -1,0 +1,14 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+the integral as used in calculus, for which the mathematical notation is
+
+\[
+\lim_{n \to \infty} \sum_{i=1}^{n} F_i \Delta t_i = \int_0^t F(t) dt
+\]
+
+A similar numerical method consists of "counting the squares on the graph paper" enclosed by the thrust-time curve and the axes. The number of newton-seconds represented by each square can be found from a knowledge of the vertical and horizontal graph scales. The impulse per square is then multiplied by the number of squares to give the total impulse, as shown in Figure 4c. An instrument called a planimeter is often used to compute total impulse in this manner. The instrument has a stylus which is used to trace the boundary of the thrust-time curve, resulting in a measurement of the area enclosed by the curve. The total impulse is directly proportional to this area, the constant of proportionality being equal to the amount of impulse represented by a unit area of the graph paper. Persons who do not have a planimeter can still make a good planimetric determination of total impulse using the method of Figure 4d. In this technique the thrust-time curve is traced onto cardboard, cut out, and weighed on a good laboratory gram balance. A rectangle of the same kind of cardboard cut to the size that represents a single newton-second of impulse in the scale to which the thrust-time curve is drawn is also weighed. The weight of the curve cutout divided by the weight of the one newton-second rectangle is then equal to the total impulse. You can see that all these numerical methods rely on the

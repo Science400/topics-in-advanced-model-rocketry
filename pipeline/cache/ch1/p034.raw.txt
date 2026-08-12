@@ -1,0 +1,20 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+2.3 Drag and Side Force
+
+Probably the most interesting, and certainly the most complex and difficult to calculate, force acting on a body moving through the atmosphere is the aerodynamic resistance to its passage, which physicists and engineers call drag. The drag of a body is a function of the density and viscosity of the medium through which it moves, its size and shape, the velocity with which it moves, the quality of its finish, its detailed surface characteristics, and its angle of attack.
+
+Detailed discussions of the physical mechanisms by which all these factors influence the drag of a model rocket will be presented in Chapter 3. For the present it will be enough to write down just a few of the most fundamental facts about drag as it pertains to model rockets. First of all, the total drag on a model rocket moving through air of density \( \rho \) at a velocity of magnitude \( v \) is given by
+
+\[
+D = \frac{1}{2} \rho C_D A_r v^2
+\]
+
+where \( A_r \) is a reference area which is usually taken to be the cross-sectional area of the largest diameter body tube used in the rocket and \( C_D \) is the drag coefficient, a dimensionless parameter which depends on the shape of the model and its angle of attack, and also (more generally) on the Reynolds number at which it is operating.
+
+The angle of attack, usually denoted by the symbol \( \alpha \), is the angle between the instantaneous velocity vector of the model's C.G. with respect to the air and the orientation of the rocket's

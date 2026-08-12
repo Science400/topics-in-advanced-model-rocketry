@@ -1,0 +1,12 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+model about its center of gravity. The changes in angle of attack produced by such rotations result, as we saw in Section 2.3, in increased aerodynamic drag and also give rise to side forces which, if they persist for a long enough time, can seriously disturb the rocket's flight path. The _perturbing forces_ generally arise from irregularities in the construction of the model, launching and staging effects, and local wind phenomena -- all of which must be allowed for in some degree when designing a model. Model rockets must be designed to respond as little as possible to the perturbing forces, and to return to straight and true flight as soon as possible after the disturbance has passed. Accordingly, the analyses of Chapters 2 and 4 will present in detail information useful in designing disturbance-resistant rockets.
+
+3.1 _Aerodynamic Disturbances_
+
+Aerodynamic effects that tend to rotate a rocket vehicle about its C.G. can arise from winds, misaligned fins or other components, "fluttering" of the fins, or protrusions such as launch lugs which cause asymmetries in the vehicle's shape. Winds may either blow continuously or arise in momentary gusts. In Chapter 2 it will be shown that a constant wind that persists for a long period of time can produce _weathercocking_, a phenomenon in which the model tends to tip toward the direction from which the wind is coming and fly off at an angle determined by the vector sum of the wind velocity and the vertical velocity of the rocket at the time it began to experience the wind. Weathercocking is illustrated in Figure 9. A _gust_ of wind, on the other

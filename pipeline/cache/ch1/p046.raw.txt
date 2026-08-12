@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 9: Weathercocking. The rocket leaves the launcher (a) at vertical velocity \( \vec{V} \) and encounters a horizontal wind of velocity \( \vec{U} \). It then tends to fly off in the direction of the vector \( \vec{V} + (-\vec{U}) \) and "weathercocks" (b), or flies into the wind. This is because the wind acts through the center of pressure which, for any stable rocket, is behind the center of gravity.

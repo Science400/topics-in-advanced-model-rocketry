@@ -1,0 +1,10 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+6.69 sec./cm.². With the length of a typical model rocket being about 30 centimeters, a flight velocity of 150 meters/sec. (15,000 cm./sec.) produces a Reynolds number of about 3 x 10⁶. An airspeed of 5 meters/second, on the other hand, gives an \( R_e \) of only \( 1 \times 10^5 \). Both numbers are considerably greater than one, of course, so that inertial forces are much greater than viscous forces in all cases involving model rockets. Still, the two cases differ by more than an order of magnitude, so that viscous effects are _thirty times_ more important in the wind-tunnel test than in flight. Consequently, the flow behavior observed in the wind-tunnel test may be different from that actually encountered in flight. The drag coefficient, in particular, may be somewhat different.
+
+Each component of a model rocket -- nosecone, body tube, fins, and so on -- contributes in some measure to the overall drag on the model, and hence to its drag coefficient. Each contributes both _pressure drag_ due to the effect of its shape in displacing the airflow pattern about the rocket and _friction drag_ due to the _viscous shearing stress_, or "friction", of the air directly adjacent to its lateral surfaces. The effect of the components in modifying the flow about each other also produces a small amount of additional drag, called the _interference drag_. Changes in Reynolds number over a great enough range can change the value of the overall drag coefficient through the phenomenon of _transition_, which alters the characteristics of the airflow about the rocket. At lower Reynolds numbers (less than \( 5 \times 10^5 \)), where viscous forces are more

@@ -1,0 +1,13 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+interested in the final results of these presentations -- the solutions themselves. And in every case you will find that these solutions can be worked out numerically using relatively simple numerical substitutions in the algebraic formulæ which have been obtained, plus a handbook of mathematical tables.
+
+In this chapter the general problem of computing model rocket flight performance will be considered, and the various techniques used to cast these problems into forms capable of closed-form, analytic solution will be discussed. The forces which influence the motion of model rockets will be briefly described and the methods by which the performance problems will be attacked in subsequent chapters will be introduced, while the presentation of the detailed solutions themselves will be left for the chapters reserved for them.
+
+1.1 Point-Mass and Rigid-Body Dynamics
+The problem of computing in detail the motion of a model rocket in flight is one of analytical dynamics and kinematics. By "kinematics" is meant the mathematical study of movement itself, while "dynamics" can, for the purposes of this book, be taken to mean the physical and mathematical study of the relationships between movement and the various forces and moments which produce it. In general, one can distinguish two classes of motion of which rigid, extended bodies are capable: the translational motion of the body considered as a point mass concentrated at its center of mass and the rotational motion described by the body about its center of mass. Since, for all purposes of interest to model rocketeers, the center of

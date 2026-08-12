@@ -1,0 +1,16 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+hand, will succeed in temporarily deflecting the vehicle and will generally cause it to oscillate in rotation about its C.G., with its angle of attack passing back and forth through zero.
+
+Fin flutter is a _periodic_ force. That is, the fins are undergoing rapid vibrations from side to side (sometimes these vibrations are audible as a whirr, or buzz) which induce forces and moments on the model that are _sinusoidal_ (i.e., if their magnitudes were graphed versus time the resulting graphs would look like sine waves). Flutter will be present in fins which are too thin to possess sufficient rigidity; it is evidence of poor design since it is perfectly possible (indeed, _easy_) to design fins which do not flutter at all. If you do encounter a case of fin flutter, though, you will want your rocket to survive it so you will have a chance to replace the model's fins. Consequently, the rocket as a whole should be designed for minimal response to any possible flutter.
+
+Misaligned fins or other components and asymmetrical surface protrusions will cause forces and moments which are constant in direction in a rocket that is not spinning (or "rolling") about its centerline, and which are sinusoidal in nature in one that is spinning. The _angular frequency_ of the sine functions in the latter case is equal to the roll rate of the vehicle in radians per second.
+
+3.2 _Mechanical Disturbances_
+
+Mechanical perturbing forces and moments are distinguished from aerodynamic disturbances in that they in no way depend upon the aerodynamic coupling of the point-mass motion to

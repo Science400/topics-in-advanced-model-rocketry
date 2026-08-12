@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 1:  Translational and rotational motion.  The center of gravity of the rocket in illustration (a) has translated from position 1 to position 2; the rocket has not rotated at all during the motion.  The rocket of illustration (b) has rotated from position 1 to position 2 about its center of gravity without undergoing any translation.

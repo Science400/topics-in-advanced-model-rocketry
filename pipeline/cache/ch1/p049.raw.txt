@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+![Six diagrams of rocket configurations labeled a through f, showing different configurations of fins and wings.](page_0_0_1024_1583.png)

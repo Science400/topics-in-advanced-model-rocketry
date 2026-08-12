@@ -1,0 +1,33 @@
+# 1
+ref1:
+  type: Book
+  title: "Dynamics: Particles, Rigid Bodies, and Systems"
+  author: Halfman, Robert L.
+  date: 1962
+  volume: 1
+  publisher: Addison-Wesley Publishing Company, Inc.
+  location: Reading, Massachusetts
+
+# 2
+ref2:
+  type: Book
+  title: Mechanics and Thermodynamics of Propulsion
+  author:
+    - Hill, Philip G.
+    - Peterson, Carl R.
+  date: 1965
+  publisher: Addison-Wesley Publishing Company, Inc.
+  location: Reading, Massachusetts
+
+# 3
+ref3:
+  type: Book
+  title: Calculus and Analytic Geometry
+  author:
+    name: Thomas
+    given-name: George B.
+    suffix: Jr.
+  date: 1960
+  edition: 3
+  publisher: Addison-Wesley Publishing Company, Inc.
+  location: Reading, Massachusetts

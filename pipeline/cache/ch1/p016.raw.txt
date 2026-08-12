@@ -1,0 +1,18 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+that value of time. The meaning of these terms is indicated by the example in Figure 3, which also describes the procedures for obtaining derivatives from graphs and tables.
+
+Now the connection between the time derivative of a rocket's mass and the thrust of its engine lies in the fact that the thrust of a rocket motor is equal to the rate at which it is transferring momentum to the rocket in which it is mounted. Those of you who have had some exposure to elementary physics will be familiar with the concept of momentum; some of you, moreover, may already know that the rate of momentum transfer resulting from the expulsion of mass from a body depends upon two quantities: the rate at which mass is being expelled and the velocity with which it is being ejected. In Chapter 4 it will be shown by more detailed momentum considerations that the relationship involved is
+
+\[
+\vec{F} = -\vec{c} \frac{d m_e}{dt}
+\]
+
+where \( \vec{F} \) denotes the thrust produced by the motor and \( \vec{c} \) is the velocity of the exhaust gases as measured by an observer moving with the rocket. Both the thrust force and the exhaust velocity, students of physics will note, are vector quantities; that is, both their magnitudes and the directions in which they act must be specified to describe them completely. Mass (and its time derivative), on the other hand, is a scalar quantity; it can have only a magnitude.
+
+In a properly designed and constructed model rocket whose engine is not suffering from any malfunction the exhaust stream

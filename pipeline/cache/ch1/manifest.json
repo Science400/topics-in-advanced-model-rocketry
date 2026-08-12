@@ -1,0 +1,434 @@
+{
+  "6": {
+    "seconds": 66.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1357,
+    "lines": 6,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "7": {
+    "seconds": 70.3,
+    "variant": "official+addendum+symbols",
+    "chars": 1678,
+    "lines": 1,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "8": {
+    "seconds": 76.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1602,
+    "lines": 6,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "9": {
+    "seconds": 83.9,
+    "variant": "official+addendum+symbols",
+    "chars": 1558,
+    "lines": 5,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "10": {
+    "seconds": 56.0,
+    "variant": "official+addendum+symbols",
+    "chars": 341,
+    "lines": 1,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "11": {
+    "seconds": 88.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1641,
+    "lines": 4,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "12": {
+    "seconds": 70.0,
+    "variant": "official+addendum+symbols",
+    "chars": 1497,
+    "lines": 11,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "13": {
+    "seconds": 77.2,
+    "variant": "official+addendum+symbols",
+    "chars": 1710,
+    "lines": 3,
+    "math_spans": 4,
+    "latex_cmds": 5,
+    "eq_numbers": []
+  },
+  "14": {
+    "seconds": 55.9,
+    "variant": "official+addendum+symbols",
+    "chars": 452,
+    "lines": 1,
+    "math_spans": 11,
+    "latex_cmds": 9,
+    "eq_numbers": []
+  },
+  "15": {
+    "seconds": 69.6,
+    "variant": "official+addendum+symbols",
+    "chars": 1497,
+    "lines": 7,
+    "math_spans": 0,
+    "latex_cmds": 1,
+    "eq_numbers": []
+  },
+  "16": {
+    "seconds": 72.7,
+    "variant": "official+addendum+symbols",
+    "chars": 1519,
+    "lines": 9,
+    "math_spans": 3,
+    "latex_cmds": 5,
+    "eq_numbers": []
+  },
+  "17": {
+    "seconds": 22.2,
+    "variant": "official+addendum+symbols",
+    "chars": 474,
+    "lines": 1,
+    "math_spans": 3,
+    "latex_cmds": 3,
+    "eq_numbers": []
+  },
+  "18": {
+    "seconds": 61.3,
+    "variant": "official+addendum+symbols",
+    "chars": 985,
+    "lines": 9,
+    "math_spans": 4,
+    "latex_cmds": 5,
+    "eq_numbers": [
+      "2"
+    ]
+  },
+  "19": {
+    "seconds": 70.9,
+    "variant": "official+addendum+symbols",
+    "chars": 1669,
+    "lines": 3,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": [
+      "2"
+    ]
+  },
+  "20": {
+    "seconds": 76.7,
+    "variant": "official+addendum+symbols",
+    "chars": 1561,
+    "lines": 7,
+    "math_spans": 6,
+    "latex_cmds": 3,
+    "eq_numbers": [
+      "3"
+    ]
+  },
+  "21": {
+    "seconds": 75.2,
+    "variant": "official+addendum+symbols",
+    "chars": 1460,
+    "lines": 9,
+    "math_spans": 3,
+    "latex_cmds": 3,
+    "eq_numbers": [
+      "3"
+    ]
+  },
+  "22": {
+    "seconds": 89.2,
+    "variant": "official+addendum+symbols",
+    "chars": 1111,
+    "lines": 17,
+    "math_spans": 7,
+    "latex_cmds": 3,
+    "eq_numbers": [
+      "3"
+    ]
+  },
+  "23": {
+    "seconds": 79.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1623,
+    "lines": 7,
+    "math_spans": 1,
+    "latex_cmds": 9,
+    "eq_numbers": []
+  },
+  "24": {
+    "seconds": 64.5,
+    "variant": "official+addendum+symbols",
+    "chars": 916,
+    "lines": 1,
+    "math_spans": 5,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "25": {
+    "seconds": 55.8,
+    "variant": "official+addendum+symbols",
+    "chars": 292,
+    "lines": 9,
+    "math_spans": 0,
+    "latex_cmds": 4,
+    "eq_numbers": []
+  },
+  "26": {
+    "seconds": 117.8,
+    "variant": "official+addendum+symbols",
+    "chars": 1554,
+    "lines": 5,
+    "math_spans": 1,
+    "latex_cmds": 6,
+    "eq_numbers": []
+  },
+  "27": {
+    "seconds": 71.5,
+    "variant": "official+addendum+symbols",
+    "chars": 1564,
+    "lines": 3,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "28": {
+    "seconds": 51.8,
+    "variant": "official+addendum+symbols",
+    "chars": 504,
+    "lines": 2,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "29": {
+    "seconds": 76.2,
+    "variant": "official+addendum+symbols",
+    "chars": 1684,
+    "lines": 5,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "30": {
+    "seconds": 98.6,
+    "variant": "official+addendum+symbols",
+    "chars": 1336,
+    "lines": 11,
+    "math_spans": 10,
+    "latex_cmds": 2,
+    "eq_numbers": []
+  },
+  "31": {
+    "seconds": 71.3,
+    "variant": "official+addendum+symbols",
+    "chars": 1407,
+    "lines": 12,
+    "math_spans": 2,
+    "latex_cmds": 3,
+    "eq_numbers": [
+      "2",
+      "7"
+    ]
+  },
+  "32": {
+    "seconds": 81.2,
+    "variant": "official+addendum+symbols",
+    "chars": 1438,
+    "lines": 11,
+    "math_spans": 15,
+    "latex_cmds": 10,
+    "eq_numbers": [
+      "2"
+    ]
+  },
+  "33": {
+    "seconds": 184.5,
+    "variant": "official+addendum+symbols",
+    "chars": 1439,
+    "lines": 11,
+    "math_spans": 1,
+    "latex_cmds": 9,
+    "eq_numbers": [
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "34": {
+    "seconds": 72.1,
+    "variant": "official+addendum+symbols",
+    "chars": 1482,
+    "lines": 11,
+    "math_spans": 6,
+    "latex_cmds": 4,
+    "eq_numbers": []
+  },
+  "35": {
+    "seconds": 71.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1293,
+    "lines": 17,
+    "math_spans": 9,
+    "latex_cmds": 11,
+    "eq_numbers": [
+      "15",
+      "17"
+    ]
+  },
+  "36": {
+    "seconds": 48.2,
+    "variant": "official+addendum+symbols",
+    "chars": 379,
+    "lines": 1,
+    "math_spans": 3,
+    "latex_cmds": 3,
+    "eq_numbers": []
+  },
+  "37": {
+    "seconds": 76.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1451,
+    "lines": 7,
+    "math_spans": 1,
+    "latex_cmds": 2,
+    "eq_numbers": []
+  },
+  "38": {
+    "seconds": 78.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1651,
+    "lines": 3,
+    "math_spans": 3,
+    "latex_cmds": 2,
+    "eq_numbers": []
+  },
+  "39": {
+    "seconds": 73.9,
+    "variant": "official+addendum+symbols",
+    "chars": 1613,
+    "lines": 3,
+    "math_spans": 2,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "40": {
+    "seconds": 76.0,
+    "variant": "official+addendum+symbols",
+    "chars": 1333,
+    "lines": 15,
+    "math_spans": 11,
+    "latex_cmds": 17,
+    "eq_numbers": []
+  },
+  "41": {
+    "seconds": 48.1,
+    "variant": "official+addendum+symbols",
+    "chars": 378,
+    "lines": 1,
+    "math_spans": 3,
+    "latex_cmds": 3,
+    "eq_numbers": []
+  },
+  "42": {
+    "seconds": 72.0,
+    "variant": "official+addendum+symbols",
+    "chars": 1181,
+    "lines": 11,
+    "math_spans": 9,
+    "latex_cmds": 24,
+    "eq_numbers": [
+      "19",
+      "20",
+      "21",
+      "22"
+    ]
+  },
+  "43": {
+    "seconds": 52.3,
+    "variant": "official+addendum+symbols",
+    "chars": 651,
+    "lines": 4,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "44": {
+    "seconds": 45.6,
+    "variant": "official+addendum+symbols",
+    "chars": 291,
+    "lines": 1,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "45": {
+    "seconds": 74.3,
+    "variant": "official+addendum+symbols",
+    "chars": 1615,
+    "lines": 5,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "46": {
+    "seconds": 50.1,
+    "variant": "official+addendum+symbols",
+    "chars": 398,
+    "lines": 1,
+    "math_spans": 3,
+    "latex_cmds": 4,
+    "eq_numbers": []
+  },
+  "47": {
+    "seconds": 73.0,
+    "variant": "official+addendum+symbols",
+    "chars": 1577,
+    "lines": 9,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "48": {
+    "seconds": 59.0,
+    "variant": "official+addendum+symbols",
+    "chars": 874,
+    "lines": 2,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "49": {
+    "seconds": 42.8,
+    "variant": "official+addendum+symbols",
+    "chars": 137,
+    "lines": 1,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "50": {
+    "seconds": 71.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1621,
+    "lines": 5,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  }
+}

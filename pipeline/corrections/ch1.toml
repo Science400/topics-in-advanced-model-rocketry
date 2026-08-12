@@ -1,0 +1,46 @@
+# Correction rules for Chapter 1, applied by emit.py on every run.
+#
+# When you find yourself making the same edit twice, put it here instead.
+# Re-emitting a section overwrites hand edits inside its markers, so a fix that
+# lives only in the .typ will be lost the next time the section is regenerated.
+#
+#   [[math]]   applied to converted Typst math only — never touches prose
+#   [[prose]]  applied to prose text only — never touches math
+#   [[any]]    applied to the finished section, math and prose alike
+#
+# Literal find/replace by default. Set regex = true for a pattern.
+# `note` is for you; it is printed by `python pipeline/corrections.py ch1`.
+
+# ---------------------------------------------------------------------------
+# Math
+# ---------------------------------------------------------------------------
+
+# No math rules needed yet — the symbol table already canonicalises spellings
+# automatically (C_{D0}, C_{D_0} and C_{D 0} all become C_D_0), so add a rule
+# here only for something the table cannot express.
+#
+# Example of the shape, once you hit a real one:
+#
+# [[math]]
+# find = "m_o"
+# replace = "m_0"
+# note = "letter o misread for zero"
+
+# ---------------------------------------------------------------------------
+# Prose
+# ---------------------------------------------------------------------------
+
+# [[prose]]
+# find = "..."
+# replace = "..."
+
+# ---------------------------------------------------------------------------
+# Anywhere
+# ---------------------------------------------------------------------------
+
+# Example of a regex rule — collapse doubled spaces the OCR leaves behind.
+[[any]]
+find = "  +"
+replace = " "
+regex = true
+note = "collapse runs of spaces"

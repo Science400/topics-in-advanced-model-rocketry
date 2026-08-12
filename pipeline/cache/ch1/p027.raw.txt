@@ -1,0 +1,10 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+essential relationship between the integral of a function and the area enclosed between the graph of that function and the coordinate axes with respect to which that graph is drawn. Appeals to the intuitive notion of an integral as "the area under the curve" of the integrand are in fact often used in teaching calculus at the senior high school and undergraduate college level.
+
+The particular functional forms of F(t) encountered in model rocketry fall into several well-defined classes. These categories are represented by the sample thrust-time curves of Figures 5a, 5b, and 5c. The curve of Figure 5a exemplifies the behavior of a typical end-burning motor. The vast majority of the NAR Class 1A through D engines, as well as some of the larger engines, have thrust-time curves of this type. Such engines are produced with a solid propellant grain having a slight indentation at the rear, immediately inside the nozzle. The indentation serves a dual purpose: it provides a convenient cavity into which the electrical igniter may be packed and it is also responsible for increasing the burning surface area of the propellant grain in the fraction of a second immediately following ignition, thereby producing the "spike" in the thrust-time curve shown in Figure 5a. This short period of higher thrust is useful in accelerating the model rapidly to velocities at which the stabilizing fins become effective. Thereafter the thrust decreases to the virtually constant level characteristic of a true end-burning, or "cigarette-burning", grain until burnout occurs.

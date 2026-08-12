@@ -1,0 +1,18 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+(11) \quad m_b = m_0 - \int_0^{t_b} \frac{F(t)}{c} \, dt \quad \text{or, since}
+
+(12) \quad m_f = \int_0^{t_b} \frac{F(t)}{c} \, dt
+
+where \( m_f \) is the total mass of propellant in the engine before ignition,
+
+(13) \quad m_b = m_0 - m_f
+
+Accordingly, the weight of the rocket decreases continuously during the engine burn and the model is lighter after burnout than at ignition. In large guided missiles and space boosters the propellant constitutes most of the liftoff mass of the vehicle, so that such a rocket at burnout has only a small fraction of the mass it had at ignition. In model rockets, however, the mass change due to the expenditure of the propellant is relatively slight. This fact, as will be shown in Chapter 4, considerably simplifies the calculation of model rocket altitude performance.
+
+Unlike the thrust, the direction of the weight vector remains invariant when the rocket rotates or "tips" away from the vertical. The weight of a model rocket, or for that matter any object, appears to originate from a point called the center of mass, which for all practical purposes within the scope of this book may be taken as identical to the center of gravity, or balance point: the point by which the object may be suspended without showing any tendency to rotate in any direction. All rotations of a model in flight occur about the C.G., and the weight vector always acts through the C.G. downward along the local vertical.

@@ -1,0 +1,20 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+is directed dead astern. In such a case we can replace the full vector notation for force and velocity with a simpler, fore-and-aft sign convention in which vector quantities directed forward along the vehicle longitudinal axis are considered positive, while those directed rearward are considered negative. According to this convention.
+
+\[
+\vec{c} \equiv -c
+\]
+
+so that
+
+\[
+F = c \frac{d m_e}{dt}
+\]
+
+Professional rocket engineers refer to the derivative \( \dot{m}_e / dt \) as the mass flow rate and sometimes write it as \( \dot{m} \), the superscript dot denoting differentiation with respect to time (an alternate calculus notation for the time derivative which is sometimes used to save writing). Note that, since positive quantities only are involved in the right-hand side of equation (2), the thrust is a positive quantity also -- confirming what we as practical model rocketeers already know to be the case; namely that the thrust is directed forward along the rocket's centerline.

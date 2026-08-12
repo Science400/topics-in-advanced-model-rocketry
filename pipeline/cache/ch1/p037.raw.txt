@@ -1,0 +1,14 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+the two cases are identical; and
+
+(b) The Reynolds number expresses the ratio of _inertial_ force to _viscous_ force in any given fluid-flow situation. The effects of _viscosity_ predominate at Reynolds numbers less than 1.0, while _inertial_ effects predominate at Reynolds numbers greater than 1.0.
+
+Statement (a) is important to the field of aerodynamic testing in which models are used, such as wind-tunnel testing. It means, for instance, that a quarter-scale model of an airplane placed in a wind tunnel will yield accurate information about the full-scale prototype if the tunnel airspeed is maintained at four times the flight speed of the prototype, so that the product vL is the same for the two cases (or if the tunnel is pressurized or some other fluid than air is used, so that the kinematic viscosity is decreased and a lower speed may be used). Conversely, data taken on a model rocket placed in a wind tunnel which can only generate an airspeed of 5 meters per second may _not_ apply to that same model when it is flying 150 meters per second.
+
+Statement (b) is important when considering the effect of varying Reynolds number on the drag coefficient. The density of sea-level air is 1.225 x 10^{-3} gram/cm.^3, while its viscosity at room temperature (180° C) is 1.827 x 10^{-4} gram/(cm.-sec.). The unit combination gram/(cm.-sec.) is also known as the _poise_. In any case, this makes the value of \( \rho / \mu \) in CGS units equal to

@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 6: Angle of attack. The direction of the rocket's longitudinal axis is deflected through the angle \( \alpha \) from the instantaneous velocity vector \( \vec{V} \). \( \alpha \) is referred to as the "angle of attack". This diagram assumes that there is no horizontal wind, so that the rocket's velocity with respect to the air is the same as its velocity with respect to the ground.

@@ -1,0 +1,14 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+time interval over which that change occurs. This ratio is also called the derivative of the rocket's mass with respect to time:
+
+rate of mass change = \frac{-d m_e}{dt}
+
+= derivative of mass with respect to time
+
+The above explanation of the derivative as a ratio of differentials is useful in forming a mental picture of what a derivative physically represents, but it provides no information about how derivatives are actually computed. They are not calculated by somehow finding each differential and taking the ratio of the two; they are, rather, done "all at once" by one of two possible methods. The first such method is usable when the dependent variable (in this case mass) is given as an analytic function of the independent variable (in this case time); that is, when the dependent variable is expressed as some algebraic formula in terms of the independent variable. In such cases the derivative is itself an algebraic formula which is computable from the original function by means of the limiting arguments used in differential calculus. You will not need to know how to perform any such calculations to understand this book; wherever the derivative of an algebraic expression is needed we will supply it already written out. The second method is an approximate one and is used when the function whose derivative is to be taken is supplied in graph or table form. In the case of a graph, the derivative at any given time t' is just the slope of the tangent line touching the graph at

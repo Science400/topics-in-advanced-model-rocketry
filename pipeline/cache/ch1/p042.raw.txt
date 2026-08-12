@@ -1,0 +1,26 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+is very nearly equal to the value of \( \alpha \) itself in radians (one radian equals 57.3°), while \( \cos \alpha \) is very nearly equal to 1.0. Accordingly, one can make the small-angle approximations
+
+\[
+\text{(21)} \quad N \sin \alpha \approx N \alpha
+\]
+\[
+\text{(22)} \quad S \equiv N \cos \alpha \approx N
+\]
+
+where \( S \) denotes the magnitude of the side force. Now by inspection of equations (19), (20), and (21), one might be tempted to deduce that
+
+\[
+\epsilon = \frac{1}{2} f C_{n \alpha} A_r \quad \text{and}
+\]
+\[
+f(\alpha) = \alpha^2
+\]
+
+Unfortunately, things are not quite that simple. The drag increase due to the normal force is only one of several contributions to the increase in drag produced by a nonzero angle of attack. As explained in Chapter 3, viscous cross-flow and increased interference effects cause the increase in drag due to angle of attack to be somewhat greater than one would predict from Barrowman analysis alone. It will, however, be found quite accurate to represent \( f(\alpha) \) by \( \alpha^2 \), and this property will be used in Chapter 4 to estimate the effects of the oscillatory responses to various in-flight perturbations on altitude capability.

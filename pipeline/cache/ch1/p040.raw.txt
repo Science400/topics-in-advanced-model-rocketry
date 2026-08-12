@@ -1,0 +1,28 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+("wobbling" of the rocket on the way up) on a model's maximum altitude. According to this treatment, the coefficient of drag at zero angle of attack is written \( C_{D0} \). A constant \( k \) can then be defined such that
+
+\[
+k \equiv \frac{1}{2} \rho A_r C_{D0}
+\]
+
+Then one can represent the drag as a function of angle of attack by
+
+\[
+D = \{ k + \epsilon f(\alpha) \} v^2
+\]
+
+where \( \epsilon \) is a constant and \( f(\alpha) \) is some function of the angle of attack that decreases to zero as the angle of attack itself goes to zero. According to the method of analysis developed by James Barrowman, which is discussed in detail in Chapter 2, a rocket flying at a nonzero angle of attack experiences a normal force (i.e., one perpendicular to the model's centerline) whose magnitude is given by
+
+\[
+N = \frac{1}{2} \rho C_{N\alpha} A_r v^2
+\]
+
+where \( C_{N\alpha} \) is the normal force coefficient, whose computation by the Barrowman method is described in Chapter 2. The component of force \( N \sin \alpha \) is an additional contribution to the drag, while the component \( N \cos \alpha \) is a side force tending to deflect the rocket's path by causing an acceleration component normal to the current direction of flight. The resolution of the normal force is shown in Figure 7.
+
+Now at small angles of attack (less than about 15°) \( \sin \alpha \)

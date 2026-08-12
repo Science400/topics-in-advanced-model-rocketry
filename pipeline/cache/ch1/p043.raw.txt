@@ -1,0 +1,11 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+In Figure 8 a complete vector diagram of all the forces influencing the center-of-mass motion of a model rocket in flight is presented. The making of such a drawing, called a free-body diagram, is one of the fundamental steps in the solution of any problem in statics or dynamics since it enables one to readily visualize all the components of the forces required to write down the equations of motion. You may find it helpful to consult Figure 8 of this chapter again when reading Chapter 4.
+
+3. Description of the Perturbing Forces
+This section will consider those forces encountered by a model rocket in flight that produce moments which rotate the

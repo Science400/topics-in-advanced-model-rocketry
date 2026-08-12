@@ -1,0 +1,16 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+You can also see that total impulse has units of (force x time). Since model rocket thrust is measured in newtons and time in seconds, total impulse is given in newton-seconds.
+
+But suppose there is no simple algebraic formula that describes F(t). Suppose there is either no known formula at all or one so complicated that its integral would literally cover pages. In such cases the total impulse can be computed numerically, without integral formulae. To see how this is done suppose we take as an example the thrust-time curve of Figure 4a, which is typical of many of the smaller classes of model rocket engines: there is an initial "spike" at ignition followed by a drop-off to a fairly constant thrust for the rest of the burn time. In Figure 4b the exact thrust-time curve has been approximated by a series of eight adjacent rectangles. There are many mathematically "fancier" and more precise ways to do this, but in Figure 4b it has been done "by eye" and indeed such an intuitive, physical approach will be found sufficiently accurate for virtually all model rocketry work. The total impulse according to this method is given approximately by
+
+\[
+I_t \approx F_1 \Delta t_1 + F_2 \Delta t_2 + F_3 \Delta t_3 + F_4 \Delta t_4 + F_5 \Delta t_5 + F_6 \Delta t_6 + F_7 \Delta t_7 + F_8 \Delta t_8
+\]
+
+It is evident that more than eight rectangles can be used, and that the approximation will get better as the number of rectangles increases and they get narrower and narrower. "In the limit", as the rectangles get infinitesimally thin, the approximation will become exact -- and in fact this is just the definition of

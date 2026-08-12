@@ -1,0 +1,16 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+instance, that the thrust is given in newtons and the exhaust velocity in meters/second. Remembering that one newton is one kilogram-meter/(second^2), one then obtains the mass flow rate in kilograms/second, which can easily be converted to grams/second by multiplying by a thousand. An easy method of calculating the average exhaust velocity will be described a little later on.
+
+Model rocket engines come in a wide variety of sizes and configurations, permitting the modeler to choose any desired average thrust from as low as 3 newtons to as high as 100 newtons. A knowledge of the average thrust alone, however, is not sufficient to enable one to predict the overall effect of the engine on the rocket's performance. It is also necessary to know how the thrust varies as a function of time and the length of time for which the engine will burn. Knowing these the modeler can compute the total momentum change which the engine will impart to the rocket, also called the total impulse, according to the relation
+
+\[
+I_t \equiv \int_{0}^{t_b} F(t) dt
+\]
+
+where \( I_t \) is the total impulse, \( F(t) \) is the calculus notation for "thrust as a function of time", and \( t_b \) is the total burning time (not counting the delay/tracking charge) of the engine. Equation (3) is the first we have encountered so far needing the techniques of integral calculus for its solution. The symbol \( \int \) is referred to as an integral sign. The quantity to be "integrated" (in this case \( F(t) \)) is called the integrand, and the variable with respect to which the integration is to be

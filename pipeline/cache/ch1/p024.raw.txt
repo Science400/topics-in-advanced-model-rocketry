@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 4: Total impulse and the concept of integration. Panel (a) shows the thrust-time curve of the NAR Type B4 engine. The total impulse \( I_t \) of the engine is equal to the integral of its thrust-time curve; that is, to the area (in N-sec) enclosed by it. The other three panels show some approximate methods of obtaining this integral. In (b) the curve has been approximated by a series of rectangles and \( I_t \) has been computed as the sum of the areas (in N-sec) of the rectangles. In (c) each square of the grid represents 0.1 N-sec and \( I_t \) is found by determining the approximate number of squares enclosed by the curve. In (d) the weight in gram-forces of a piece of cardboard 1 sec long and 1 N high has been determined and \( I_t \) has been found by comparing it with the weight of a cardboard cutout of the curve. Method (d) was most accurate in this case, as the actual \( I_t \) of the B4 engine is 5.0 N-sec.

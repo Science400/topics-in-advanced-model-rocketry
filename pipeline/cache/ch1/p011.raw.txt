@@ -1,0 +1,11 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+acting on the body which affect both the C.G. motion and the rigid-body motion. If the model should undergo rigid-body motion due to aerodynamic or other forces, the changes in its angle to the incident airflow resulting from such motion will change the drag experienced by the vehicle, thus affecting the total force on it. In the presence of gravity, the rigid-body rotations will also change the angle of the thrust vector with respect to the local vertical and will therefore change the vertical and horizontal components of the force on the model due to the thrust. The point-mass motion also influences the rigid-body motion, since the magnitude of the drag components which act to rotate the vehicle vary strongly with the velocity of the C.G. The differential equations of motion of a model rocket travelling through the atmosphere under the influence of gravity are, therefore, a coupled set of equations.
+
+1.2 Separation of the Differential Equations of Motion
+Since, as we have remarked, it is generally much easier to solve a system of mutually independent equations than it is to solve a coupled set, the authors of the various chapters have followed the procedure generally used in full-scale science and engineering for problems of this type by adopting various simplifying approximations which permit the point-mass and rigid-body equations of motion to be decoupled (and also greatly simplify the solution of each of the decoupled sets). Such a separation cannot result in exact solutions; it will yield solutions of acceptable accuracy only if the coupling between the two types of motion is slight or "weak" in some sense.

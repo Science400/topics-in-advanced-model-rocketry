@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 7: Resolution of normal force into side force and "drag due to lift". The normal force and its components are considered to act through the center of pressure. \( \vec{N} \) is perpendicular to the longitudinal axis of the rocket, \( \vec{S} \) is perpendicular to the velocity vector, and \( \vec{D}_1 \) is parallel to the velocity vector. A case of no wind has again been assumed.

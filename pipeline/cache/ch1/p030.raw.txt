@@ -1,0 +1,24 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+like the polyurethane/ammonium perchlorate mixtures used in the Polaris and Minuteman guided missiles and many sounding rockets currently in use. When selecting a propellant from among the many available types, one of the first questions the rocket engineer asks is, "How powerful is it?" The answer to this question lies in a quantity called the _specific impulse_ of the propellant; that is, the total impulse obtainable from the combustion of a unit mass of propellant. Specific impulse is thus a measure of a propellant's efficiency. Strictly speaking, the mathematical definition of specific impulse is
+
+\[
+I_{sp} = \frac{I_t}{m_f}
+\]
+
+where \( m_f \) is the mass of propellant consumed in providing the total impulse \( I_t \). The strictly consistent physical units for \( I_{sp} \) in the MKS system used in model rocketry are therefore newton-seconds per kilogram. Rocket engineers, however, use _weight_ measure when computing specific impulse, using the definition
+
+\[
+I_{sp} = \frac{I_t}{w_f}
+\]
+
+where \( w_f \) is the _weight_ of propellant required to produce the total impulse \( I_t \). According to this definition \( I_{sp} \) has units of newton-seconds per newton -- or simply _seconds_. The engineering definition is especially convenient in that it relates \( I_{sp} \) to the exhaust velocity through the simple relation
+
+\[
+c = g I_{sp}
+\]

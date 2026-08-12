@@ -1,0 +1,22 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+gravity field. The weight force always points in the direction of the gravity field, which in this case is the center of the Earth -- or "straight down" along the local vertical. Strictly speaking, the value of \( \vec{g} \) decreases with increasing altitude above the Earth's surface according to the relation
+
+\[
+\frac{g}{g_0} = \left[ \frac{R_0}{R} \right]^2
+\]
+
+where \( R_0 \) is the radius of the Earth, \( g_0 \) is the magnitude of \( \vec{g} \) at the Earth's surface, \( R \) is any radius greater than \( R_0 \) and \( g \) is the magnitude of \( \vec{g} \) at that radius. Even a 20,000-foot model rocket flight (about 6,000 meters -- much higher than any ever officially confirmed), however, would result in an apogee value of \( R \) only one tenth of one percent greater than \( R_0 \). The effect of altitude on the weight of a model rocket is, therefore, wholly negligible. In all the calculations in this book \( \vec{g} \) will be taken to have the magnitude \( g_0 \).
+
+The weight of a model rocket does vary during its flight, though. This in-flight weight variation is due to the expulsion of mass from the rocket motor as it produces thrust. In Section 2.1 the relationship between thrust and the rate of mass expulsion was established as equation (2). Equation (2) can now be used to determine the model's mass as a function of time in the form
+
+\[
+m = m_0 - \int_0^t \frac{F(t)}{c} dt
+\]
+
+When the engine ceases burning at time \( t_b \), the mass of the rocket is

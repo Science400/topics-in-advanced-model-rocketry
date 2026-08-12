@@ -1,0 +1,9 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 5:  Major classes of model rocket thrust-time curves.
+(a):  Curve of Type B4 engine, representative of end-burning engines with initial peak.  (b):  Curve of Type B14 engine, a core-burning engine with a constant-diameter port.  (c):  Curve of Type E62 engine, an ammonium perchlorate/polyurethane engine also having a constant-diameter port.  Its high-energy propellant is slow-burning, enabling it to produce thrust-time characteristics that would require a tapered port in a blackpowder engine.

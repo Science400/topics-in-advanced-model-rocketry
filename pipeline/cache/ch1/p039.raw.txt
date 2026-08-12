@@ -1,0 +1,10 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+important, the flow in the boundary layer directly adjacent to the model is likely to be arranged in neat, smooth, microscopically-thin layers and is thus said to be laminar. At higher Reynolds numbers (greater than 5 x 10^6) the importance of viscosity diminishes and the boundary layer is likely to undergo transition and become turbulent; the once-smooth layers mixing and swirling down the side of the model in a rough, chaotic manner. The friction drag of an object with a turbulent boundary layer is much higher than that of one with a laminar boundary layer, but a turbulent boundary layer follows the contour of an object's surface better than a laminar one and is less likely to separate from the surface, so it may lower the pressure drag. Detailed discussions of precisely how much Reynolds number changes, with their associated transition phenomena, alter a model rocket's drag coefficient will be presented in Chapter 3. The present brief discussion should be sufficient to give you a general idea of why the Reynolds number is important and how it can change the drag coefficient. Over the range of \( R_e \) usually encountered in practice, values of \( C_D \) for most model rockets range from 0.35 to about 1.0, averaging 0.7 to 0.75 for sport rockets of average design and finish quality.
+
+Chapter 3 will also present a thorough treatment of methods for calculating how a model rocket's drag coefficient increases with angle of attack. A slightly different approach, but one which gives very nearly the same numerical results, will be used in Chapter 4 for determining the effect of dynamic oscillations

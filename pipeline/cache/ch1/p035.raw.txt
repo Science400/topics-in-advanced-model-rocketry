@@ -1,0 +1,30 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+longitudinal axis. The concept of angle of attack is illustrated in Figure 6. As the angle of attack of a model rocket increases from zero its drag coefficient also increases, since the effective area normal -- that is, perpendicular -- to the airflow which it presents becomes larger than the reference area \( A_r \) used in calculating the drag, and the effective shape of the rocket becomes more difficult for the airflow to negotiate.
+
+The Reynolds number, named for the English physicist Osborne Reynolds (1842-1912), is usually denoted by \( R_e \) and is a dimensionless aerodynamic scaling factor given by the relation
+
+\[
+R_e = \frac{\rho v L}{\mu}
+\]
+
+where (again) \( \rho \) is the density of the air, \( \mu \) is the viscosity of the air, \( v \) is the magnitude of the velocity vector and \( L \) is the length of the rocket or other object of interest. There is also a _kinematic viscosity_, defined as
+
+\[
+\nu = \frac{\mu}{\rho}
+\]
+
+so that the Reynolds number is sometimes written as
+
+\[
+R_e = \frac{v L}{\nu}
+\]
+
+The concept of viscosity will be more fully discussed and explained in Chapter 3. For the present, the importance of equations (15) and (17) can be summed up in two statements:
+
+(a) The flow about two geometrically similar objects is _dynamically similar_ if the Reynolds numbers for

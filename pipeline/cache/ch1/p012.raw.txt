@@ -1,0 +1,18 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+The analyses of model rocket flight presented in this book will therefore be restricted to cases of weak coupling. As will be shown in Chapter 2, and later in Chapter 4, the coupling is in fact slight for all rockets that can be considered well-designed, so such a restriction is not unreasonable. One may therefore decouple the equations of motion under the assumption that the forces on the O.G. due to the rigid-body rotations are small compared to the other forces influencing the point-mass motion.
+
+Once the separate solutions to the decoupled equations of motion have been obtained, approximate methods will be used to re-introduce coupling for the purpose of obtaining a "first-order" idea of the effect of rigid-body motions on the altitude capability of any given model rocket.
+
+The remaining sections of this chapter will be devoted to brief discussions of each of the forces and moments which influence the rigid-body and point-mass motion of model rockets.
+
+2. Description of the Flight Forces
+This section will enumerate and consider the forces on the model which give rise to the motion of its center of mass. Such forces will hereafter be referred to as flight forces, as opposed to those forces encountered during the course of a model's flight whose moments give rise to rigid-body rotations. These latter forces will be referred to as perturbing forces.
+
+2.1 Thrust
+Thrust is the term applied to the force produced by a model rocket engine due to the rapid exit of exhaust gases

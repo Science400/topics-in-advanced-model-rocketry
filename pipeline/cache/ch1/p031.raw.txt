@@ -1,0 +1,21 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+where g is the acceleration of the Earth's gravity field (9.8 meters/sec.2).
+
+Model rocket engines using pressed blackpowder propellant grains exhibit values of specific impulse in the range of 48 to 103 seconds. More recently, several types of engines using high-performance, ammonium perchlorate/polyurethane propellants have been introduced in model rocketry. These motors deliver specific impulses in the neighborhood of 175 seconds. There exist solid propellants which deliver specific impulses in excess of 240 seconds when burned at high chamber pressures, but problems of temperature, pressure, ignition technology, and cost have so far prevented their use in model rocketry.
+
+The specific impulse delivered by any given model rocket motor is a quantity that is measured and published, either by the manufacturer of that motor himself or by the NAR Standards and Testing Committee. It is therefore a simple matter to compute the average exhaust velocity of any given motor using equation (7), and to use the value of exhaust velocity thus obtained in computing the mass flow rate from equation (2) and a knowledge of the engine's thrust-time curve.
+
+2.2 Weight
+The weight of a model rocket is the force exerted on it by the Earth's gravitational field. A rocket of mass m will have a weight given by
+
+\[
+\vec{w} = m \vec{g}
+\]
+
+where, as before, \( \vec{g} \) is the (vector) acceleration of the Earth's

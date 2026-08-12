@@ -1,0 +1,12 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+Figure 5b represents the thrust-time curve of the NAR type Bl4 motor, a high-thrust, short-time engine used to accelerate heavy rockets and multistaged models. These engines have a hollow core, or port, along the central axis of the grain, causing burning to progress radially outward toward the wall of the casing rather than forward as in the end-burning motors. The burning surface area of the core-burning motor is thus much greater than that of the end-burner and its thrust-time curve consists of a single, high-thrust spike. The rapidity with which these engines can accelerate a model has been described by stating that they deliver a "sledge-hammer blow" or "kick in the tail" to the rocket in which they are installed.
+
+Many of the largest model rocket engines -- those in NAR Classes E and F -- have thrust-time curves like that of Figure 5c. These engines are also port-burners but, unlike the Bl4, they have tapered ports; their grain configurations are said to be "three-dimensional". Although they also exhibit a characteristic peak in their thrust-time behavior, this peak is attained more gradually than is the case with the Bl4 engines and occurs near the end of the burning period.
+
+Since the invention of the rocket in China during the Middle Ages a great many varieties of solid propellant have been developed. The first rockets used black gunpowder, an improved form of which is still the major constituent of most model rocket propellants. Smokeless powder was introduced at the beginning of the twentieth century, followed by "double-base" propellants -- essentially variations of nitroglycerin- and nitrocellulose-type compounds -- and "composite" propellants

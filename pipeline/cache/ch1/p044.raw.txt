@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 8: Forces on a model rocket in flight. Thrust, drag, weight, and side force, as well as the velocity vector, have been shown for a rocket in general flight attitude (that is, the rocket is neither flying vertically nor at zero angle of attack). Wind-free conditions have been assumed.

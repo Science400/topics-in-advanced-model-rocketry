@@ -1,0 +1,95 @@
+# Section map — Chapter 1, "An Introduction to the Dynamics of Model Rocket Flight"
+#
+# Page numbers are 1-based and refer to pages of pdf/ch1-flight-dynamics.pdf (52 pages).
+# For this book the PDF page number equals the printed manuscript page number:
+# the page stamped "-6-" is page 6 here. No offset table needed.
+#
+# You give only the START page of each section. The end is implied by the next
+# section's start, so gaps and overlaps are impossible by construction and you
+# write one number per section instead of two.
+#
+# A section's page range is [start, next_start] inclusive on both ends — the
+# boundary page is shared, and the pipeline splits it at the section heading.
+# The last section runs to the end of the chapter.
+#
+# Aim for sections under ~15 pages. If the manuscript has one much longer,
+# split it with an "a"/"b" id and leave a note.
+
+chapter = 1
+pdf = "ch1-flight-dynamics.pdf"
+pages = 52
+
+# Front matter. Not OCR'd as prose: the symbol table is hand-typed as
+# #symbol-table() at the top of the chapter and parsed back out by the pipeline.
+[frontmatter]
+title_pages = [1]
+symbol_table_pages = [3, 5]
+body_starts = 6
+references = 51
+
+# ---------------------------------------------------------------------------
+# One [[section]] per numbered heading, one [[subsection]] per sub-heading.
+# id = the manuscript's own number, verbatim ("2", "2.1").
+#
+# The two arrays are separate in TOML, so document order between them is not
+# preserved by the parser — the hierarchy is recovered from the id prefix
+# ("2.1" belongs to "2") and the ordering from `start`. Keep ids accurate.
+#
+# Labels are chapter-prefixed with the manuscript number kept verbatim:
+#   section "2"    -> <sec:1-2>      renders "Section 2"
+#   subsection "2.1" -> <sec:1-2.1>  renders "Section 2.1"
+# Dots in labels are valid and @sec:1-2.1 resolves correctly, including at the
+# end of a sentence. Heading numbers come out right on their own — main.typ's
+# numbering function drops the chapter number from level 2+.
+# ---------------------------------------------------------------------------
+
+[[section]]
+id = "1"
+title = "Definition of the Problem"
+start = 6
+
+[[subsection]]
+id = "1.1"
+title = "Point-Mass and Rigid-Body Dynamics"
+start = 8
+
+[[subsection]]
+id = "1.2"
+title = "Separation of the Differential Equations of Motion"
+start = 11
+
+[[section]]
+id = "2"
+title = "Descriptions of the Flight Force"
+start = 12
+
+[[subsection]]
+id = "2.1"
+title = "Thrust"
+start = 12
+
+[[subsection]]
+id = "2.2"
+title = "Weight"
+start = 31
+
+[[subsection]]
+id = "2.3"
+title = "Drag and Side Force"
+start = 34
+
+[[section]]
+id = "3"
+title = "Description of the Perturbing Forces"
+start = 43
+
+[[subsection]]
+id = "3.1"
+title = "Aerodynamic Disturbances"
+start = 45
+
+[[subsection]]
+id = "3.2"
+title = "Mechanical Disturbances"
+start = 47
+

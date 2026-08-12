@@ -1,0 +1,13 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+AN INTRODUCTION TO THE DYNAMICS OF MODEL ROCKET FLIGHT
+
+1. Definition of the Problem
+There is probably not a single model rocketeer in the world who has not, at one time or another, found himself speculating on the subject of model rocket flight performance. How high, how fast will a rocket go? Will it fly straight and true or not? Will it "weathercock" -- that is, fly into the wind? Will it wobble on the way up? How high will it go if launched at an angle, and how far? Such questions as these are the most natural and common that come to mind when one is presented with a new rocket design. They are of interest to even the most casual sport flyer, and of course are the vital concerns of competition rocketeers and researchers. It is the purpose of this book to present information that will enable any interested model rocketeer with a reasonably complete educational background to answer them accurately and completely, using the most advanced and general methods available in our hobby to date.
+
+The mathematical equations that would have to be solved to compute theoretically exact answers to the questions of model rocket flight performance are among the most difficult known to the physical sciences. Complete, exact, and unique solutions to these equations have never been obtained by anyone, whether model rocketeer or professional scientist.

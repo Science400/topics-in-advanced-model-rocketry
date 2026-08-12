@@ -8,3 +8,14 @@ review/
 assets/figures-original/
 assets/figures-export/
 *.code-workspace
+
+# One-off model comparison. The conclusion is recorded in the design notes;
+# the artifacts are 4.5 MB of base64 page images.
+pipeline/bakeoff/
+
+# Derived from the committed *.raw.txt by ocrlib.normalize() — no GPU, no
+# scans, regenerated automatically by emit.py when missing.
+pipeline/cache/*/p*.md
+
+# Sidecars from the shelved equation-number verifier.
+pipeline/cache/*/*.eqnums.json

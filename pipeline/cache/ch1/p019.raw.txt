@@ -1,0 +1,10 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: False
+---
+In theory, then, if you were given the exhaust velocity and mass flow rate of any given rocket motor as functions of time, you could compute the thrust of that motor as a function of time. It is also theoretically possible to calculate both the exhaust velocity and the mass flow rate from the combustion characteristics and thermodynamic properties of the propellant and the size and shape of the combustion chamber and the nozzle. In practice, however, rocket engineers generally compute the thrust directly from the propellant, casing and nozzle characteristics and obtain the exhaust velocity and mass flow rate as byproducts of this calculation. The thrusts of model rocket engines as functions of time are always supplied by the manufacturers in graphical form: the so-called thrust-time curves, which are derived from averaging a large number of traces recorded during static firings of engines of the same type. The thrust-time curves of individual model rocket motors may differ somewhat from the average for their type. This variation is not too severe, however, in motor types which have received Safety Certification or Contest Certification from the Standards and Testing Committee of the National Association of Rocketry.
+
+In any one given engine, one generally finds that variations in thrust with time are due more to variations in the mass flow rate than variations in the exhaust velocity. In fact, it is almost always accurate enough for model rocketry purposes to assume the exhaust velocity to be constant during the entire burning period. The mass flow rate can then be easily computed from equation (2) if you are careful with units. Suppose, for
