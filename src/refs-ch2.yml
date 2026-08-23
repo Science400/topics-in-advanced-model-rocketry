@@ -1,0 +1,123 @@
+# 1
+ref1:
+  type: Thesis
+  title: The Practical Calculation of the Aerodynamic Characteristics of Slender Finned Vehicles
+  author: Barrowman, James S.
+  date: 1967-03
+  organization: The Catholic University of America
+  location: Washington, D.C.
+  note: A dissertation submitted to the Faculty of the School of Engineering and Architecture in partial fulfillment of the requirements for the degree of Master of Science in Aerospace Engineering
+
+# 2
+ref2:
+  type: Report
+  title: Calculating the Center of Pressure of a Model Rocket
+  author: Barrowman, James
+  date: 1968
+  organization: Centuri Engineering Company
+  serial-number: TIR-33
+
+# 3
+ref3:
+  type: Book
+  title: Introduction to Automatic Control Systems
+  author: Clark, Robert N.
+  date: 1962
+  publisher: John Wiley and Sons, Inc.
+  location: New York
+
+# 4
+ref4:
+  type: Book
+  title: The Exterior Ballistics of Rockets
+  author:
+    - name: Davis
+      given-name: L.
+      suffix: Jr.
+    - name: Follin
+      given-name: James W.
+      suffix: Jr.
+    - Blitzer, Leon
+  date: 1958
+  publisher: D. Van Nostrand Company, Inc.
+  location: Princeton, New Jersey
+
+# 5
+ref5:
+  type: Article
+  title: Basic Missile Aerodynamic Stability
+  author: Gurkin, Luther W.
+  date: 1964
+  parent:
+    type: Conference
+    title: Sixth Annual National Model Rocket Championship Meet
+    location: NASA Wallops Station, Virginia
+
+# 6
+ref6:
+  type: Book
+  title: "Dynamics: Particles, Rigid Bodies, and Systems"
+  author: Halfman, Robert L.
+  date: 1962
+  volume: 1
+  publisher: Addison-Wesley Publishing Company, Inc.
+  location: Reading, Massachusetts
+
+# 7
+ref7:
+  type: Article
+  title: Fundamentals of Dynamic Stability
+  author: Mandell, Gordon K.
+  date: 1969
+  parent:
+    type: Periodical
+    title: Model Rocketry
+    publisher: Model Rocketry, Inc.
+    location: Cambridge, Massachusetts
+  note: Series appearing October 1968-March 1969
+
+# 8
+ref8:
+  type: Article
+  title: Inertias by Torsion Wire
+  author: Mandell, Gordon K.
+  date: 1969-04
+  parent:
+    type: Periodical
+    title: Model Rocketry
+    publisher: Model Rocketry, Inc.
+    location: Cambridge, Massachusetts
+
+# 9
+ref9:
+  type: Article
+  title: Model Missile Design
+  author: "Stine, G. Harry"
+  date: 1958-07
+  parent:
+    type: Periodical
+    title: American Modeler
+    publisher: The Conde-Nast Publications, Inc.
+    location: New York
+
+# 10
+ref10:
+  type: Article
+  title: "'Ogive' Me a Ring-Tailed Cylindrical Bird"
+  author: "Stine, G. Harry"
+  date: 1958-11
+  parent:
+    type: Periodical
+    title: American Modeler
+    publisher: The Conde-Nast Publications, Inc.
+    location: New York
+
+# 11
+ref11:
+  type: Book
+  title: Handbook of Model Rocketry
+  author: "Stine, G. Harry"
+  date: 1965
+  edition: 1
+  publisher: Follett Publishing Company
+  location: Chicago

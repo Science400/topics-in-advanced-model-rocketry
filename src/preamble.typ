@@ -85,6 +85,30 @@
 // Bare "(44a)" instead of "Equation (44a)", for prose that already says the word.
 #let eqref(label) = ref(label, supplement: none)
 
+// Aspect ratio, written in the manuscript as a hand-drawn A-R ligature. There is
+// no Unicode codepoint for it and no Typst package supplying one — LaTeX's
+// `aspectratio` ships a purpose-drawn font — so it is assembled from Garamond-Math's
+// own A and R.
+//
+// Simply overlapping the two letters does not work: the A's right leg is a diagonal
+// and the R's stem is vertical, so no kern makes them coincide and the result always
+// shows a doubled stroke. A real ligature deletes the A's right leg outright and lets
+// the crossbar die into the R's stem, which is what the truncation below does — the A
+// is clipped mid-crossbar and the R is kerned back so its stem covers the cut edge.
+// The A's apex still protrudes a little to the left of the stem, as it does in the
+// manuscript's hand-drawn glyph.
+//
+// Both constants are measured, not eyeballed, against Garamond-Math at 1em = 1000
+// units: the R's stem spans x = 130..210 of its own advance, so the R sits back far
+// enough to put that stem where the A's leg was, and the A is cut at 0.44em — inside
+// the stem, so the flat cut edge is hidden under it. Re-measure if the *math* font
+// changes; the body font does not matter, since math.upright resolves in the math font.
+#let _ar-cut = 0.44em
+#let _ar-kern = -0.195em
+
+#let AR = math.class("normal",
+  box(clip: true, width: _ar-cut, math.upright($A$)) + h(_ar-kern) + math.upright($R$))
+
 // The chapter symbol table: content in the book, and parsed back out by
 // pipeline/symtab.py as the pipeline's symbol configuration.
 #let symbol-table(..rows) = table(columns: (auto, 1fr), stroke: none, ..rows)
@@ -119,7 +143,8 @@
 
 #set document(title: "Topics in Advanced Model Rocketry")
 #set page(numbering: "1", margin: (x: 1.25in, y: 1in))
-#set text(font: "New Computer Modern", size: 12pt)
+#set text(font: "EB Garamond", size: 12pt)
+#show math.equation: set text(font: "Garamond-Math")
 #set par(justify: true, leading: 0.65em, first-line-indent: (amount: 1em, all: true))
 
 // Typewriter manuscript convention: underline → italics
