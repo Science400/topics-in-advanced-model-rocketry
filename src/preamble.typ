@@ -1,4 +1,4 @@
-#import "@preview/unify:0.7.1": qty as _qty, unit, num
+#import "@preview/unify:0.7.1": qty as _qty, unit, num, qtyrange
 
 // Units not in unify's SI registry — extend as needed for this book.
 // Values are Typst math expression strings passed to eval inside unify's rawunit mode.
@@ -40,18 +40,41 @@
   content
 }
 
-// Equation numbering: unnumbered is the default, numbered is explicit.
+// Equation numbering. A display equation is numbered by default; a leading `!`
+// inside the dollars marks one the manuscript left unnumbered.
 //
-// Ch3 did this the other way round and it cost 24 #set rules, 9 counter
-// resyncs, and 38 wrapper blocks — a #set leaks forward until the next one, so
-// inserting an equation shifts every number after it. Here the manuscript's own
-// number is written literally beside the label, so the two cannot disagree and
-// out-of-order numbers need no special handling.
+//   $ F = m a $                                     numbered, counter steps
+//   $! arrow(c) equiv -c $                          display, no number
+//   #eq("44a")[$ u = (partial psi)/(partial y) $]   literal manuscript number
 //
-//   $ (partial u)/(partial x) = 0 $                 unnumbered, zero markup
-//   #eq("44a")[$ u = (partial psi)/(partial y) $] <eq:1-44a>
+// The `!` replaces the `#set math.equation(numbering: none)` / `#set ... "(1)"`
+// sandwiches ch3 is full of, which leak forward until the next #set and so make
+// every unnumbered equation a two-line edit in three places.
 //
-#set math.equation(numbering: none)
+// #eq() stays for the manuscript's out-of-order numbers (12a, 44b, 102a): the
+// number is written literally beside the label, so the two cannot disagree.
+// Note it still steps the counter, so a chapter mixing both needs the usual
+// #counter(math.equation).update(n) resync after a lettered run.
+
+// `$!` has no space after the opening dollar, so Typst parses it as *inline*
+// math whose body begins with a `!` text child. The rule therefore has to strip
+// the `!` (and the space behind it) and rebuild the equation as a block — a
+// show rule cannot flip `block` in place.
+#let _bang = $!$.body
+
+#let _unnumbered-bang(it) = {
+  let kids = if it.body.has("children") { it.body.children } else { (it.body,) }
+  if kids.len() == 0 or kids.first() != _bang { return it }
+  // Introspection still sees the original numbered element, so a label here
+  // would resolve to whatever the counter happens to hold — a silently wrong
+  // cross-reference. Fail loudly instead.
+  if it.at("label", default: none) != none {
+    panic("`$! ... $` is unnumbered and cannot be referenced — use `$ ... $` or #eq()")
+  }
+  let rest = kids.slice(1)
+  if rest.len() > 0 and rest.first() == [ ] { rest = rest.slice(1) }
+  math.equation(block: true, numbering: none, rest.join())
+}
 
 #let eq(n, body) = math.equation(
   block: true,
@@ -75,12 +98,22 @@
 //
 // Level 1 is the chapter; deeper levels drop the chapter number so a level-3
 // heading in chapter 1 reads "2.1", matching the manuscript.
+//
+// Equation numbering lives here for the same reason — a bare `#set` at the top
+// of this file is dead code, since #import carries values but not rules. The
+// counter restarts per chapter, as the manuscript numbers do.
 #let chapter-setup(body) = {
   set heading(numbering: (..nums) => {
     let n = nums.pos()
     if n.len() == 1 { numbering("1", ..n) } else { n.slice(1).map(str).join(".") }
   })
   show heading.where(level: 1): set heading(supplement: [Chapter])
+  // A function, not the "(1)" pattern string: Typst strips a pattern's literal
+  // affixes inside a @ref, so the string form numbers "(7)" on the page but
+  // references it as "7" — while #eq() below, being a function, keeps "(44a)".
+  set math.equation(numbering: n => "(" + str(n) + ")")
+  show math.equation: _unnumbered-bang
+  counter(math.equation).update(0)
   body
 }
 
