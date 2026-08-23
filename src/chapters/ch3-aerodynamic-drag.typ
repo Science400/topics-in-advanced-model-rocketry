@@ -3400,4 +3400,4 @@ The drop test, like the vertical wind tunnel, is suitable only for determining t
 The relative merits of the three experimental techniques described above can only be properly judged at such time as all three have been tried in practice and developed to the highest level of effectiveness of which it is reasonable to believe they are capable.
 It is our hope that, in the near future, each of them will be tried and that an extensive experimental literature will be generated within the hobby as a result, for only a large body of reliable experimental data can permit us to verify or improve upon the techniques herein described for the analytical prediction of model rocket drag.
 // === page 237 ===
-#bibliography("../refs-ch3.yml", style: "ieee", title: "References")
+#bibliography("../refs-ch3.yml", style: "ieee", title: "References", group: none)

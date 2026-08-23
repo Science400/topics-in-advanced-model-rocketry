@@ -586,4 +586,4 @@ While reading Chapter 2 you may wish to consult @fig:1-10, in which a number of 
 // === page 51 ===
 // full: true because Chapter 1 never cites these in the text; the manuscript
 // just lists them, so nothing would print without it.
-#bibliography("../refs-ch1.yml", style: "ieee", title: "References", full: true)
+#bibliography("../refs-ch1.yml", style: "ieee", title: "References", full: true, group: none)
