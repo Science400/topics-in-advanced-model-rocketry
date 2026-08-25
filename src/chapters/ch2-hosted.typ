@@ -1,6 +1,5 @@
 #import "../preamble.typ": conflict, minor, unit, qty, qtyrange, num, eqn, eqref, symbol-table, chapter-setup, AR
 #show: chapter-setup
-#counter(figure.where(kind: image)).update(0)
 
 = A Unified Approach to Aerodynamic Stability
 
@@ -191,7 +190,7 @@
     )
 
 // === page 11 ===
-#heading(depth: 2, numbering: none)[Introduction] <sec:2-0>
+== Introduction <sec:2-0>
 
 Model rocketeers have been familiar with the concept of aerodynamic stability for quite some time.
 As early as 1958 G. Harry Stine had published simplified treatments of aerodynamic stability as it pertains to model rocket design, in which the hobbyist was first made aware of the existence of a center of pressure (C.P.) and of the all-important relationship between it and the model's center of gravity (C.G.).
@@ -200,7 +199,6 @@ In these early treatments the center of pressure was approximated by the center 
 The next major advance in the field came in 1966 at the Eighth National Association of Rocketry Annual Meet, where James Barrowman of the National Aeronautics and Space Administration's Sounding Rocket Branch unveiled an algebraic method based on the theory of potential flow capable of determining the center of pressure of a model rocket flying subsonically and at small angles of attack to a high order of accuracy.
 Barrowman showed that the actual C.P. of a model rocket lies some distance aft of the location predicted by the cutout method, and that therefore model rocketeers had been designing their vehicles too conservatively.
 // === page 12 ===
-
 All consideration of model rocket stability had thus far been confined exclusively to its static manifestations, with the nature of the C.P.-C.G. relationship being used to determine whether a rocket, once deflected from facing directly into the relative airstream, would experience a moment tending to return it to the undeflected state (in which case it would be considered stable) or one tending to further deflect it (in which case it would be considered unstable).
 Little attention had been paid to the details of the process by which a stable rocket, once disturbed in its flight, restores itself to alignment with its intended flight path, or to the process by which an unstable rocket goes head over heels (unless, strangely enough, it is spinning rapidly enough about its centerline).
 The _statics_ of stability had been treated in admirable detail, but its _dynamics_ remained virtually ignored.
@@ -240,14 +238,9 @@ In order to facilitate correlation of this treatment with theirs, appropriate re
 === Euler's Angles <sec:2-1.1>
 
 Suppose we have a rocket which has been rotated about some set of mutually perpendicular axes fixed in space: $A$, $B$, and $C$.
-We can speak of this rotational displacement in a quantitative way if we consider a second set of axes, $D$, $E$, and $F$, to have been fixed in the _rocket_, with origin at the rocket's C.G., and with directions coincident with $A$, $B$, and $C$ before the rotation began, and to have _remained_ fixed in the rocket as it rotated.
+We can speak of this rotational displacement in a quantitative way if we consider a second set of axes, $D$, $E$, and $F$, to have been fixed in the rocket, with origin at the rocket's C.G., and with directions coincident with $A$, $B$, and $C$ before the rotation began, and to have _remained_ fixed in the rocket as it rotated.
 We can always uniquely determine the final orientation of the rocket if we agree to abide by the following rule: that, in undergoing any given rotation, the rocket first _yaws_ through an angle $alpha_D$ about axis $D$; then _pitches_ through an angle $alpha_E$ about axis $E$; and finally _rolls_ through an angle $alpha_F$ about axis $F$.
 This process is illustrated in @fig:2-1.
-
-#figure(
-  image("/assets/figures-original/fig2-1.png"),
-  caption: [A set of Euler's angles for specifying the rotational position of a model rocket. $alpha_D$ is the angle of yaw, $alpha_E$ is the angle of pitch, and $alpha_F$ is the angle of roll. The origin of the coordinate system is taken as the center of gravity of the rocket.]
-) <fig:2-1>
 
 The _body axes_ $D$, $E$, and $F$ first rotate about $D$ through angle $alpha_D$.
 Throughout this first rotation $D$ coincides with axis $A$ of the _space axes_ and $E$ and $F$ remain in the plane defined by $B$ and $C$.
@@ -259,6 +252,10 @@ Finally the body axes execute the roll through angle $alpha_F$ about $F$, in the
 
 It is important that this order of rotations be observed;
 // === page 16 ===
+#figure(
+  image("/assets/figures-original/fig2-1.png"),
+  caption: [A set of Euler's angles for specifying the rotational position of a model rocket. $alpha_D$ is the angle of yaw, $alpha_E$ is the angle of pitch, and $alpha_F$ is the angle of roll. The origin of the coordinate system is taken as the center of gravity of the rocket.]
+) <fig:2-1>
 // === page 17 ===
 if the order in which the yaw, pitch, and roll occur is changed the final position of the rocket will be different.
 A mathematician would say that angular displacements, or rotations, are _not vector quantities_ because, although they specify both a magnitude and a direction, they do not _commute in addition_.

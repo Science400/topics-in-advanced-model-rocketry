@@ -1,0 +1,258 @@
+# Section map — ch2, scaffolded from ch2-aerodynamic-stability.typ
+#
+# `start` is a HINT that narrows the search for a heading in the OCR'd
+# text; emit.py cuts sections at the heading itself, so an approximate
+# number is fine and 0 means "search the whole chapter". Fill them in
+# to make heading matching more robust on a long chapter.
+#
+# The order below is the document order and is authoritative while any
+# start is still 0. Do not reorder.
+#
+# Boundaries verified against the scan so far (PDF page, printed page):
+#   0    Introduction          p11  (-63-)
+#   1    The Dynamical Equations  p15  (-67-)   1 and 1.1 share a page
+#   1.1  Euler's Angles           p15  (-67-)
+#   1.2  Angular Velocity         p17  (-69-)
+# Left as 0 deliberately: a partly-filled map gives a section a start with no
+# next start to bound it, so its page range runs to the end of the chapter and
+# `ocr.py --section` would transcribe 190 pages. Fill them all or none; until
+# then use `--pages`.
+
+chapter = 2
+pdf = "ch2-aerodynamic-stability.pdf"
+pages = 208
+
+[frontmatter]
+# Pages 1-10 are the title page and the six-page symbol table, which is
+# hand-typed into the chapter as #table() and read back by symtab.py rather
+# than OCR'd. Body text runs 11-206; references begin on 207.
+body_starts = 11
+references = 207
+# Unlike ch1, this chapter's PDF page does not equal its printed page:
+# PDF 11 is stamped "-63-". Reports cite both.
+page_offset = 52
+
+[[section]]
+id = "0"
+title = "Introduction"
+start = 0
+
+[[section]]
+id = "1"
+title = "The Dynamical Equations"
+start = 0
+
+[[section]]
+id = "1.1"
+title = "Euler's Angles"
+start = 0
+
+[[section]]
+id = "1.2"
+title = "Angular Velocity"
+start = 0
+
+[[section]]
+id = "1.3"
+title = "Applied Moments, Angular Accelerations, and Moment of Inertia"
+start = 0
+
+[[section]]
+id = "1.4"
+title = "Euler's Dynamical Equations"
+start = 0
+
+[[section]]
+id = "2"
+title = "The Linearized Theory"
+start = 0
+
+[[section]]
+id = "2.1"
+title = "Corrective and Damping Moment"
+start = 0
+
+[[section]]
+id = "2.2"
+title = "The Linearization Approximations"
+start = 0
+
+[[section]]
+id = "2.3"
+title = "Coupled and Decoupled Systems of Equations"
+start = 0
+
+[[section]]
+id = "2.4"
+title = "Homogeneous, Particular, and Steady-State Solutions"
+start = 0
+
+[[section]]
+id = "3"
+title = "Solutions to the Dynamical Equations for Particular Cases of Interest"
+start = 0
+
+[[section]]
+id = "3.1"
+title = "Dynamical Behavior at Zero Roll Rate"
+start = 0
+
+[[section]]
+id = "3.1.1"
+title = "Generalized Homogeneous Response"
+start = 0
+
+[[section]]
+id = "3.1.2"
+title = "Complete Response to Step Input"
+start = 0
+
+[[section]]
+id = "3.1.3"
+title = "Complete Response to Impulse Input"
+start = 0
+
+[[section]]
+id = "3.1.4"
+title = "Steady State Response to Sinusoidal Forcing"
+start = 0
+
+[[section]]
+id = "3.2"
+title = "Dynamical Behavior at a Constant, Nonzero Roll Rate"
+start = 0
+
+[[section]]
+id = "3.2.1"
+title = "Generalized Homogeneous Response"
+start = 0
+
+[[section]]
+id = "3.2.2"
+title = "Complete Response to Step Input"
+start = 0
+
+[[section]]
+id = "3.2.3"
+title = "Complete Response to Impluse Input"
+start = 0
+
+[[section]]
+id = "3.2.4"
+title = "Steady State Response to Sinusoidal Forcing at the Roll Rate"
+start = 0
+
+[[section]]
+id = "3.2.5"
+title = "Roll Stabilization"
+start = 0
+
+[[section]]
+id = "4"
+title = "Analytical Determination of the Dynamic Parameters"
+start = 0
+
+[[section]]
+id = "4.1"
+title = "Normal Force Coefficients and Center of Pressure: The Barrowman Method"
+start = 0
+
+[[section]]
+id = "4.2"
+title = "Locating the Center of Gravity"
+start = 0
+
+[[section]]
+id = "4.3"
+title = "The Corrective Moment Coefficient"
+start = 0
+
+[[section]]
+id = "4.4"
+title = "The Damping Moment Coefficient"
+start = 0
+
+[[section]]
+id = "4.5"
+title = "The Longitudinal Moment of Inertia"
+start = 0
+
+[[section]]
+id = "4.6"
+title = "The Radial Moment of Inertia"
+start = 0
+
+[[section]]
+id = "4.7"
+title = "General Properties of the Parameters"
+start = 0
+
+[[section]]
+id = "5"
+title = "Experimental Determination of the Dynamic Parameters"
+start = 0
+
+[[section]]
+id = "5.1"
+title = "Moments of Inertia: The Torsion-Wire Experiment"
+start = 0
+
+[[section]]
+id = "5.2"
+title = "The Corrective Moment Coefficient"
+start = 0
+
+[[section]]
+id = "5.3"
+title = "The Damping Moment Coefficient"
+start = 0
+
+[[section]]
+id = "6"
+title = "Model Rocket Design"
+start = 0
+
+[[section]]
+id = "6.1"
+title = "Representative Parameters"
+start = 0
+
+[[section]]
+id = "6.2"
+title = "Effects of Varying the Parameters"
+start = 0
+
+[[section]]
+id = "6.3"
+title = "Rolling Rockets"
+start = 0
+
+[[section]]
+id = "6.4"
+title = "Design Procedures and Criteria"
+start = 0
+
+[[section]]
+id = "6.4.1"
+title = "Design Definition: Center of Gravity and moments of Inertia"
+start = 0
+
+[[section]]
+id = "6.4.2"
+title = "Static Stability Margin"
+start = 0
+
+[[section]]
+id = "6.4.3"
+title = "Damping Ratio"
+start = 0
+
+[[section]]
+id = "6.4.4"
+title = "Roll Rate"
+start = 0
+
+[[section]]
+id = "6.4.5"
+title = "Construction and Testing"
+start = 0

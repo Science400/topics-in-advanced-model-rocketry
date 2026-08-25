@@ -1,0 +1,56 @@
+{
+  "15": {
+    "seconds": 154.9,
+    "variant": "official+addendum+symbols",
+    "chars": 1659,
+    "lines": 9,
+    "math_spans": 6,
+    "latex_cmds": 6,
+    "eq_numbers": []
+  },
+  "16": {
+    "seconds": 49.8,
+    "variant": "official+addendum+symbols",
+    "chars": 280,
+    "lines": 1,
+    "math_spans": 3,
+    "latex_cmds": 3,
+    "eq_numbers": []
+  },
+  "17": {
+    "seconds": 78.5,
+    "variant": "official+addendum+symbols",
+    "chars": 1646,
+    "lines": 5,
+    "math_spans": 2,
+    "latex_cmds": 3,
+    "eq_numbers": []
+  },
+  "18": {
+    "seconds": 81.4,
+    "variant": "official+addendum+symbols",
+    "chars": 1516,
+    "lines": 17,
+    "math_spans": 10,
+    "latex_cmds": 23,
+    "eq_numbers": []
+  },
+  "19": {
+    "seconds": 75.3,
+    "variant": "official+addendum+symbols",
+    "chars": 1744,
+    "lines": 3,
+    "math_spans": 0,
+    "latex_cmds": 0,
+    "eq_numbers": []
+  },
+  "20": {
+    "seconds": 51.8,
+    "variant": "official+addendum+symbols",
+    "chars": 359,
+    "lines": 3,
+    "math_spans": 3,
+    "latex_cmds": 3,
+    "eq_numbers": []
+  }
+}

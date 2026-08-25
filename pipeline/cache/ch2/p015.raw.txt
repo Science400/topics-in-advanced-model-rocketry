@@ -1,0 +1,9 @@
+1. The Dynamical Equations
+
+1.1 Euler's Angles
+
+Suppose we have a rocket which has been rotated about some set of mutually perpendicular axes fixed in space: A, B, and C. We can speak of this rotational displacement in a quantitative way if we consider a second set of axes, D, E, and F, to have been fixed in the rocket, with origin at the rocket's O.G., and with directions coincident with A, B, and C before the rotation began, and to have remained fixed in the rocket as it rotated. We can always uniquely determine the final orientation of the rocket if we agree to abide by the following rule: that, in undergoing any given rotation, the rocket first _yaws_ through an angle \( \alpha_D \) about axis D; then _pitches_ through an angle \( \alpha_E \) about axis E; and finally _rolls_ through an angle \( \alpha_F \) about axis F. This process is illustrated in Figure 1.
+
+The _body axes_ D, E, and F first rotate about D through angle \( \alpha_D \). Throughout this first rotation D coincides with axis A of the _space axes_ and E and F remain in the plane defined by B and C. At its completion axis F coincides with the dashed line _Of_ and axis E with _Oe_. Next the body axes rotate about the _new position_ of E (that is, about _Oe_) through an angle \( \alpha_E \). This rotation occurs in the plane of A and _Of_, and at its conclusion axis F is in its final position as shown and axis D lies along line _Od_. E, of course, is still along _Oe_. Finally the body axes execute the roll through angle \( \alpha_F \) about F, in the plane defined by _Oe_ and _Od_, bringing all the axes into their final positions.
+
+It is important that this order of rotations be observed;

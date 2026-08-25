@@ -1,0 +1,19 @@
+nearly the same result is obtained no matter what the order in which the rotations occur. If the rotations are allowed to become _infinitesimally_ small, so that they are, in the terminology of calculus, _differential quantities_, the equality becomes exact. Thus, differential rotations _are_ vector quantities; they possess both a magnitude (though slight, to be sure) and a direction, and they _do_ commute in addition. Differentials are denoted by a lower-case letter d in front of the quantity in question; differential angular displacements are thus \( d\alpha_D \), \( d\alpha_E \), and \( d\alpha_F \).
+
+Now suppose the rocket is turning continuously, so that its Euler's angles keep changing as time goes on. This can be represented mathematically by stating that, in every _differential element_ of time dt, the rocket experiences differential angular displacements \( d\alpha_D \), \( d\alpha_E \), and \( d\alpha_F \). We then form the fractions
+
+\[
+\begin{align*}
+\omega_D &= \frac{d\alpha_D}{dt} \\
+\omega_E &= \frac{d\alpha_E}{dt} \\
+\omega_F &= \frac{d\alpha_F}{dt}
+\end{align*}
+\]
+
+and define \( \omega_D \equiv \) angular velocity about D, or D-component of angular velocity
+
+\( \omega_E \equiv \) angular velocity about E, or E-component of angular velocity
+
+\( \omega_F \equiv \) angular velocity about F, or F-component of angular velocity
+
+Angular velocity is called the _derivative with respect to time_ of angular displacement, or the _time rate of change_ of angular displacement. Angular velocities are vector quantities: they

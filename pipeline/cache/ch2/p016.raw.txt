@@ -1,0 +1,8 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 1:  A set of Euler's angles for specifying the rotational position of a model rocket. \( \alpha_D \) is the angle of yaw, \( \alpha_E \) is the angle of pitch, and \( \alpha_F \) is the angle of roll. The origin of the coordinate system is taken as the center of gravity of the rocket.

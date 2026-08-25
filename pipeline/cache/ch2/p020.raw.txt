@@ -1,0 +1,10 @@
+---
+primary_language: en
+is_rotation_valid: True
+rotation_correction: 0
+is_table: False
+is_diagram: True
+---
+Figure 2: Definition of a right-handed coordinate system. Turning a screw with right-hand threads as if axis A were being turned toward axis B causes the screw to advance positively along axis C.
+
+Figure 3: Positive components of angular velocity. \( \omega_D \) is a positive yaw rate, \( \omega_E \) is a positive pitch rate, and \( \omega_F \) is a positive roll rate.
