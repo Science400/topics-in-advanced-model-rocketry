@@ -35,7 +35,22 @@ LOAD_CONFIGS = {
     "qwen/qwen3.5-9b":              {"context_length": 16384, "flash_attention": True},
     "qwen3-4b-instruct-2507":       {"context_length": 16384, "flash_attention": True},
     "google/gemma-3-4b":            {"context_length": 8192,  "flash_attention": True},
-    "google/gemma-4-26b-a4b":        {"context_length": 8192,  "flash_attention": True},
+    # Qwen3.8-27B. The context is pinned deliberately: this model's native
+    # context is 262,144, and letting LM Studio size the KV cache for that on a
+    # shared-memory iGPU exhausted a 30 GB machine and the loader was OOM-killed.
+    # Even 16k left only ~2 GB free and the engine lost the Vulkan device the
+    # moment an image arrived. 4k survives vision, but is too small for the
+    # references pass on a long section — see EDITOR_MODEL_KEY in edit.py.
+    # Bonsai-27B: a Q1_0 quant, so the whole model plus projector is ~4.4 GB
+    # and a 16k context costs nothing here.
+    "prism-ml/bonsai-27b":           {"context_length": 16384, "flash_attention": True},
+    "qwen3.8-27b":                   {"context_length": 4096,  "flash_attention": True},
+    # The editor. Use the QAT build: the plain `google/gemma-4-26b-a4b` is
+    # installed but its llama-server aborts before the engine reports healthy
+    # (SIGABRT on load, with or without a load config), while the QAT build of
+    # the same model loads in about 30s. `google/gemma-4-e4b` aborts the same way.
+    "google/gemma-4-26b-a4b-qat":    {"context_length": 32768, "flash_attention": True},
+    "google/gemma-4-26b-a4b":        {"context_length": 32768, "flash_attention": True},
 }
 
 from pathlib import Path

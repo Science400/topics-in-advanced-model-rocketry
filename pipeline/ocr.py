@@ -283,19 +283,27 @@ def main() -> None:
     args = ap.parse_args()
 
     if args.list:
-        for tile in S.tiles(args.chapter):
-            n = tile.end - tile.start + 1
-            console.print(f"  {tile.id:<6} {tile.start:>3}-{tile.end:<3} "
-                          f"({n:>2}p) {tile.title}")
+        start, end = S.body_range(args.chapter)
+        console.print(f"  body pages {start}-{end} "
+                      f"({end - start + 1}p), {len(S.sections(args.chapter))} headings")
+        for sec in S.sections(args.chapter):
+            where = f"{sec.start:>3}-{sec.end:<3}" if sec.has_pages else " by heading"
+            console.print(f"  {'  ' * sec.level}{sec.id:<8} {where} {sec.title}")
         return
 
     if args.pages:
         units = [("pages " + args.pages, S.parse_pages(args.pages))]
     elif args.section:
         sec = S.find(args.chapter, args.section)
+        if not sec.has_pages:
+            ap.error(f"section {sec.id} has no page range in {args.chapter}.toml "
+                     f"(start is a hint and may be 0) — use --pages instead")
         units = [(f"{sec.id} {sec.title}", list(sec.pages))]
     elif args.all:
-        units = [(f"{t.id} {t.title}", list(t.pages)) for t in S.tiles(args.chapter)]
+        # Every body page exactly once. Sections no longer tile the chapter —
+        # they are located by heading text after transcription — so the page
+        # range from [frontmatter] is what OCR works from.
+        units = [("whole chapter", S.body_pages(args.chapter))]
     else:
         ap.error("give --section, --pages, --all, or --list")
 

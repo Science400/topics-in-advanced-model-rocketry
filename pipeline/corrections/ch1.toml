@@ -30,9 +30,21 @@
 # Prose
 # ---------------------------------------------------------------------------
 
-# [[prose]]
-# find = "..."
-# replace = "..."
+# olmocr reads the manuscript's "formulae" as the ae ligature. Corrected here
+# rather than in the .typ, because a re-emit overwrites the .typ and this is the
+# kind of fix that would otherwise have to be made again every run.
+[[prose]]
+find = "formulæ"
+replace = "formulae"
+note = "ae ligature misread"
+
+# The typewriter's capital C has an almost closed aperture, so olmocr reads
+# "C.G." as "O.G." — inconsistently, since it gets "C.P." right on the same
+# line. Verified against the scan at high resolution; the book says C.G.
+[[prose]]
+find = "O.G."
+replace = "C.G."
+note = "closed-aperture C misread as O; the book means center of gravity"
 
 # ---------------------------------------------------------------------------
 # Anywhere

@@ -14,10 +14,25 @@ from term import console
 _BASE = LM_STUDIO_BASE_URL.replace("/v1", "")
 
 
+class LMStudioError(RuntimeError):
+    """A management-API call failed, carrying LM Studio's own explanation."""
+
+
 def _mgmt(method: str, path: str, **kwargs):
     url = f"{_BASE}/api/v1{path}"
     r = httpx.request(method, url, timeout=300, **kwargs)
-    r.raise_for_status()
+    if r.is_error:
+        # raise_for_status() reports only "500 Internal Server Error", while the
+        # body says what actually went wrong — a missing model, or an engine
+        # that aborted on load. Losing that turns a one-line diagnosis into a
+        # session of curling the endpoint by hand.
+        detail = ""
+        try:
+            body = r.json()
+            detail = body.get("error", {}).get("message") or str(body)
+        except Exception:
+            detail = r.text[:400]
+        raise LMStudioError(f"{r.status_code} from {path}: {detail}")
     return r.json()
 
 

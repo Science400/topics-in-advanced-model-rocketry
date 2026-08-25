@@ -60,8 +60,35 @@ class Converted:
 # Pre / post processing
 # ---------------------------------------------------------------------------
 
+# LaTeX environments whose only job is to stack aligned rows. Typst needs no
+# wrapper for that — it takes `&` for alignment and `\` for a row break, which
+# is exactly what the body already contains — so the wrapper is simply removed.
+#
+# This matters more in ch2 than it did in ch1: the manuscript stacks several
+# equations under a single margin number (page 18's equation (1) is three rows
+# defining omega_D, omega_E and omega_F), and olmocr renders those as align*.
+# Without this the whole block failed to convert and landed in the chapter as
+# #conflict[unconverted: …].
+#
+# Deliberately NOT stripped: cases, array, matrix, pmatrix and friends. Those
+# carry structure Typst spells differently (cases(...), mat(...)), so dropping
+# the wrapper would silently flatten them. They fail conversion instead, which
+# puts a visible #conflict in the text rather than a wrong equation.
+_ALIGN_ENVS = ("align*", "align", "aligned", "alignat*", "alignat", "gather*",
+               "gather", "gathered", "split", "eqnarray*", "eqnarray",
+               "multline*", "multline", "displaymath", "equation*", "equation")
+
+_ENV_RE = re.compile(
+    r"\\(?:begin|end)\s*\{(" + "|".join(re.escape(e) for e in _ALIGN_ENVS) + r")\}"
+    r"(?:\s*\{[^{}]*\})?")
+
+
+def _strip_align_envs(latex: str) -> str:
+    return _ENV_RE.sub(" ", latex)
+
+
 def _preprocess(latex: str) -> str:
-    s = latex.strip()
+    s = _strip_align_envs(latex.strip())
 
     # Protect LaTeX line breaks: convert_mi maps "\\" -> "\ " -> " ", silently
     # merging stacked equations into one line.

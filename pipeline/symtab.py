@@ -139,6 +139,57 @@ def to_latex(typst: str) -> str:
 # Public API
 # ---------------------------------------------------------------------------
 
+_MATH_SPAN_RE = re.compile(r"\$([^$]+)\$")
+
+
+def _split_cell(cell: str) -> list[str]:
+    """
+    The symbols declared by one left-hand cell.
+
+    Usually one, but the book groups symbols that share a meaning into a single
+    row — `[$A$, $B$, $C$], [space axes]` declares three. Matching the cell as
+    one `$...$` span reads that as a symbol literally named `A$, $B$, $C`, which
+    then poisons both the OCR prompt and the canonicalisation index.
+
+    A comma *inside* a single pair of dollars is different and must not split:
+    `$F_1, dots.h, F_8$` is one symbol whose name contains commas. So the cell
+    splits only when it is entirely a run of `$...$` spans joined by commas.
+    """
+    spans = list(_MATH_SPAN_RE.finditer(cell))
+    if not spans:
+        return []
+    # Whatever sits outside the spans decides whether this is a list or a
+    # single symbol that merely looks like one.
+    between = _MATH_SPAN_RE.sub("", cell)
+    if between.strip(", \t\r\n"):
+        return []
+    return [m.group(1).strip() for m in spans if m.group(1).strip()]
+
+
+def table_span(src: str) -> tuple[int, int] | None:
+    """
+    (start, end) of the whole symbol-table call in a chapter source.
+
+    `emit.py` regenerates the chapter body in place and needs to know where the
+    hand-written front matter stops. The symbol table is the last of it, so its
+    closing paren is the boundary — which means the body can be rewritten with
+    no marker comments delimiting it, since the file's own structure says where
+    it begins.
+    """
+    for name in ("symbol-table", "table"):
+        found = _call_body(src, name)
+        if found is None:
+            continue
+        body, start = found
+        # `start` points just inside the opening paren. Walk back to the "#" of
+        # the call rather than assuming its width — `#table (` is legal Typst.
+        head = src.rfind(f"#{name}", 0, start)
+        if head < 0:
+            continue
+        return head, start + len(body) + 1
+    return None
+
+
 def parse(path: str | Path) -> list[Symbol]:
     src = Path(path).read_text()
     found = _call_body(src, "symbol-table") or _call_body(src, "table")
@@ -150,16 +201,13 @@ def parse(path: str | Path) -> list[Symbol]:
     i = 0
     while i < len(groups):
         cell = groups[i].strip()
-        match = re.fullmatch(r"\$(.+)\$", cell, re.S)
-        # A leading/trailing $ pair only: reject '$$x$$' style typos by requiring
-        # the inner text to be non-empty and not itself $-wrapped.
-        if match and i + 1 < len(groups):
-            inner = match.group(1).strip()
-            if inner and not inner.startswith("$"):
-                meaning = " ".join(groups[i + 1].split())
-                symbols.append(Symbol(inner, meaning, to_latex(inner)))
-                i += 2
-                continue
+        names = _split_cell(cell) if i + 1 < len(groups) else []
+        if names:
+            meaning = " ".join(groups[i + 1].split())
+            for name in names:
+                symbols.append(Symbol(name, meaning, to_latex(name)))
+            i += 2
+            continue
         i += 1
     return symbols
 
