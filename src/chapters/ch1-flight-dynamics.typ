@@ -1,4 +1,4 @@
-#import "../preamble.typ": conflict, minor, unit, qty, qtyrange, num, eq, eqref, symbol-table, chapter-setup
+#import "../preamble.typ": conflict, minor, unit, qty, qtyrange, num, eqn, eqref, symbol-table, chapter-setup
 #show: chapter-setup
 
 = An Introduction to the Dynamics of Model Rocket Flight <flight-dynamics>
@@ -506,8 +506,8 @@ Now at small angles of attack (less than about 15°) $sin alpha$
 // === page 42 ===
 is very nearly equal to the value of $alpha$ itself in _radians_ (one radian equals 57.3°), while $cos alpha$ is very nearly equal to 1.0.
 Accordingly, one can make the _small-angle approximations_
-#eq("21")[$ N sin alpha approx N alpha $] <eq:1-21>
-#eq("22")[$ S equiv N cos alpha approx N $] <eq:1-22>
+#eqn("21")[$ N sin alpha approx N alpha $] <eq:1-21>
+#eqn("22")[$ S equiv N cos alpha approx N $] <eq:1-22>
 where $S$ denotes the magnitude of the side force.
 Now by inspection of @eq:1-19, @eq:1-20, and @eq:1-21, one might be tempted to deduce that
 $! epsilon = 1/2 f C_(n alpha) A_r $

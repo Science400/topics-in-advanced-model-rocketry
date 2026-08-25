@@ -10,6 +10,10 @@
   "lb":   "upright(\"lb\")",
   "lbf":  "upright(\"lbf\")",
   "ft":   "upright(\"ft\")",
+  // unify has no "in" or "oz" — without these, #qty(3, "in") renders a bare
+  // "3" and silently drops the unit. pipeline/units.py checks for exactly that.
+  "in":   "upright(\"in\")",
+  "oz":   "upright(\"oz\")",
   "degC": "upright(\"°C\")",
   "degF": "upright(\"°F\")",
   "degR": "upright(\"°R\")",
@@ -76,7 +80,11 @@
   math.equation(block: true, numbering: none, rest.join())
 }
 
-#let eq(n, body) = math.equation(
+// Named `eqn`, not `eq`: Typst's own `eq` is a symbol namespace (eq.not for
+// ≠, eq.quest, eq.gt …), and a `#let eq(..)` here shadows all of it, so any
+// `$ a eq.not b $` in the book fails with "cannot access fields on user-defined
+// functions". Cost an hour to diagnose from a model's output; do not rename back.
+#let eqn(n, body) = math.equation(
   block: true,
   numbering: _ => "(" + n + ")",
   body,
